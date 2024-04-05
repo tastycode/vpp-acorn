@@ -10,7 +10,9 @@ import type {
 
 const formatCountyData = (countyData: CountyFormerData): CountyData => {
   return {
-    fips: countyData["FIPS_County"],
+    fips:
+      countyData["FIPS_State"].padStart(2, "0") +
+      countyData["FIPS_County"].padStart(3, "0"),
     county: countyData["County"],
     total_voters: parseInt(countyData["count"]),
     purged_voters: parseInt(countyData["key_count"]),

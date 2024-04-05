@@ -2,6 +2,7 @@ import states from "./states.json";
 export type StateCode = keyof typeof states;
 
 export type CountyFormerData = {
+  FIPS_State: string;
   FIPS_County: string;
   County: string;
   count: string;

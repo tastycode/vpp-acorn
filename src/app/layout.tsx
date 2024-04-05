@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import { useEffect } from "react";
 import "./globals.css";
 import { createStore, Provider, atom } from "jotai";
-import type { StateData } from "counties/types";
+import type { StateData } from "@/app/counties/types";
 
 const inter = Inter({ subsets: ["latin"] });
 

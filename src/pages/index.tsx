@@ -1,5 +1,5 @@
 import CountryMap from "../app/components/CountryMap";
-import fetchStatesData from "../app/fetchStatesData";
+import { fetchStatesData } from "../app/statesData";
 
 export default function Home() {
   return (
