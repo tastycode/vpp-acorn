@@ -7,3 +7,16 @@ export const statesAtom = atom<IndexedArray<StateData>>(
 export const countiesAtom = atom<IndexedArray<CountyData>>(
   createIndexedArray<CountyData>([]),
 );
+
+interface PurgeMetadata {
+    count: number
+    mean: number
+    stddev: number
+}
+
+type CountryMetadata = {
+    "*": PurgeMetadata
+
+}
+
+export const MetaAtom = atom<CountryMetadata>({});

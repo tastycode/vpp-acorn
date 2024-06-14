@@ -13,7 +13,14 @@ export default function Home() {
     </main>
   );
 }
-export async function getServerSideProps() {
+export async function getCommonServerSideProps() {
   const data = await fetchStatesData();
-  return { props: { initialStatesData: data } };
+  return {
+    props: {
+      initialStatesData: data,
+    },
+  };
+}
+export async function getServerSideProps() {
+  return getCommonServerSideProps();
 }

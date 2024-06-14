@@ -1,0 +1,30 @@
+{
+  inputs = {
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    dream2nix.url = "github:nix-community/dream2nix/legacy";
+    dream2nix.inputs.nixpkgs.follows = "nixpkgs";
+    nix-filter.url = "github:numtide/nix-filter";
+  };
+  outputs = inp: with inp; let
+    flakeOutputs = dream2nix.lib.makeFlakeOutputs {
+      systems = ["x86_64-linux" "aarch64-linux" "x86_64-darwin" "aarch64-darwin"];
+      autoProjects = true;
+      config.projectRoot = ./.;
+      source = nix-filter.lib.filter {
+        root = ./.;
+        include = [
+          "package-lock.json"
+          "yarn.lock"
+          "package.json"
+        ];
+      };
+      settings = [
+        {
+          subsystemInfo.nodejs = 20;
+          subsystemInfo.npmArgs = "--legacy-peer-deps";
+        }
+      ];
+    };
+  in
+    flakeOutputs;
+}

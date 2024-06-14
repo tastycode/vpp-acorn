@@ -1,0 +1,43 @@
+{
+  description = "Photonic, successor to Atomic";
+
+  inputs = {
+    flake-utils.url = "github:numtide/flake-utils";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    devenv.url = "github:cachix/devenv";
+    dvc-nix.url = "github:xc-jp/dvc.nix";
+  };
+  nixConfig = {
+    extra-trusted-public-keys = "devenv.cachix.org-1:w1cLUi8dv3hnoSPGAuibQv+f9TZLr6cv/Hm9XgU50cw= nixpkgs-python.cachix.org-1:hxjI7pFxTyuTHn2NkvWCrAUcNZLNS3ZAvfYNuYifcEU=";
+    extra-substituters = "https://devenv.cachix.org";
+  };
+
+  outputs = {
+    self,
+    nixpkgs,
+    flake-utils,
+    devenv,
+    ...
+  } @ inputs: let
+    supportedSystems = ["x86_64-linux" "aarch64-darwin"];
+    mach-nix = import (builtins.fetchGit {
+      url = "https://github.com/DavHau/mach-nix";
+      ref = "refs/tags/3.5.0";
+    }) {};
+  in
+    flake-utils.lib.eachDefaultSystem (system: let
+      # see https://github.com/nix-community/poetry2nix/tree/master#api for more functions and examples.
+      pkgs = import nixpkgs {
+        inherit system;
+        overlays = [
+          inputs.dvc-nix.overlays.default
+        ];
+      };
+    in rec {
+      devShell = import ./shell.nix {
+        inherit inputs pkgs devenv;
+        nodejs = pkgs.nodejs-18_x;
+      };
+      defaultPackage = devShell;
+    });
+}
