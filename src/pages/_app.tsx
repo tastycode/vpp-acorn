@@ -1,25 +1,23 @@
 "use client";
 import { useAtom } from "jotai";
 import { useEffect } from "react";
-import { statesAtom } from "../states/atoms";
-import { countiesAtom } from "../states/atoms";
-import { createIndexedArray } from "@/utils/indexedArray";
-import { CountyData, StateData } from "@/app/counties/types";
+import { statesAtom, countiesAtom, countryAtom } from "../states/atoms";
+import { enhanceData } from '@/utils/enhanceData'
 
 function PurgeApp({ Component, pageProps }) {
+  const enhancedData = enhanceData(pageProps)
   const [_, setStatesData] = useAtom(statesAtom);
   const [__, setCountiesData] = useAtom(countiesAtom);
+  const [___, setCountryData] = useAtom(countryAtom);
+
   useEffect(() => {
-    if (pageProps.initialStatesData) {
-      console.log("initialStatesData", pageProps.initialStatesData);
-      setStatesData(createIndexedArray<StateData>(pageProps.initialStatesData));
-      const counties: CountyData[] = [];
-      for (const state of pageProps.initialStatesData) {
-        counties.push(...state.counties);
-      }
-      setCountiesData(createIndexedArray<CountyData>(counties));
+    if (enhancedData.states && enhancedData.counties && enhancedData.country) {
+      console.log('setStatesData', enhancedData.states)
+      setStatesData(enhancedData.states);
+      setCountiesData(enhancedData.counties);
+      setCountryData(enhancedData.country);
     }
-  }, [pageProps.initialStatesData, setStatesData]);
+  }, [pageProps]);
 
   return <Component {...pageProps} />;
 }

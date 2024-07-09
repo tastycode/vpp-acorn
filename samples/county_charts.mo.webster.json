@@ -1,0 +1,306 @@
+{
+  "code": "29",
+  "name": "Missouri",
+  "end_date": "2024-01-01",
+  "county": "Webster",
+  "cat1": "county",
+  "datasets": [
+    {
+      "cat3": "age",
+      "data": [
+        {
+          "cat2": "total",
+          "datasets": [
+            {
+              "data": [
+                2049,
+                3713,
+                3772,
+                3814,
+                4098,
+                6368
+              ],
+              "label": "Total Voters"
+            }
+          ],
+          "subtitle": "Total Voters by Age Group",
+          "categories": [
+            "18-24",
+            "25-34",
+            "35-44",
+            "45-54",
+            "55-64",
+            "65+"
+          ],
+          "dp": 201
+        },
+        {
+          "cat2": "drop",
+          "datasets": [
+            {
+              "data": [
+                17,
+                101,
+                49,
+                79,
+                54,
+                131
+              ],
+              "label": "Total Voters"
+            }
+          ],
+          "subtitle": "Dropped Voters by Age Group",
+          "categories": [
+            "18-24",
+            "25-34",
+            "35-44",
+            "45-54",
+            "55-64",
+            "65+"
+          ],
+          "dp": 211
+        },
+        {
+          "cat2": "new",
+          "datasets": [
+            {
+              "data": [
+                114,
+                38,
+                26,
+                30,
+                27,
+                23
+              ],
+              "label": "Total Voters"
+            }
+          ],
+          "subtitle": "New Voters by Age Group",
+          "categories": [
+            "18-24",
+            "25-34",
+            "35-44",
+            "45-54",
+            "55-64",
+            "65+"
+          ],
+          "dp": 221
+        }
+      ],
+      "title": "Voters by Age Group"
+    },
+    {
+      "cat3": "status",
+      "data": [
+        {
+          "cat2": "total",
+          "datasets": [
+            {
+              "data": [
+                21816,
+                1971
+              ],
+              "label": "Total Voters"
+            }
+          ],
+          "subtitle": "Total Voters by Status",
+          "categories": [
+            "Active",
+            "Inactive"
+          ],
+          "dp": 202
+        },
+        {
+          "cat2": "drop",
+          "datasets": [
+            {
+              "data": [
+                115,
+                316
+              ],
+              "label": "Total Voters"
+            }
+          ],
+          "subtitle": "Dropped Voters by Status",
+          "categories": [
+            "Active",
+            "Inactive"
+          ],
+          "dp": 212
+        },
+        {
+          "cat2": "new",
+          "datasets": [
+            {
+              "data": [
+                312,
+                3
+              ],
+              "label": "Total Voters"
+            }
+          ],
+          "subtitle": "New Voters by Status",
+          "categories": [
+            "Active",
+            "Inactive"
+          ],
+          "dp": 222
+        }
+      ],
+      "title": "Voters by Status"
+    },
+    {
+      "cat3": "party",
+      "data": [
+        {
+          "cat2": "total",
+          "datasets": [
+            {
+              "data": [
+                9644,
+                1,
+                3,
+                2
+              ],
+              "label": "Total Voters"
+            }
+          ],
+          "subtitle": "Total Voters by Party",
+          "categories": [
+            " ",
+            "Democratic",
+            "Republican",
+            "Unaffiliated"
+          ],
+          "dp": 203
+        },
+        {
+          "cat2": "drop",
+          "datasets": [
+            {
+              "data": [
+                39
+              ],
+              "label": "Total Voters"
+            }
+          ],
+          "subtitle": "Dropped Voters by Party",
+          "categories": [
+            " "
+          ],
+          "dp": 213
+        },
+        {
+          "cat2": "new",
+          "datasets": [
+            {
+              "data": [
+                296,
+                1,
+                2,
+                2
+              ],
+              "label": "Total Voters"
+            }
+          ],
+          "subtitle": "New Voters by Party",
+          "categories": [
+            " ",
+            "Democratic",
+            "Republican",
+            "Unaffiliated"
+          ],
+          "dp": 223
+        }
+      ],
+      "title": "Voters by Party"
+    },
+    {
+      "cat3": "sex",
+      "data": [
+        {
+          "cat2": "total",
+          "datasets": [
+            {
+              "data": [],
+              "label": "Total Voters"
+            }
+          ],
+          "subtitle": "Total Voters by Gender",
+          "categories": [],
+          "dp": 204
+        },
+        {
+          "cat2": "drop",
+          "datasets": [
+            {
+              "data": [],
+              "label": "Total Voters"
+            }
+          ],
+          "subtitle": "Dropped Voters by Gender",
+          "categories": [],
+          "dp": 214
+        },
+        {
+          "cat2": "new",
+          "datasets": [
+            {
+              "data": [],
+              "label": "Total Voters"
+            }
+          ],
+          "subtitle": "New Voters by Gender",
+          "categories": [],
+          "dp": 224
+        }
+      ],
+      "title": "Voters by Gender"
+    },
+    {
+      "cat3": "race",
+      "data": [
+        {
+          "cat2": "total",
+          "datasets": [
+            {
+              "data": [],
+              "label": "Total Voters"
+            }
+          ],
+          "subtitle": "Total Voters by Race",
+          "categories": [],
+          "dp": 205
+        },
+        {
+          "cat2": "drop",
+          "datasets": [
+            {
+              "data": [],
+              "label": "Total Voters"
+            }
+          ],
+          "subtitle": "Dropped Voters by Race",
+          "categories": [],
+          "dp": 215
+        },
+        {
+          "cat2": "new",
+          "datasets": [
+            {
+              "data": [],
+              "label": "Total Voters"
+            }
+          ],
+          "subtitle": "New Voters by Race",
+          "categories": [],
+          "dp": 225
+        }
+      ],
+      "title": "Voters by Race"
+    }
+  ],
+  "fips": "225",
+  "abv": "MO",
+  "start_date": "2023-01-01"
+}

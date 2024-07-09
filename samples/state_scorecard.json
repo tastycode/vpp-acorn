@@ -1,0 +1,5784 @@
+[
+  {
+    "state": "AL",
+    "categories": [
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "Price",
+            "value": "$/yr",
+            "desc": "The state provides voter registration data for a free or low price."
+          }
+        ],
+        "name": "Cost",
+        "stars": "",
+        "altname": "cost"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "online",
+            "value": "",
+            "desc": "State request procedures are readily available online."
+          },
+          {
+            "points": null,
+            "name": "foia",
+            "value": "",
+            "desc": "The state responds to FOIA requests."
+          },
+          {
+            "points": null,
+            "name": "inquiry",
+            "value": "",
+            "desc": "The state responds to inquiries on their data processing practices."
+          },
+          {
+            "points": null,
+            "name": "errors",
+            "value": "",
+            "desc": "The state will admit errors when found."
+          },
+          {
+            "points": null,
+            "name": "procedure",
+            "value": "",
+            "desc": "The state publicizes procedural changes."
+          },
+          {
+            "points": null,
+            "name": "category",
+            "value": "",
+            "desc": "The state utilizes commonly accepted categories."
+          },
+          {
+            "points": null,
+            "name": "age",
+            "value": "",
+            "desc": "The state provides birthdates and age data."
+          },
+          {
+            "points": null,
+            "name": "felon",
+            "value": "",
+            "desc": "The state offers clarity on ex-felon registration and purging."
+          }
+        ],
+        "name": "Transparency",
+        "stars": "",
+        "altname": "transparency"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "schedule",
+            "value": "",
+            "desc": "The state provides regular data releases (quarterly, monthly, or weekly)."
+          },
+          {
+            "points": null,
+            "name": "aquisition",
+            "value": "",
+            "desc": "The state disseminates data in an easily retrievable manner (email, web download, or mail)."
+          },
+          {
+            "points": null,
+            "name": "indentifiers",
+            "value": "",
+            "desc": "The state is transparent with identifiers."
+          },
+          {
+            "points": null,
+            "name": "contact",
+            "value": "",
+            "desc": "The state provides an in-depth history of voters including telephone numbers and email addresses."
+          }
+        ],
+        "name": "Access",
+        "stars": "",
+        "altname": "access"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "purgedtototal",
+            "value": "",
+            "desc": "Percentage of purged voters to total voters"
+          }
+        ],
+        "name": "Purge History",
+        "stars": "",
+        "altname": "purgehistory"
+      }
+    ],
+    "stars": "0"
+  },
+  {
+    "state": "AK",
+    "categories": [
+      {
+        "items": [
+          {
+            "points": 2,
+            "name": "Price",
+            "value": "$240/yr",
+            "desc": "The state provides voter registration data for a free or low price."
+          }
+        ],
+        "name": "Cost",
+        "stars": "2",
+        "altname": "cost"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "online",
+            "value": "",
+            "desc": "State request procedures are readily available online."
+          },
+          {
+            "points": null,
+            "name": "foia",
+            "value": "Yes",
+            "desc": "The state responds to FOIA requests."
+          },
+          {
+            "points": null,
+            "name": "inquiry",
+            "value": "",
+            "desc": "The state responds to inquiries on their data processing practices."
+          },
+          {
+            "points": null,
+            "name": "errors",
+            "value": "",
+            "desc": "The state will admit errors when found."
+          },
+          {
+            "points": null,
+            "name": "procedure",
+            "value": "",
+            "desc": "The state publicizes procedural changes."
+          },
+          {
+            "points": null,
+            "name": "category",
+            "value": "",
+            "desc": "The state utilizes commonly accepted categories."
+          },
+          {
+            "points": null,
+            "name": "age",
+            "value": "",
+            "desc": "The state provides birthdates and age data."
+          },
+          {
+            "points": null,
+            "name": "felon",
+            "value": "",
+            "desc": "The state offers clarity on ex-felon registration and purging."
+          }
+        ],
+        "name": "Transparency",
+        "stars": "1",
+        "altname": "transparency"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "schedule",
+            "value": "Monthly",
+            "desc": "The state provides regular data releases (quarterly, monthly, or weekly)."
+          },
+          {
+            "points": null,
+            "name": "aquisition",
+            "value": "Email",
+            "desc": "The state disseminates data in an easily retrievable manner (email, web download, or mail)."
+          },
+          {
+            "points": null,
+            "name": "indentifiers",
+            "value": "",
+            "desc": "The state is transparent with identifiers."
+          },
+          {
+            "points": null,
+            "name": "contact",
+            "value": "",
+            "desc": "The state provides an in-depth history of voters including telephone numbers and email addresses."
+          }
+        ],
+        "name": "Access",
+        "stars": "2",
+        "altname": "access"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "purgedtototal",
+            "value": "2.68",
+            "desc": "Percentage of purged voters to total voters"
+          }
+        ],
+        "name": "Purge History",
+        "stars": "2",
+        "altname": "purgehistory"
+      }
+    ],
+    "stars": "2"
+  },
+  {
+    "state": "AZ",
+    "categories": [
+      {
+        "items": [
+          {
+            "points": 1,
+            "name": "Price",
+            "value": "$2800/yr",
+            "desc": "The state provides voter registration data for a free or low price."
+          }
+        ],
+        "name": "Cost",
+        "stars": "1",
+        "altname": "cost"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "online",
+            "value": "",
+            "desc": "State request procedures are readily available online."
+          },
+          {
+            "points": null,
+            "name": "foia",
+            "value": "Yes",
+            "desc": "The state responds to FOIA requests."
+          },
+          {
+            "points": null,
+            "name": "inquiry",
+            "value": "",
+            "desc": "The state responds to inquiries on their data processing practices."
+          },
+          {
+            "points": null,
+            "name": "errors",
+            "value": "",
+            "desc": "The state will admit errors when found."
+          },
+          {
+            "points": null,
+            "name": "procedure",
+            "value": "",
+            "desc": "The state publicizes procedural changes."
+          },
+          {
+            "points": null,
+            "name": "category",
+            "value": "",
+            "desc": "The state utilizes commonly accepted categories."
+          },
+          {
+            "points": null,
+            "name": "age",
+            "value": "Yes",
+            "desc": "The state provides birthdates and age data."
+          },
+          {
+            "points": null,
+            "name": "felon",
+            "value": "",
+            "desc": "The state offers clarity on ex-felon registration and purging."
+          }
+        ],
+        "name": "Transparency",
+        "stars": "2",
+        "altname": "transparency"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "schedule",
+            "value": "Quarterly",
+            "desc": "The state provides regular data releases (quarterly, monthly, or weekly)."
+          },
+          {
+            "points": null,
+            "name": "aquisition",
+            "value": "Email",
+            "desc": "The state disseminates data in an easily retrievable manner (email, web download, or mail)."
+          },
+          {
+            "points": null,
+            "name": "indentifiers",
+            "value": "",
+            "desc": "The state is transparent with identifiers."
+          },
+          {
+            "points": null,
+            "name": "contact",
+            "value": "",
+            "desc": "The state provides an in-depth history of voters including telephone numbers and email addresses."
+          }
+        ],
+        "name": "Access",
+        "stars": "2",
+        "altname": "access"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "purgedtototal",
+            "value": "2.46",
+            "desc": "Percentage of purged voters to total voters"
+          }
+        ],
+        "name": "Purge History",
+        "stars": "2",
+        "altname": "purgehistory"
+      }
+    ],
+    "stars": "2"
+  },
+  {
+    "state": "AR",
+    "categories": [
+      {
+        "items": [
+          {
+            "points": 3,
+            "name": "Price",
+            "value": "$Free/yr",
+            "desc": "The state provides voter registration data for a free or low price."
+          }
+        ],
+        "name": "Cost",
+        "stars": "3",
+        "altname": "cost"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "online",
+            "value": "",
+            "desc": "State request procedures are readily available online."
+          },
+          {
+            "points": null,
+            "name": "foia",
+            "value": "Yes",
+            "desc": "The state responds to FOIA requests."
+          },
+          {
+            "points": null,
+            "name": "inquiry",
+            "value": "",
+            "desc": "The state responds to inquiries on their data processing practices."
+          },
+          {
+            "points": null,
+            "name": "errors",
+            "value": "",
+            "desc": "The state will admit errors when found."
+          },
+          {
+            "points": null,
+            "name": "procedure",
+            "value": "",
+            "desc": "The state publicizes procedural changes."
+          },
+          {
+            "points": null,
+            "name": "category",
+            "value": "",
+            "desc": "The state utilizes commonly accepted categories."
+          },
+          {
+            "points": null,
+            "name": "age",
+            "value": "Yes",
+            "desc": "The state provides birthdates and age data."
+          },
+          {
+            "points": null,
+            "name": "felon",
+            "value": "",
+            "desc": "The state offers clarity on ex-felon registration and purging."
+          }
+        ],
+        "name": "Transparency",
+        "stars": "2",
+        "altname": "transparency"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "schedule",
+            "value": "Monthly",
+            "desc": "The state provides regular data releases (quarterly, monthly, or weekly)."
+          },
+          {
+            "points": null,
+            "name": "aquisition",
+            "value": "Mail",
+            "desc": "The state disseminates data in an easily retrievable manner (email, web download, or mail)."
+          },
+          {
+            "points": null,
+            "name": "indentifiers",
+            "value": "",
+            "desc": "The state is transparent with identifiers."
+          },
+          {
+            "points": null,
+            "name": "contact",
+            "value": "Phone",
+            "desc": "The state provides an in-depth history of voters including telephone numbers and email addresses."
+          }
+        ],
+        "name": "Access",
+        "stars": "2",
+        "altname": "access"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "purgedtototal",
+            "value": "17.66",
+            "desc": "Percentage of purged voters to total voters"
+          }
+        ],
+        "name": "Purge History",
+        "stars": "0",
+        "altname": "purgehistory"
+      }
+    ],
+    "stars": "2"
+  },
+  {
+    "state": "CA",
+    "categories": [
+      {
+        "items": [
+          {
+            "points": 2,
+            "name": "Price",
+            "value": "$360/yr",
+            "desc": "The state provides voter registration data for a free or low price."
+          }
+        ],
+        "name": "Cost",
+        "stars": "2",
+        "altname": "cost"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "online",
+            "value": "",
+            "desc": "State request procedures are readily available online."
+          },
+          {
+            "points": null,
+            "name": "foia",
+            "value": "Yes",
+            "desc": "The state responds to FOIA requests."
+          },
+          {
+            "points": null,
+            "name": "inquiry",
+            "value": "",
+            "desc": "The state responds to inquiries on their data processing practices."
+          },
+          {
+            "points": null,
+            "name": "errors",
+            "value": "",
+            "desc": "The state will admit errors when found."
+          },
+          {
+            "points": null,
+            "name": "procedure",
+            "value": "",
+            "desc": "The state publicizes procedural changes."
+          },
+          {
+            "points": null,
+            "name": "category",
+            "value": "",
+            "desc": "The state utilizes commonly accepted categories."
+          },
+          {
+            "points": null,
+            "name": "age",
+            "value": "Yes",
+            "desc": "The state provides birthdates and age data."
+          },
+          {
+            "points": null,
+            "name": "felon",
+            "value": "",
+            "desc": "The state offers clarity on ex-felon registration and purging."
+          }
+        ],
+        "name": "Transparency",
+        "stars": "2",
+        "altname": "transparency"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "schedule",
+            "value": "Monthly",
+            "desc": "The state provides regular data releases (quarterly, monthly, or weekly)."
+          },
+          {
+            "points": null,
+            "name": "aquisition",
+            "value": "Download",
+            "desc": "The state disseminates data in an easily retrievable manner (email, web download, or mail)."
+          },
+          {
+            "points": null,
+            "name": "indentifiers",
+            "value": "",
+            "desc": "The state is transparent with identifiers."
+          },
+          {
+            "points": null,
+            "name": "contact",
+            "value": "",
+            "desc": "The state provides an in-depth history of voters including telephone numbers and email addresses."
+          }
+        ],
+        "name": "Access",
+        "stars": "3",
+        "altname": "access"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "purgedtototal",
+            "value": "",
+            "desc": "Percentage of purged voters to total voters"
+          }
+        ],
+        "name": "Purge History",
+        "stars": "",
+        "altname": "purgehistory"
+      }
+    ],
+    "stars": "2"
+  },
+  {
+    "state": "CO",
+    "categories": [
+      {
+        "items": [
+          {
+            "points": 1,
+            "name": "Price",
+            "value": "$1000/yr",
+            "desc": "The state provides voter registration data for a free or low price."
+          }
+        ],
+        "name": "Cost",
+        "stars": "1",
+        "altname": "cost"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "online",
+            "value": "",
+            "desc": "State request procedures are readily available online."
+          },
+          {
+            "points": null,
+            "name": "foia",
+            "value": "Yes",
+            "desc": "The state responds to FOIA requests."
+          },
+          {
+            "points": null,
+            "name": "inquiry",
+            "value": "",
+            "desc": "The state responds to inquiries on their data processing practices."
+          },
+          {
+            "points": null,
+            "name": "errors",
+            "value": "",
+            "desc": "The state will admit errors when found."
+          },
+          {
+            "points": null,
+            "name": "procedure",
+            "value": "",
+            "desc": "The state publicizes procedural changes."
+          },
+          {
+            "points": null,
+            "name": "category",
+            "value": "",
+            "desc": "The state utilizes commonly accepted categories."
+          },
+          {
+            "points": null,
+            "name": "age",
+            "value": "",
+            "desc": "The state provides birthdates and age data."
+          },
+          {
+            "points": null,
+            "name": "felon",
+            "value": "",
+            "desc": "The state offers clarity on ex-felon registration and purging."
+          }
+        ],
+        "name": "Transparency",
+        "stars": "1",
+        "altname": "transparency"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "schedule",
+            "value": "Monthly",
+            "desc": "The state provides regular data releases (quarterly, monthly, or weekly)."
+          },
+          {
+            "points": null,
+            "name": "aquisition",
+            "value": "Email",
+            "desc": "The state disseminates data in an easily retrievable manner (email, web download, or mail)."
+          },
+          {
+            "points": null,
+            "name": "indentifiers",
+            "value": "",
+            "desc": "The state is transparent with identifiers."
+          },
+          {
+            "points": null,
+            "name": "contact",
+            "value": "",
+            "desc": "The state provides an in-depth history of voters including telephone numbers and email addresses."
+          }
+        ],
+        "name": "Access",
+        "stars": "1",
+        "altname": "access"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "purgedtototal",
+            "value": "8.16",
+            "desc": "Percentage of purged voters to total voters"
+          }
+        ],
+        "name": "Purge History",
+        "stars": "1",
+        "altname": "purgehistory"
+      }
+    ],
+    "stars": "1"
+  },
+  {
+    "state": "CT",
+    "categories": [
+      {
+        "items": [
+          {
+            "points": 1,
+            "name": "Price",
+            "value": "$/yr",
+            "desc": "The state provides voter registration data for a free or low price."
+          }
+        ],
+        "name": "Cost",
+        "stars": "1",
+        "altname": "cost"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "online",
+            "value": "",
+            "desc": "State request procedures are readily available online."
+          },
+          {
+            "points": null,
+            "name": "foia",
+            "value": "",
+            "desc": "The state responds to FOIA requests."
+          },
+          {
+            "points": null,
+            "name": "inquiry",
+            "value": "",
+            "desc": "The state responds to inquiries on their data processing practices."
+          },
+          {
+            "points": null,
+            "name": "errors",
+            "value": "",
+            "desc": "The state will admit errors when found."
+          },
+          {
+            "points": null,
+            "name": "procedure",
+            "value": "",
+            "desc": "The state publicizes procedural changes."
+          },
+          {
+            "points": null,
+            "name": "category",
+            "value": "",
+            "desc": "The state utilizes commonly accepted categories."
+          },
+          {
+            "points": null,
+            "name": "age",
+            "value": "No",
+            "desc": "The state provides birthdates and age data."
+          },
+          {
+            "points": null,
+            "name": "felon",
+            "value": "",
+            "desc": "The state offers clarity on ex-felon registration and purging."
+          }
+        ],
+        "name": "Transparency",
+        "stars": "1",
+        "altname": "transparency"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "schedule",
+            "value": "Quarterly",
+            "desc": "The state provides regular data releases (quarterly, monthly, or weekly)."
+          },
+          {
+            "points": null,
+            "name": "aquisition",
+            "value": "Email",
+            "desc": "The state disseminates data in an easily retrievable manner (email, web download, or mail)."
+          },
+          {
+            "points": null,
+            "name": "indentifiers",
+            "value": "",
+            "desc": "The state is transparent with identifiers."
+          },
+          {
+            "points": null,
+            "name": "contact",
+            "value": "",
+            "desc": "The state provides an in-depth history of voters including telephone numbers and email addresses."
+          }
+        ],
+        "name": "Access",
+        "stars": "0",
+        "altname": "access"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "purgedtototal",
+            "value": "0.09",
+            "desc": "Percentage of purged voters to total voters"
+          }
+        ],
+        "name": "Purge History",
+        "stars": "3",
+        "altname": "purgehistory"
+      }
+    ],
+    "stars": "2"
+  },
+  {
+    "state": "DE",
+    "categories": [
+      {
+        "items": [
+          {
+            "points": 3,
+            "name": "Price",
+            "value": "$300/yr",
+            "desc": "The state provides voter registration data for a free or low price."
+          }
+        ],
+        "name": "Cost",
+        "stars": "3",
+        "altname": "cost"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "online",
+            "value": "",
+            "desc": "State request procedures are readily available online."
+          },
+          {
+            "points": null,
+            "name": "foia",
+            "value": "Yes",
+            "desc": "The state responds to FOIA requests."
+          },
+          {
+            "points": null,
+            "name": "inquiry",
+            "value": "",
+            "desc": "The state responds to inquiries on their data processing practices."
+          },
+          {
+            "points": null,
+            "name": "errors",
+            "value": "",
+            "desc": "The state will admit errors when found."
+          },
+          {
+            "points": null,
+            "name": "procedure",
+            "value": "",
+            "desc": "The state publicizes procedural changes."
+          },
+          {
+            "points": null,
+            "name": "category",
+            "value": "",
+            "desc": "The state utilizes commonly accepted categories."
+          },
+          {
+            "points": null,
+            "name": "age",
+            "value": "Yes",
+            "desc": "The state provides birthdates and age data."
+          },
+          {
+            "points": null,
+            "name": "felon",
+            "value": "",
+            "desc": "The state offers clarity on ex-felon registration and purging."
+          }
+        ],
+        "name": "Transparency",
+        "stars": "2",
+        "altname": "transparency"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "schedule",
+            "value": "Monthly",
+            "desc": "The state provides regular data releases (quarterly, monthly, or weekly)."
+          },
+          {
+            "points": null,
+            "name": "aquisition",
+            "value": "Mail",
+            "desc": "The state disseminates data in an easily retrievable manner (email, web download, or mail)."
+          },
+          {
+            "points": null,
+            "name": "indentifiers",
+            "value": "",
+            "desc": "The state is transparent with identifiers."
+          },
+          {
+            "points": null,
+            "name": "contact",
+            "value": "",
+            "desc": "The state provides an in-depth history of voters including telephone numbers and email addresses."
+          }
+        ],
+        "name": "Access",
+        "stars": "0",
+        "altname": "access"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "purgedtototal",
+            "value": "1.99",
+            "desc": "Percentage of purged voters to total voters"
+          }
+        ],
+        "name": "Purge History",
+        "stars": "3",
+        "altname": "purgehistory"
+      }
+    ],
+    "stars": "2"
+  },
+  {
+    "state": "FL",
+    "categories": [
+      {
+        "items": [
+          {
+            "points": 3,
+            "name": "Price",
+            "value": "$Free/yr",
+            "desc": "The state provides voter registration data for a free or low price."
+          }
+        ],
+        "name": "Cost",
+        "stars": "3",
+        "altname": "cost"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "online",
+            "value": "",
+            "desc": "State request procedures are readily available online."
+          },
+          {
+            "points": null,
+            "name": "foia",
+            "value": "Yes",
+            "desc": "The state responds to FOIA requests."
+          },
+          {
+            "points": null,
+            "name": "inquiry",
+            "value": "",
+            "desc": "The state responds to inquiries on their data processing practices."
+          },
+          {
+            "points": null,
+            "name": "errors",
+            "value": "",
+            "desc": "The state will admit errors when found."
+          },
+          {
+            "points": null,
+            "name": "procedure",
+            "value": "",
+            "desc": "The state publicizes procedural changes."
+          },
+          {
+            "points": null,
+            "name": "category",
+            "value": "",
+            "desc": "The state utilizes commonly accepted categories."
+          },
+          {
+            "points": null,
+            "name": "age",
+            "value": "Yes",
+            "desc": "The state provides birthdates and age data."
+          },
+          {
+            "points": null,
+            "name": "felon",
+            "value": "",
+            "desc": "The state offers clarity on ex-felon registration and purging."
+          }
+        ],
+        "name": "Transparency",
+        "stars": "2",
+        "altname": "transparency"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "schedule",
+            "value": "Monthly",
+            "desc": "The state provides regular data releases (quarterly, monthly, or weekly)."
+          },
+          {
+            "points": null,
+            "name": "aquisition",
+            "value": "Email",
+            "desc": "The state disseminates data in an easily retrievable manner (email, web download, or mail)."
+          },
+          {
+            "points": null,
+            "name": "indentifiers",
+            "value": "",
+            "desc": "The state is transparent with identifiers."
+          },
+          {
+            "points": null,
+            "name": "contact",
+            "value": "Phone and Email",
+            "desc": "The state provides an in-depth history of voters including telephone numbers and email addresses."
+          }
+        ],
+        "name": "Access",
+        "stars": "2",
+        "altname": "access"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "purgedtototal",
+            "value": "2.17",
+            "desc": "Percentage of purged voters to total voters"
+          }
+        ],
+        "name": "Purge History",
+        "stars": "3",
+        "altname": "purgehistory"
+      }
+    ],
+    "stars": "3"
+  },
+  {
+    "state": "GA",
+    "categories": [
+      {
+        "items": [
+          {
+            "points": 1,
+            "name": "Price",
+            "value": "$1500/yr",
+            "desc": "The state provides voter registration data for a free or low price."
+          }
+        ],
+        "name": "Cost",
+        "stars": "1",
+        "altname": "cost"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "online",
+            "value": "",
+            "desc": "State request procedures are readily available online."
+          },
+          {
+            "points": null,
+            "name": "foia",
+            "value": "Yes",
+            "desc": "The state responds to FOIA requests."
+          },
+          {
+            "points": null,
+            "name": "inquiry",
+            "value": "",
+            "desc": "The state responds to inquiries on their data processing practices."
+          },
+          {
+            "points": null,
+            "name": "errors",
+            "value": "",
+            "desc": "The state will admit errors when found."
+          },
+          {
+            "points": null,
+            "name": "procedure",
+            "value": "",
+            "desc": "The state publicizes procedural changes."
+          },
+          {
+            "points": null,
+            "name": "category",
+            "value": "",
+            "desc": "The state utilizes commonly accepted categories."
+          },
+          {
+            "points": null,
+            "name": "age",
+            "value": "Yes",
+            "desc": "The state provides birthdates and age data."
+          },
+          {
+            "points": null,
+            "name": "felon",
+            "value": "",
+            "desc": "The state offers clarity on ex-felon registration and purging."
+          }
+        ],
+        "name": "Transparency",
+        "stars": "2",
+        "altname": "transparency"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "schedule",
+            "value": "Bi-Monthly",
+            "desc": "The state provides regular data releases (quarterly, monthly, or weekly)."
+          },
+          {
+            "points": null,
+            "name": "aquisition",
+            "value": "Email",
+            "desc": "The state disseminates data in an easily retrievable manner (email, web download, or mail)."
+          },
+          {
+            "points": null,
+            "name": "indentifiers",
+            "value": "",
+            "desc": "The state is transparent with identifiers."
+          },
+          {
+            "points": null,
+            "name": "contact",
+            "value": "",
+            "desc": "The state provides an in-depth history of voters including telephone numbers and email addresses."
+          }
+        ],
+        "name": "Access",
+        "stars": "3",
+        "altname": "access"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "purgedtototal",
+            "value": "3.18",
+            "desc": "Percentage of purged voters to total voters"
+          }
+        ],
+        "name": "Purge History",
+        "stars": "2",
+        "altname": "purgehistory"
+      }
+    ],
+    "stars": "2"
+  },
+  {
+    "state": "HI",
+    "categories": [
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "Price",
+            "value": "$/yr",
+            "desc": "The state provides voter registration data for a free or low price."
+          }
+        ],
+        "name": "Cost",
+        "stars": "",
+        "altname": "cost"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "online",
+            "value": "",
+            "desc": "State request procedures are readily available online."
+          },
+          {
+            "points": null,
+            "name": "foia",
+            "value": "",
+            "desc": "The state responds to FOIA requests."
+          },
+          {
+            "points": null,
+            "name": "inquiry",
+            "value": "",
+            "desc": "The state responds to inquiries on their data processing practices."
+          },
+          {
+            "points": null,
+            "name": "errors",
+            "value": "",
+            "desc": "The state will admit errors when found."
+          },
+          {
+            "points": null,
+            "name": "procedure",
+            "value": "",
+            "desc": "The state publicizes procedural changes."
+          },
+          {
+            "points": null,
+            "name": "category",
+            "value": "",
+            "desc": "The state utilizes commonly accepted categories."
+          },
+          {
+            "points": null,
+            "name": "age",
+            "value": "",
+            "desc": "The state provides birthdates and age data."
+          },
+          {
+            "points": null,
+            "name": "felon",
+            "value": "",
+            "desc": "The state offers clarity on ex-felon registration and purging."
+          }
+        ],
+        "name": "Transparency",
+        "stars": "",
+        "altname": "transparency"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "schedule",
+            "value": "",
+            "desc": "The state provides regular data releases (quarterly, monthly, or weekly)."
+          },
+          {
+            "points": null,
+            "name": "aquisition",
+            "value": "",
+            "desc": "The state disseminates data in an easily retrievable manner (email, web download, or mail)."
+          },
+          {
+            "points": null,
+            "name": "indentifiers",
+            "value": "",
+            "desc": "The state is transparent with identifiers."
+          },
+          {
+            "points": null,
+            "name": "contact",
+            "value": "",
+            "desc": "The state provides an in-depth history of voters including telephone numbers and email addresses."
+          }
+        ],
+        "name": "Access",
+        "stars": "",
+        "altname": "access"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "purgedtototal",
+            "value": "",
+            "desc": "Percentage of purged voters to total voters"
+          }
+        ],
+        "name": "Purge History",
+        "stars": "",
+        "altname": "purgehistory"
+      }
+    ],
+    "stars": "0"
+  },
+  {
+    "state": "ID",
+    "categories": [
+      {
+        "items": [
+          {
+            "points": 3,
+            "name": "Price",
+            "value": "$250/yr",
+            "desc": "The state provides voter registration data for a free or low price."
+          }
+        ],
+        "name": "Cost",
+        "stars": "3",
+        "altname": "cost"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "online",
+            "value": "",
+            "desc": "State request procedures are readily available online."
+          },
+          {
+            "points": null,
+            "name": "foia",
+            "value": "Yes",
+            "desc": "The state responds to FOIA requests."
+          },
+          {
+            "points": null,
+            "name": "inquiry",
+            "value": "",
+            "desc": "The state responds to inquiries on their data processing practices."
+          },
+          {
+            "points": null,
+            "name": "errors",
+            "value": "",
+            "desc": "The state will admit errors when found."
+          },
+          {
+            "points": null,
+            "name": "procedure",
+            "value": "",
+            "desc": "The state publicizes procedural changes."
+          },
+          {
+            "points": null,
+            "name": "category",
+            "value": "",
+            "desc": "The state utilizes commonly accepted categories."
+          },
+          {
+            "points": null,
+            "name": "age",
+            "value": "Yes",
+            "desc": "The state provides birthdates and age data."
+          },
+          {
+            "points": null,
+            "name": "felon",
+            "value": "",
+            "desc": "The state offers clarity on ex-felon registration and purging."
+          }
+        ],
+        "name": "Transparency",
+        "stars": "2",
+        "altname": "transparency"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "schedule",
+            "value": "Monthly",
+            "desc": "The state provides regular data releases (quarterly, monthly, or weekly)."
+          },
+          {
+            "points": null,
+            "name": "aquisition",
+            "value": "Email",
+            "desc": "The state disseminates data in an easily retrievable manner (email, web download, or mail)."
+          },
+          {
+            "points": null,
+            "name": "indentifiers",
+            "value": "",
+            "desc": "The state is transparent with identifiers."
+          },
+          {
+            "points": null,
+            "name": "contact",
+            "value": "",
+            "desc": "The state provides an in-depth history of voters including telephone numbers and email addresses."
+          }
+        ],
+        "name": "Access",
+        "stars": "1",
+        "altname": "access"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "purgedtototal",
+            "value": "0.48",
+            "desc": "Percentage of purged voters to total voters"
+          }
+        ],
+        "name": "Purge History",
+        "stars": "3",
+        "altname": "purgehistory"
+      }
+    ],
+    "stars": "3"
+  },
+  {
+    "state": "IL",
+    "categories": [
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "Price",
+            "value": "$/yr",
+            "desc": "The state provides voter registration data for a free or low price."
+          }
+        ],
+        "name": "Cost",
+        "stars": "",
+        "altname": "cost"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "online",
+            "value": "",
+            "desc": "State request procedures are readily available online."
+          },
+          {
+            "points": null,
+            "name": "foia",
+            "value": "",
+            "desc": "The state responds to FOIA requests."
+          },
+          {
+            "points": null,
+            "name": "inquiry",
+            "value": "",
+            "desc": "The state responds to inquiries on their data processing practices."
+          },
+          {
+            "points": null,
+            "name": "errors",
+            "value": "",
+            "desc": "The state will admit errors when found."
+          },
+          {
+            "points": null,
+            "name": "procedure",
+            "value": "",
+            "desc": "The state publicizes procedural changes."
+          },
+          {
+            "points": null,
+            "name": "category",
+            "value": "",
+            "desc": "The state utilizes commonly accepted categories."
+          },
+          {
+            "points": null,
+            "name": "age",
+            "value": "",
+            "desc": "The state provides birthdates and age data."
+          },
+          {
+            "points": null,
+            "name": "felon",
+            "value": "",
+            "desc": "The state offers clarity on ex-felon registration and purging."
+          }
+        ],
+        "name": "Transparency",
+        "stars": "",
+        "altname": "transparency"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "schedule",
+            "value": "",
+            "desc": "The state provides regular data releases (quarterly, monthly, or weekly)."
+          },
+          {
+            "points": null,
+            "name": "aquisition",
+            "value": "",
+            "desc": "The state disseminates data in an easily retrievable manner (email, web download, or mail)."
+          },
+          {
+            "points": null,
+            "name": "indentifiers",
+            "value": "",
+            "desc": "The state is transparent with identifiers."
+          },
+          {
+            "points": null,
+            "name": "contact",
+            "value": "",
+            "desc": "The state provides an in-depth history of voters including telephone numbers and email addresses."
+          }
+        ],
+        "name": "Access",
+        "stars": "",
+        "altname": "access"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "purgedtototal",
+            "value": "",
+            "desc": "Percentage of purged voters to total voters"
+          }
+        ],
+        "name": "Purge History",
+        "stars": "",
+        "altname": "purgehistory"
+      }
+    ],
+    "stars": "0"
+  },
+  {
+    "state": "IN",
+    "categories": [
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "Price",
+            "value": "$/yr",
+            "desc": "The state provides voter registration data for a free or low price."
+          }
+        ],
+        "name": "Cost",
+        "stars": "",
+        "altname": "cost"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "online",
+            "value": "",
+            "desc": "State request procedures are readily available online."
+          },
+          {
+            "points": null,
+            "name": "foia",
+            "value": "",
+            "desc": "The state responds to FOIA requests."
+          },
+          {
+            "points": null,
+            "name": "inquiry",
+            "value": "",
+            "desc": "The state responds to inquiries on their data processing practices."
+          },
+          {
+            "points": null,
+            "name": "errors",
+            "value": "",
+            "desc": "The state will admit errors when found."
+          },
+          {
+            "points": null,
+            "name": "procedure",
+            "value": "",
+            "desc": "The state publicizes procedural changes."
+          },
+          {
+            "points": null,
+            "name": "category",
+            "value": "",
+            "desc": "The state utilizes commonly accepted categories."
+          },
+          {
+            "points": null,
+            "name": "age",
+            "value": "",
+            "desc": "The state provides birthdates and age data."
+          },
+          {
+            "points": null,
+            "name": "felon",
+            "value": "",
+            "desc": "The state offers clarity on ex-felon registration and purging."
+          }
+        ],
+        "name": "Transparency",
+        "stars": "",
+        "altname": "transparency"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "schedule",
+            "value": "",
+            "desc": "The state provides regular data releases (quarterly, monthly, or weekly)."
+          },
+          {
+            "points": null,
+            "name": "aquisition",
+            "value": "",
+            "desc": "The state disseminates data in an easily retrievable manner (email, web download, or mail)."
+          },
+          {
+            "points": null,
+            "name": "indentifiers",
+            "value": "",
+            "desc": "The state is transparent with identifiers."
+          },
+          {
+            "points": null,
+            "name": "contact",
+            "value": "",
+            "desc": "The state provides an in-depth history of voters including telephone numbers and email addresses."
+          }
+        ],
+        "name": "Access",
+        "stars": "",
+        "altname": "access"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "purgedtototal",
+            "value": "",
+            "desc": "Percentage of purged voters to total voters"
+          }
+        ],
+        "name": "Purge History",
+        "stars": "",
+        "altname": "purgehistory"
+      }
+    ],
+    "stars": "0"
+  },
+  {
+    "state": "IA",
+    "categories": [
+      {
+        "items": [
+          {
+            "points": 1,
+            "name": "Price",
+            "value": "$1500/yr",
+            "desc": "The state provides voter registration data for a free or low price."
+          }
+        ],
+        "name": "Cost",
+        "stars": "1",
+        "altname": "cost"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "online",
+            "value": "",
+            "desc": "State request procedures are readily available online."
+          },
+          {
+            "points": null,
+            "name": "foia",
+            "value": "Yes",
+            "desc": "The state responds to FOIA requests."
+          },
+          {
+            "points": null,
+            "name": "inquiry",
+            "value": "",
+            "desc": "The state responds to inquiries on their data processing practices."
+          },
+          {
+            "points": null,
+            "name": "errors",
+            "value": "Yes",
+            "desc": "The state will admit errors when found."
+          },
+          {
+            "points": null,
+            "name": "procedure",
+            "value": "",
+            "desc": "The state publicizes procedural changes."
+          },
+          {
+            "points": null,
+            "name": "category",
+            "value": "",
+            "desc": "The state utilizes commonly accepted categories."
+          },
+          {
+            "points": null,
+            "name": "age",
+            "value": "Yes",
+            "desc": "The state provides birthdates and age data."
+          },
+          {
+            "points": null,
+            "name": "felon",
+            "value": "",
+            "desc": "The state offers clarity on ex-felon registration and purging."
+          }
+        ],
+        "name": "Transparency",
+        "stars": "3",
+        "altname": "transparency"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "schedule",
+            "value": "Weekly",
+            "desc": "The state provides regular data releases (quarterly, monthly, or weekly)."
+          },
+          {
+            "points": null,
+            "name": "aquisition",
+            "value": "Email",
+            "desc": "The state disseminates data in an easily retrievable manner (email, web download, or mail)."
+          },
+          {
+            "points": null,
+            "name": "indentifiers",
+            "value": "",
+            "desc": "The state is transparent with identifiers."
+          },
+          {
+            "points": null,
+            "name": "contact",
+            "value": "Phone",
+            "desc": "The state provides an in-depth history of voters including telephone numbers and email addresses."
+          }
+        ],
+        "name": "Access",
+        "stars": "3",
+        "altname": "access"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "purgedtototal",
+            "value": "6.72",
+            "desc": "Percentage of purged voters to total voters"
+          }
+        ],
+        "name": "Purge History",
+        "stars": "1",
+        "altname": "purgehistory"
+      }
+    ],
+    "stars": "2"
+  },
+  {
+    "state": "KS",
+    "categories": [
+      {
+        "items": [
+          {
+            "points": 2,
+            "name": "Price",
+            "value": "$800/yr",
+            "desc": "The state provides voter registration data for a free or low price."
+          }
+        ],
+        "name": "Cost",
+        "stars": "2",
+        "altname": "cost"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "online",
+            "value": "",
+            "desc": "State request procedures are readily available online."
+          },
+          {
+            "points": null,
+            "name": "foia",
+            "value": "Yes",
+            "desc": "The state responds to FOIA requests."
+          },
+          {
+            "points": null,
+            "name": "inquiry",
+            "value": "",
+            "desc": "The state responds to inquiries on their data processing practices."
+          },
+          {
+            "points": null,
+            "name": "errors",
+            "value": "",
+            "desc": "The state will admit errors when found."
+          },
+          {
+            "points": null,
+            "name": "procedure",
+            "value": "",
+            "desc": "The state publicizes procedural changes."
+          },
+          {
+            "points": null,
+            "name": "category",
+            "value": "",
+            "desc": "The state utilizes commonly accepted categories."
+          },
+          {
+            "points": null,
+            "name": "age",
+            "value": "Yes",
+            "desc": "The state provides birthdates and age data."
+          },
+          {
+            "points": null,
+            "name": "felon",
+            "value": "",
+            "desc": "The state offers clarity on ex-felon registration and purging."
+          }
+        ],
+        "name": "Transparency",
+        "stars": "2",
+        "altname": "transparency"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "schedule",
+            "value": "Quarterly",
+            "desc": "The state provides regular data releases (quarterly, monthly, or weekly)."
+          },
+          {
+            "points": null,
+            "name": "aquisition",
+            "value": "Email",
+            "desc": "The state disseminates data in an easily retrievable manner (email, web download, or mail)."
+          },
+          {
+            "points": null,
+            "name": "indentifiers",
+            "value": "",
+            "desc": "The state is transparent with identifiers."
+          },
+          {
+            "points": null,
+            "name": "contact",
+            "value": "Phone",
+            "desc": "The state provides an in-depth history of voters including telephone numbers and email addresses."
+          }
+        ],
+        "name": "Access",
+        "stars": "1",
+        "altname": "access"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "purgedtototal",
+            "value": "2.2",
+            "desc": "Percentage of purged voters to total voters"
+          }
+        ],
+        "name": "Purge History",
+        "stars": "3",
+        "altname": "purgehistory"
+      }
+    ],
+    "stars": "2"
+  },
+  {
+    "state": "KY",
+    "categories": [
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "Price",
+            "value": "$/yr",
+            "desc": "The state provides voter registration data for a free or low price."
+          }
+        ],
+        "name": "Cost",
+        "stars": "",
+        "altname": "cost"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "online",
+            "value": "",
+            "desc": "State request procedures are readily available online."
+          },
+          {
+            "points": null,
+            "name": "foia",
+            "value": "",
+            "desc": "The state responds to FOIA requests."
+          },
+          {
+            "points": null,
+            "name": "inquiry",
+            "value": "",
+            "desc": "The state responds to inquiries on their data processing practices."
+          },
+          {
+            "points": null,
+            "name": "errors",
+            "value": "",
+            "desc": "The state will admit errors when found."
+          },
+          {
+            "points": null,
+            "name": "procedure",
+            "value": "",
+            "desc": "The state publicizes procedural changes."
+          },
+          {
+            "points": null,
+            "name": "category",
+            "value": "",
+            "desc": "The state utilizes commonly accepted categories."
+          },
+          {
+            "points": null,
+            "name": "age",
+            "value": "",
+            "desc": "The state provides birthdates and age data."
+          },
+          {
+            "points": null,
+            "name": "felon",
+            "value": "",
+            "desc": "The state offers clarity on ex-felon registration and purging."
+          }
+        ],
+        "name": "Transparency",
+        "stars": "",
+        "altname": "transparency"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "schedule",
+            "value": "",
+            "desc": "The state provides regular data releases (quarterly, monthly, or weekly)."
+          },
+          {
+            "points": null,
+            "name": "aquisition",
+            "value": "",
+            "desc": "The state disseminates data in an easily retrievable manner (email, web download, or mail)."
+          },
+          {
+            "points": null,
+            "name": "indentifiers",
+            "value": "",
+            "desc": "The state is transparent with identifiers."
+          },
+          {
+            "points": null,
+            "name": "contact",
+            "value": "",
+            "desc": "The state provides an in-depth history of voters including telephone numbers and email addresses."
+          }
+        ],
+        "name": "Access",
+        "stars": "",
+        "altname": "access"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "purgedtototal",
+            "value": "",
+            "desc": "Percentage of purged voters to total voters"
+          }
+        ],
+        "name": "Purge History",
+        "stars": "",
+        "altname": "purgehistory"
+      }
+    ],
+    "stars": "0"
+  },
+  {
+    "state": "LA",
+    "categories": [
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "Price",
+            "value": "$/yr",
+            "desc": "The state provides voter registration data for a free or low price."
+          }
+        ],
+        "name": "Cost",
+        "stars": "",
+        "altname": "cost"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "online",
+            "value": "",
+            "desc": "State request procedures are readily available online."
+          },
+          {
+            "points": null,
+            "name": "foia",
+            "value": "",
+            "desc": "The state responds to FOIA requests."
+          },
+          {
+            "points": null,
+            "name": "inquiry",
+            "value": "",
+            "desc": "The state responds to inquiries on their data processing practices."
+          },
+          {
+            "points": null,
+            "name": "errors",
+            "value": "",
+            "desc": "The state will admit errors when found."
+          },
+          {
+            "points": null,
+            "name": "procedure",
+            "value": "",
+            "desc": "The state publicizes procedural changes."
+          },
+          {
+            "points": null,
+            "name": "category",
+            "value": "",
+            "desc": "The state utilizes commonly accepted categories."
+          },
+          {
+            "points": null,
+            "name": "age",
+            "value": "",
+            "desc": "The state provides birthdates and age data."
+          },
+          {
+            "points": null,
+            "name": "felon",
+            "value": "",
+            "desc": "The state offers clarity on ex-felon registration and purging."
+          }
+        ],
+        "name": "Transparency",
+        "stars": "",
+        "altname": "transparency"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "schedule",
+            "value": "",
+            "desc": "The state provides regular data releases (quarterly, monthly, or weekly)."
+          },
+          {
+            "points": null,
+            "name": "aquisition",
+            "value": "",
+            "desc": "The state disseminates data in an easily retrievable manner (email, web download, or mail)."
+          },
+          {
+            "points": null,
+            "name": "indentifiers",
+            "value": "",
+            "desc": "The state is transparent with identifiers."
+          },
+          {
+            "points": null,
+            "name": "contact",
+            "value": "",
+            "desc": "The state provides an in-depth history of voters including telephone numbers and email addresses."
+          }
+        ],
+        "name": "Access",
+        "stars": "",
+        "altname": "access"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "purgedtototal",
+            "value": "",
+            "desc": "Percentage of purged voters to total voters"
+          }
+        ],
+        "name": "Purge History",
+        "stars": "",
+        "altname": "purgehistory"
+      }
+    ],
+    "stars": "0"
+  },
+  {
+    "state": "ME",
+    "categories": [
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "Price",
+            "value": "$/yr",
+            "desc": "The state provides voter registration data for a free or low price."
+          }
+        ],
+        "name": "Cost",
+        "stars": "",
+        "altname": "cost"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "online",
+            "value": "",
+            "desc": "State request procedures are readily available online."
+          },
+          {
+            "points": null,
+            "name": "foia",
+            "value": "",
+            "desc": "The state responds to FOIA requests."
+          },
+          {
+            "points": null,
+            "name": "inquiry",
+            "value": "",
+            "desc": "The state responds to inquiries on their data processing practices."
+          },
+          {
+            "points": null,
+            "name": "errors",
+            "value": "",
+            "desc": "The state will admit errors when found."
+          },
+          {
+            "points": null,
+            "name": "procedure",
+            "value": "",
+            "desc": "The state publicizes procedural changes."
+          },
+          {
+            "points": null,
+            "name": "category",
+            "value": "",
+            "desc": "The state utilizes commonly accepted categories."
+          },
+          {
+            "points": null,
+            "name": "age",
+            "value": "",
+            "desc": "The state provides birthdates and age data."
+          },
+          {
+            "points": null,
+            "name": "felon",
+            "value": "",
+            "desc": "The state offers clarity on ex-felon registration and purging."
+          }
+        ],
+        "name": "Transparency",
+        "stars": "",
+        "altname": "transparency"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "schedule",
+            "value": "",
+            "desc": "The state provides regular data releases (quarterly, monthly, or weekly)."
+          },
+          {
+            "points": null,
+            "name": "aquisition",
+            "value": "",
+            "desc": "The state disseminates data in an easily retrievable manner (email, web download, or mail)."
+          },
+          {
+            "points": null,
+            "name": "indentifiers",
+            "value": "",
+            "desc": "The state is transparent with identifiers."
+          },
+          {
+            "points": null,
+            "name": "contact",
+            "value": "",
+            "desc": "The state provides an in-depth history of voters including telephone numbers and email addresses."
+          }
+        ],
+        "name": "Access",
+        "stars": "",
+        "altname": "access"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "purgedtototal",
+            "value": "",
+            "desc": "Percentage of purged voters to total voters"
+          }
+        ],
+        "name": "Purge History",
+        "stars": "",
+        "altname": "purgehistory"
+      }
+    ],
+    "stars": "0"
+  },
+  {
+    "state": "MD",
+    "categories": [
+      {
+        "items": [
+          {
+            "points": 1,
+            "name": "Price",
+            "value": "$1500/yr",
+            "desc": "The state provides voter registration data for a free or low price."
+          }
+        ],
+        "name": "Cost",
+        "stars": "1",
+        "altname": "cost"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "online",
+            "value": "",
+            "desc": "State request procedures are readily available online."
+          },
+          {
+            "points": null,
+            "name": "foia",
+            "value": "Yes",
+            "desc": "The state responds to FOIA requests."
+          },
+          {
+            "points": null,
+            "name": "inquiry",
+            "value": "",
+            "desc": "The state responds to inquiries on their data processing practices."
+          },
+          {
+            "points": null,
+            "name": "errors",
+            "value": "",
+            "desc": "The state will admit errors when found."
+          },
+          {
+            "points": null,
+            "name": "procedure",
+            "value": "",
+            "desc": "The state publicizes procedural changes."
+          },
+          {
+            "points": null,
+            "name": "category",
+            "value": "",
+            "desc": "The state utilizes commonly accepted categories."
+          },
+          {
+            "points": null,
+            "name": "age",
+            "value": "",
+            "desc": "The state provides birthdates and age data."
+          },
+          {
+            "points": null,
+            "name": "felon",
+            "value": "",
+            "desc": "The state offers clarity on ex-felon registration and purging."
+          }
+        ],
+        "name": "Transparency",
+        "stars": "1",
+        "altname": "transparency"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "schedule",
+            "value": "Monthly",
+            "desc": "The state provides regular data releases (quarterly, monthly, or weekly)."
+          },
+          {
+            "points": null,
+            "name": "aquisition",
+            "value": "Email",
+            "desc": "The state disseminates data in an easily retrievable manner (email, web download, or mail)."
+          },
+          {
+            "points": null,
+            "name": "indentifiers",
+            "value": "",
+            "desc": "The state is transparent with identifiers."
+          },
+          {
+            "points": null,
+            "name": "contact",
+            "value": "",
+            "desc": "The state provides an in-depth history of voters including telephone numbers and email addresses."
+          }
+        ],
+        "name": "Access",
+        "stars": "2",
+        "altname": "access"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "purgedtototal",
+            "value": "",
+            "desc": "Percentage of purged voters to total voters"
+          }
+        ],
+        "name": "Purge History",
+        "stars": "",
+        "altname": "purgehistory"
+      }
+    ],
+    "stars": "1"
+  },
+  {
+    "state": "MA",
+    "categories": [
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "Price",
+            "value": "$/yr",
+            "desc": "The state provides voter registration data for a free or low price."
+          }
+        ],
+        "name": "Cost",
+        "stars": "",
+        "altname": "cost"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "online",
+            "value": "",
+            "desc": "State request procedures are readily available online."
+          },
+          {
+            "points": null,
+            "name": "foia",
+            "value": "",
+            "desc": "The state responds to FOIA requests."
+          },
+          {
+            "points": null,
+            "name": "inquiry",
+            "value": "",
+            "desc": "The state responds to inquiries on their data processing practices."
+          },
+          {
+            "points": null,
+            "name": "errors",
+            "value": "",
+            "desc": "The state will admit errors when found."
+          },
+          {
+            "points": null,
+            "name": "procedure",
+            "value": "",
+            "desc": "The state publicizes procedural changes."
+          },
+          {
+            "points": null,
+            "name": "category",
+            "value": "",
+            "desc": "The state utilizes commonly accepted categories."
+          },
+          {
+            "points": null,
+            "name": "age",
+            "value": "",
+            "desc": "The state provides birthdates and age data."
+          },
+          {
+            "points": null,
+            "name": "felon",
+            "value": "",
+            "desc": "The state offers clarity on ex-felon registration and purging."
+          }
+        ],
+        "name": "Transparency",
+        "stars": "",
+        "altname": "transparency"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "schedule",
+            "value": "",
+            "desc": "The state provides regular data releases (quarterly, monthly, or weekly)."
+          },
+          {
+            "points": null,
+            "name": "aquisition",
+            "value": "",
+            "desc": "The state disseminates data in an easily retrievable manner (email, web download, or mail)."
+          },
+          {
+            "points": null,
+            "name": "indentifiers",
+            "value": "",
+            "desc": "The state is transparent with identifiers."
+          },
+          {
+            "points": null,
+            "name": "contact",
+            "value": "",
+            "desc": "The state provides an in-depth history of voters including telephone numbers and email addresses."
+          }
+        ],
+        "name": "Access",
+        "stars": "",
+        "altname": "access"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "purgedtototal",
+            "value": "",
+            "desc": "Percentage of purged voters to total voters"
+          }
+        ],
+        "name": "Purge History",
+        "stars": "",
+        "altname": "purgehistory"
+      }
+    ],
+    "stars": "0"
+  },
+  {
+    "state": "MI",
+    "categories": [
+      {
+        "items": [
+          {
+            "points": 2,
+            "name": "Price",
+            "value": "$600/yr",
+            "desc": "The state provides voter registration data for a free or low price."
+          }
+        ],
+        "name": "Cost",
+        "stars": "2",
+        "altname": "cost"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "online",
+            "value": "",
+            "desc": "State request procedures are readily available online."
+          },
+          {
+            "points": null,
+            "name": "foia",
+            "value": "Yes",
+            "desc": "The state responds to FOIA requests."
+          },
+          {
+            "points": null,
+            "name": "inquiry",
+            "value": "",
+            "desc": "The state responds to inquiries on their data processing practices."
+          },
+          {
+            "points": null,
+            "name": "errors",
+            "value": "",
+            "desc": "The state will admit errors when found."
+          },
+          {
+            "points": null,
+            "name": "procedure",
+            "value": "",
+            "desc": "The state publicizes procedural changes."
+          },
+          {
+            "points": null,
+            "name": "category",
+            "value": "",
+            "desc": "The state utilizes commonly accepted categories."
+          },
+          {
+            "points": null,
+            "name": "age",
+            "value": "Yes",
+            "desc": "The state provides birthdates and age data."
+          },
+          {
+            "points": null,
+            "name": "felon",
+            "value": "",
+            "desc": "The state offers clarity on ex-felon registration and purging."
+          }
+        ],
+        "name": "Transparency",
+        "stars": "2",
+        "altname": "transparency"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "schedule",
+            "value": "Monthly",
+            "desc": "The state provides regular data releases (quarterly, monthly, or weekly)."
+          },
+          {
+            "points": null,
+            "name": "aquisition",
+            "value": "Mail",
+            "desc": "The state disseminates data in an easily retrievable manner (email, web download, or mail)."
+          },
+          {
+            "points": null,
+            "name": "indentifiers",
+            "value": "",
+            "desc": "The state is transparent with identifiers."
+          },
+          {
+            "points": null,
+            "name": "contact",
+            "value": "",
+            "desc": "The state provides an in-depth history of voters including telephone numbers and email addresses."
+          }
+        ],
+        "name": "Access",
+        "stars": "0",
+        "altname": "access"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "purgedtototal",
+            "value": "1.26",
+            "desc": "Percentage of purged voters to total voters"
+          }
+        ],
+        "name": "Purge History",
+        "stars": "3",
+        "altname": "purgehistory"
+      }
+    ],
+    "stars": "2"
+  },
+  {
+    "state": "MN",
+    "categories": [
+      {
+        "items": [
+          {
+            "points": 2,
+            "name": "Price",
+            "value": "$550/yr",
+            "desc": "The state provides voter registration data for a free or low price."
+          }
+        ],
+        "name": "Cost",
+        "stars": "2",
+        "altname": "cost"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "online",
+            "value": "",
+            "desc": "State request procedures are readily available online."
+          },
+          {
+            "points": null,
+            "name": "foia",
+            "value": "",
+            "desc": "The state responds to FOIA requests."
+          },
+          {
+            "points": null,
+            "name": "inquiry",
+            "value": "",
+            "desc": "The state responds to inquiries on their data processing practices."
+          },
+          {
+            "points": null,
+            "name": "errors",
+            "value": "",
+            "desc": "The state will admit errors when found."
+          },
+          {
+            "points": null,
+            "name": "procedure",
+            "value": "",
+            "desc": "The state publicizes procedural changes."
+          },
+          {
+            "points": null,
+            "name": "category",
+            "value": "",
+            "desc": "The state utilizes commonly accepted categories."
+          },
+          {
+            "points": null,
+            "name": "age",
+            "value": "",
+            "desc": "The state provides birthdates and age data."
+          },
+          {
+            "points": null,
+            "name": "felon",
+            "value": "",
+            "desc": "The state offers clarity on ex-felon registration and purging."
+          }
+        ],
+        "name": "Transparency",
+        "stars": "",
+        "altname": "transparency"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "schedule",
+            "value": "Monthly",
+            "desc": "The state provides regular data releases (quarterly, monthly, or weekly)."
+          },
+          {
+            "points": null,
+            "name": "aquisition",
+            "value": "",
+            "desc": "The state disseminates data in an easily retrievable manner (email, web download, or mail)."
+          },
+          {
+            "points": null,
+            "name": "indentifiers",
+            "value": "",
+            "desc": "The state is transparent with identifiers."
+          },
+          {
+            "points": null,
+            "name": "contact",
+            "value": "Phone",
+            "desc": "The state provides an in-depth history of voters including telephone numbers and email addresses."
+          }
+        ],
+        "name": "Access",
+        "stars": "1",
+        "altname": "access"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "purgedtototal",
+            "value": "0.41",
+            "desc": "Percentage of purged voters to total voters"
+          }
+        ],
+        "name": "Purge History",
+        "stars": "3",
+        "altname": "purgehistory"
+      }
+    ],
+    "stars": "2"
+  },
+  {
+    "state": "MS",
+    "categories": [
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "Price",
+            "value": "$/yr",
+            "desc": "The state provides voter registration data for a free or low price."
+          }
+        ],
+        "name": "Cost",
+        "stars": "",
+        "altname": "cost"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "online",
+            "value": "",
+            "desc": "State request procedures are readily available online."
+          },
+          {
+            "points": null,
+            "name": "foia",
+            "value": "",
+            "desc": "The state responds to FOIA requests."
+          },
+          {
+            "points": null,
+            "name": "inquiry",
+            "value": "",
+            "desc": "The state responds to inquiries on their data processing practices."
+          },
+          {
+            "points": null,
+            "name": "errors",
+            "value": "",
+            "desc": "The state will admit errors when found."
+          },
+          {
+            "points": null,
+            "name": "procedure",
+            "value": "",
+            "desc": "The state publicizes procedural changes."
+          },
+          {
+            "points": null,
+            "name": "category",
+            "value": "",
+            "desc": "The state utilizes commonly accepted categories."
+          },
+          {
+            "points": null,
+            "name": "age",
+            "value": "",
+            "desc": "The state provides birthdates and age data."
+          },
+          {
+            "points": null,
+            "name": "felon",
+            "value": "",
+            "desc": "The state offers clarity on ex-felon registration and purging."
+          }
+        ],
+        "name": "Transparency",
+        "stars": "",
+        "altname": "transparency"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "schedule",
+            "value": "Bi-Anual",
+            "desc": "The state provides regular data releases (quarterly, monthly, or weekly)."
+          },
+          {
+            "points": null,
+            "name": "aquisition",
+            "value": "Mail",
+            "desc": "The state disseminates data in an easily retrievable manner (email, web download, or mail)."
+          },
+          {
+            "points": null,
+            "name": "indentifiers",
+            "value": "",
+            "desc": "The state is transparent with identifiers."
+          },
+          {
+            "points": null,
+            "name": "contact",
+            "value": "",
+            "desc": "The state provides an in-depth history of voters including telephone numbers and email addresses."
+          }
+        ],
+        "name": "Access",
+        "stars": "",
+        "altname": "access"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "purgedtototal",
+            "value": "41.95",
+            "desc": "Percentage of purged voters to total voters"
+          }
+        ],
+        "name": "Purge History",
+        "stars": "0",
+        "altname": "purgehistory"
+      }
+    ],
+    "stars": "0"
+  },
+  {
+    "state": "MO",
+    "categories": [
+      {
+        "items": [
+          {
+            "points": 2,
+            "name": "Price",
+            "value": "$435/yr",
+            "desc": "The state provides voter registration data for a free or low price."
+          }
+        ],
+        "name": "Cost",
+        "stars": "2",
+        "altname": "cost"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "online",
+            "value": "",
+            "desc": "State request procedures are readily available online."
+          },
+          {
+            "points": null,
+            "name": "foia",
+            "value": "Yes",
+            "desc": "The state responds to FOIA requests."
+          },
+          {
+            "points": null,
+            "name": "inquiry",
+            "value": "",
+            "desc": "The state responds to inquiries on their data processing practices."
+          },
+          {
+            "points": null,
+            "name": "errors",
+            "value": "",
+            "desc": "The state will admit errors when found."
+          },
+          {
+            "points": null,
+            "name": "procedure",
+            "value": "",
+            "desc": "The state publicizes procedural changes."
+          },
+          {
+            "points": null,
+            "name": "category",
+            "value": "",
+            "desc": "The state utilizes commonly accepted categories."
+          },
+          {
+            "points": null,
+            "name": "age",
+            "value": "Yes",
+            "desc": "The state provides birthdates and age data."
+          },
+          {
+            "points": null,
+            "name": "felon",
+            "value": "",
+            "desc": "The state offers clarity on ex-felon registration and purging."
+          }
+        ],
+        "name": "Transparency",
+        "stars": "2",
+        "altname": "transparency"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "schedule",
+            "value": "Monthly",
+            "desc": "The state provides regular data releases (quarterly, monthly, or weekly)."
+          },
+          {
+            "points": null,
+            "name": "aquisition",
+            "value": "Email",
+            "desc": "The state disseminates data in an easily retrievable manner (email, web download, or mail)."
+          },
+          {
+            "points": null,
+            "name": "indentifiers",
+            "value": "",
+            "desc": "The state is transparent with identifiers."
+          },
+          {
+            "points": null,
+            "name": "contact",
+            "value": "",
+            "desc": "The state provides an in-depth history of voters including telephone numbers and email addresses."
+          }
+        ],
+        "name": "Access",
+        "stars": "1",
+        "altname": "access"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "purgedtototal",
+            "value": "2.62",
+            "desc": "Percentage of purged voters to total voters"
+          }
+        ],
+        "name": "Purge History",
+        "stars": "2",
+        "altname": "purgehistory"
+      }
+    ],
+    "stars": "2"
+  },
+  {
+    "state": "MT",
+    "categories": [
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "Price",
+            "value": "$/yr",
+            "desc": "The state provides voter registration data for a free or low price."
+          }
+        ],
+        "name": "Cost",
+        "stars": "",
+        "altname": "cost"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "online",
+            "value": "",
+            "desc": "State request procedures are readily available online."
+          },
+          {
+            "points": null,
+            "name": "foia",
+            "value": "",
+            "desc": "The state responds to FOIA requests."
+          },
+          {
+            "points": null,
+            "name": "inquiry",
+            "value": "",
+            "desc": "The state responds to inquiries on their data processing practices."
+          },
+          {
+            "points": null,
+            "name": "errors",
+            "value": "",
+            "desc": "The state will admit errors when found."
+          },
+          {
+            "points": null,
+            "name": "procedure",
+            "value": "",
+            "desc": "The state publicizes procedural changes."
+          },
+          {
+            "points": null,
+            "name": "category",
+            "value": "",
+            "desc": "The state utilizes commonly accepted categories."
+          },
+          {
+            "points": null,
+            "name": "age",
+            "value": "",
+            "desc": "The state provides birthdates and age data."
+          },
+          {
+            "points": null,
+            "name": "felon",
+            "value": "",
+            "desc": "The state offers clarity on ex-felon registration and purging."
+          }
+        ],
+        "name": "Transparency",
+        "stars": "",
+        "altname": "transparency"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "schedule",
+            "value": "",
+            "desc": "The state provides regular data releases (quarterly, monthly, or weekly)."
+          },
+          {
+            "points": null,
+            "name": "aquisition",
+            "value": "",
+            "desc": "The state disseminates data in an easily retrievable manner (email, web download, or mail)."
+          },
+          {
+            "points": null,
+            "name": "indentifiers",
+            "value": "",
+            "desc": "The state is transparent with identifiers."
+          },
+          {
+            "points": null,
+            "name": "contact",
+            "value": "",
+            "desc": "The state provides an in-depth history of voters including telephone numbers and email addresses."
+          }
+        ],
+        "name": "Access",
+        "stars": "",
+        "altname": "access"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "purgedtototal",
+            "value": "0.59",
+            "desc": "Percentage of purged voters to total voters"
+          }
+        ],
+        "name": "Purge History",
+        "stars": "3",
+        "altname": "purgehistory"
+      }
+    ],
+    "stars": "1"
+  },
+  {
+    "state": "NE",
+    "categories": [
+      {
+        "items": [
+          {
+            "points": 1,
+            "name": "Price",
+            "value": "$/yr",
+            "desc": "The state provides voter registration data for a free or low price."
+          }
+        ],
+        "name": "Cost",
+        "stars": "1",
+        "altname": "cost"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "online",
+            "value": "",
+            "desc": "State request procedures are readily available online."
+          },
+          {
+            "points": null,
+            "name": "foia",
+            "value": "",
+            "desc": "The state responds to FOIA requests."
+          },
+          {
+            "points": null,
+            "name": "inquiry",
+            "value": "",
+            "desc": "The state responds to inquiries on their data processing practices."
+          },
+          {
+            "points": null,
+            "name": "errors",
+            "value": "",
+            "desc": "The state will admit errors when found."
+          },
+          {
+            "points": null,
+            "name": "procedure",
+            "value": "",
+            "desc": "The state publicizes procedural changes."
+          },
+          {
+            "points": null,
+            "name": "category",
+            "value": "",
+            "desc": "The state utilizes commonly accepted categories."
+          },
+          {
+            "points": null,
+            "name": "age",
+            "value": "Yes",
+            "desc": "The state provides birthdates and age data."
+          },
+          {
+            "points": null,
+            "name": "felon",
+            "value": "",
+            "desc": "The state offers clarity on ex-felon registration and purging."
+          }
+        ],
+        "name": "Transparency",
+        "stars": "",
+        "altname": "transparency"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "schedule",
+            "value": "Quarterly",
+            "desc": "The state provides regular data releases (quarterly, monthly, or weekly)."
+          },
+          {
+            "points": null,
+            "name": "aquisition",
+            "value": "",
+            "desc": "The state disseminates data in an easily retrievable manner (email, web download, or mail)."
+          },
+          {
+            "points": null,
+            "name": "indentifiers",
+            "value": "",
+            "desc": "The state is transparent with identifiers."
+          },
+          {
+            "points": null,
+            "name": "contact",
+            "value": "Phone",
+            "desc": "The state provides an in-depth history of voters including telephone numbers and email addresses."
+          }
+        ],
+        "name": "Access",
+        "stars": "",
+        "altname": "access"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "purgedtototal",
+            "value": "0.31",
+            "desc": "Percentage of purged voters to total voters"
+          }
+        ],
+        "name": "Purge History",
+        "stars": "3",
+        "altname": "purgehistory"
+      }
+    ],
+    "stars": "1"
+  },
+  {
+    "state": "NV",
+    "categories": [
+      {
+        "items": [
+          {
+            "points": 3,
+            "name": "Price",
+            "value": "$Free/yr",
+            "desc": "The state provides voter registration data for a free or low price."
+          }
+        ],
+        "name": "Cost",
+        "stars": "3",
+        "altname": "cost"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "online",
+            "value": "",
+            "desc": "State request procedures are readily available online."
+          },
+          {
+            "points": null,
+            "name": "foia",
+            "value": "Yes",
+            "desc": "The state responds to FOIA requests."
+          },
+          {
+            "points": null,
+            "name": "inquiry",
+            "value": "",
+            "desc": "The state responds to inquiries on their data processing practices."
+          },
+          {
+            "points": null,
+            "name": "errors",
+            "value": "",
+            "desc": "The state will admit errors when found."
+          },
+          {
+            "points": null,
+            "name": "procedure",
+            "value": "",
+            "desc": "The state publicizes procedural changes."
+          },
+          {
+            "points": null,
+            "name": "category",
+            "value": "",
+            "desc": "The state utilizes commonly accepted categories."
+          },
+          {
+            "points": null,
+            "name": "age",
+            "value": "Yes",
+            "desc": "The state provides birthdates and age data."
+          },
+          {
+            "points": null,
+            "name": "felon",
+            "value": "",
+            "desc": "The state offers clarity on ex-felon registration and purging."
+          }
+        ],
+        "name": "Transparency",
+        "stars": "2",
+        "altname": "transparency"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "schedule",
+            "value": "Weekly",
+            "desc": "The state provides regular data releases (quarterly, monthly, or weekly)."
+          },
+          {
+            "points": null,
+            "name": "aquisition",
+            "value": "Email",
+            "desc": "The state disseminates data in an easily retrievable manner (email, web download, or mail)."
+          },
+          {
+            "points": null,
+            "name": "indentifiers",
+            "value": "",
+            "desc": "The state is transparent with identifiers."
+          },
+          {
+            "points": null,
+            "name": "contact",
+            "value": "Phone",
+            "desc": "The state provides an in-depth history of voters including telephone numbers and email addresses."
+          }
+        ],
+        "name": "Access",
+        "stars": "3",
+        "altname": "access"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "purgedtototal",
+            "value": "8.84",
+            "desc": "Percentage of purged voters to total voters"
+          }
+        ],
+        "name": "Purge History",
+        "stars": "1",
+        "altname": "purgehistory"
+      }
+    ],
+    "stars": "3"
+  },
+  {
+    "state": "NJ",
+    "categories": [
+      {
+        "items": [
+          {
+            "points": 3,
+            "name": "Price",
+            "value": "$Free/yr",
+            "desc": "The state provides voter registration data for a free or low price."
+          }
+        ],
+        "name": "Cost",
+        "stars": "3",
+        "altname": "cost"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "online",
+            "value": "",
+            "desc": "State request procedures are readily available online."
+          },
+          {
+            "points": null,
+            "name": "foia",
+            "value": "Yes",
+            "desc": "The state responds to FOIA requests."
+          },
+          {
+            "points": null,
+            "name": "inquiry",
+            "value": "",
+            "desc": "The state responds to inquiries on their data processing practices."
+          },
+          {
+            "points": null,
+            "name": "errors",
+            "value": "",
+            "desc": "The state will admit errors when found."
+          },
+          {
+            "points": null,
+            "name": "procedure",
+            "value": "",
+            "desc": "The state publicizes procedural changes."
+          },
+          {
+            "points": null,
+            "name": "category",
+            "value": "",
+            "desc": "The state utilizes commonly accepted categories."
+          },
+          {
+            "points": null,
+            "name": "age",
+            "value": "Yes",
+            "desc": "The state provides birthdates and age data."
+          },
+          {
+            "points": null,
+            "name": "felon",
+            "value": "",
+            "desc": "The state offers clarity on ex-felon registration and purging."
+          }
+        ],
+        "name": "Transparency",
+        "stars": "2",
+        "altname": "transparency"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "schedule",
+            "value": "Monthly",
+            "desc": "The state provides regular data releases (quarterly, monthly, or weekly)."
+          },
+          {
+            "points": null,
+            "name": "aquisition",
+            "value": "Email",
+            "desc": "The state disseminates data in an easily retrievable manner (email, web download, or mail)."
+          },
+          {
+            "points": null,
+            "name": "indentifiers",
+            "value": "",
+            "desc": "The state is transparent with identifiers."
+          },
+          {
+            "points": null,
+            "name": "contact",
+            "value": "",
+            "desc": "The state provides an in-depth history of voters including telephone numbers and email addresses."
+          }
+        ],
+        "name": "Access",
+        "stars": "1",
+        "altname": "access"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "purgedtototal",
+            "value": "1.06",
+            "desc": "Percentage of purged voters to total voters"
+          }
+        ],
+        "name": "Purge History",
+        "stars": "3",
+        "altname": "purgehistory"
+      }
+    ],
+    "stars": "3"
+  },
+  {
+    "state": "NM",
+    "categories": [
+      {
+        "items": [
+          {
+            "points": 1,
+            "name": "Price",
+            "value": "$/yr",
+            "desc": "The state provides voter registration data for a free or low price."
+          }
+        ],
+        "name": "Cost",
+        "stars": "1",
+        "altname": "cost"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "online",
+            "value": "",
+            "desc": "State request procedures are readily available online."
+          },
+          {
+            "points": null,
+            "name": "foia",
+            "value": "",
+            "desc": "The state responds to FOIA requests."
+          },
+          {
+            "points": null,
+            "name": "inquiry",
+            "value": "",
+            "desc": "The state responds to inquiries on their data processing practices."
+          },
+          {
+            "points": null,
+            "name": "errors",
+            "value": "",
+            "desc": "The state will admit errors when found."
+          },
+          {
+            "points": null,
+            "name": "procedure",
+            "value": "",
+            "desc": "The state publicizes procedural changes."
+          },
+          {
+            "points": null,
+            "name": "category",
+            "value": "",
+            "desc": "The state utilizes commonly accepted categories."
+          },
+          {
+            "points": null,
+            "name": "age",
+            "value": "Yes",
+            "desc": "The state provides birthdates and age data."
+          },
+          {
+            "points": null,
+            "name": "felon",
+            "value": "",
+            "desc": "The state offers clarity on ex-felon registration and purging."
+          }
+        ],
+        "name": "Transparency",
+        "stars": "1",
+        "altname": "transparency"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "schedule",
+            "value": "Quarterly",
+            "desc": "The state provides regular data releases (quarterly, monthly, or weekly)."
+          },
+          {
+            "points": null,
+            "name": "aquisition",
+            "value": "",
+            "desc": "The state disseminates data in an easily retrievable manner (email, web download, or mail)."
+          },
+          {
+            "points": null,
+            "name": "indentifiers",
+            "value": "",
+            "desc": "The state is transparent with identifiers."
+          },
+          {
+            "points": null,
+            "name": "contact",
+            "value": "",
+            "desc": "The state provides an in-depth history of voters including telephone numbers and email addresses."
+          }
+        ],
+        "name": "Access",
+        "stars": "",
+        "altname": "access"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "purgedtototal",
+            "value": "1.67",
+            "desc": "Percentage of purged voters to total voters"
+          }
+        ],
+        "name": "Purge History",
+        "stars": "3",
+        "altname": "purgehistory"
+      }
+    ],
+    "stars": "2"
+  },
+  {
+    "state": "NY",
+    "categories": [
+      {
+        "items": [
+          {
+            "points": 3,
+            "name": "Price",
+            "value": "$Free/yr",
+            "desc": "The state provides voter registration data for a free or low price."
+          }
+        ],
+        "name": "Cost",
+        "stars": "3",
+        "altname": "cost"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "online",
+            "value": "",
+            "desc": "State request procedures are readily available online."
+          },
+          {
+            "points": null,
+            "name": "foia",
+            "value": "Yes",
+            "desc": "The state responds to FOIA requests."
+          },
+          {
+            "points": null,
+            "name": "inquiry",
+            "value": "",
+            "desc": "The state responds to inquiries on their data processing practices."
+          },
+          {
+            "points": null,
+            "name": "errors",
+            "value": "",
+            "desc": "The state will admit errors when found."
+          },
+          {
+            "points": null,
+            "name": "procedure",
+            "value": "",
+            "desc": "The state publicizes procedural changes."
+          },
+          {
+            "points": null,
+            "name": "category",
+            "value": "",
+            "desc": "The state utilizes commonly accepted categories."
+          },
+          {
+            "points": null,
+            "name": "age",
+            "value": "Yes",
+            "desc": "The state provides birthdates and age data."
+          },
+          {
+            "points": null,
+            "name": "felon",
+            "value": "",
+            "desc": "The state offers clarity on ex-felon registration and purging."
+          }
+        ],
+        "name": "Transparency",
+        "stars": "2",
+        "altname": "transparency"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "schedule",
+            "value": "Monthly",
+            "desc": "The state provides regular data releases (quarterly, monthly, or weekly)."
+          },
+          {
+            "points": null,
+            "name": "aquisition",
+            "value": "Mail",
+            "desc": "The state disseminates data in an easily retrievable manner (email, web download, or mail)."
+          },
+          {
+            "points": null,
+            "name": "indentifiers",
+            "value": "",
+            "desc": "The state is transparent with identifiers."
+          },
+          {
+            "points": null,
+            "name": "contact",
+            "value": "",
+            "desc": "The state provides an in-depth history of voters including telephone numbers and email addresses."
+          }
+        ],
+        "name": "Access",
+        "stars": "0",
+        "altname": "access"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "purgedtototal",
+            "value": "0.33",
+            "desc": "Percentage of purged voters to total voters"
+          }
+        ],
+        "name": "Purge History",
+        "stars": "3",
+        "altname": "purgehistory"
+      }
+    ],
+    "stars": "2"
+  },
+  {
+    "state": "NC",
+    "categories": [
+      {
+        "items": [
+          {
+            "points": 3,
+            "name": "Price",
+            "value": "$Free/yr",
+            "desc": "The state provides voter registration data for a free or low price."
+          }
+        ],
+        "name": "Cost",
+        "stars": "3",
+        "altname": "cost"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "online",
+            "value": "",
+            "desc": "State request procedures are readily available online."
+          },
+          {
+            "points": null,
+            "name": "foia",
+            "value": "Yes",
+            "desc": "The state responds to FOIA requests."
+          },
+          {
+            "points": null,
+            "name": "inquiry",
+            "value": "",
+            "desc": "The state responds to inquiries on their data processing practices."
+          },
+          {
+            "points": null,
+            "name": "errors",
+            "value": "",
+            "desc": "The state will admit errors when found."
+          },
+          {
+            "points": null,
+            "name": "procedure",
+            "value": "",
+            "desc": "The state publicizes procedural changes."
+          },
+          {
+            "points": null,
+            "name": "category",
+            "value": "",
+            "desc": "The state utilizes commonly accepted categories."
+          },
+          {
+            "points": null,
+            "name": "age",
+            "value": "Yes",
+            "desc": "The state provides birthdates and age data."
+          },
+          {
+            "points": null,
+            "name": "felon",
+            "value": "",
+            "desc": "The state offers clarity on ex-felon registration and purging."
+          }
+        ],
+        "name": "Transparency",
+        "stars": "2",
+        "altname": "transparency"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "schedule",
+            "value": "Weekly",
+            "desc": "The state provides regular data releases (quarterly, monthly, or weekly)."
+          },
+          {
+            "points": null,
+            "name": "aquisition",
+            "value": "Download",
+            "desc": "The state disseminates data in an easily retrievable manner (email, web download, or mail)."
+          },
+          {
+            "points": null,
+            "name": "indentifiers",
+            "value": "",
+            "desc": "The state is transparent with identifiers."
+          },
+          {
+            "points": null,
+            "name": "contact",
+            "value": "Phone",
+            "desc": "The state provides an in-depth history of voters including telephone numbers and email addresses."
+          }
+        ],
+        "name": "Access",
+        "stars": "3",
+        "altname": "access"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "purgedtototal",
+            "value": "2.61",
+            "desc": "Percentage of purged voters to total voters"
+          }
+        ],
+        "name": "Purge History",
+        "stars": "2",
+        "altname": "purgehistory"
+      }
+    ],
+    "stars": "3"
+  },
+  {
+    "state": "ND",
+    "categories": [
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "Price",
+            "value": "$/yr",
+            "desc": "The state provides voter registration data for a free or low price."
+          }
+        ],
+        "name": "Cost",
+        "stars": "",
+        "altname": "cost"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "online",
+            "value": "",
+            "desc": "State request procedures are readily available online."
+          },
+          {
+            "points": null,
+            "name": "foia",
+            "value": "",
+            "desc": "The state responds to FOIA requests."
+          },
+          {
+            "points": null,
+            "name": "inquiry",
+            "value": "",
+            "desc": "The state responds to inquiries on their data processing practices."
+          },
+          {
+            "points": null,
+            "name": "errors",
+            "value": "",
+            "desc": "The state will admit errors when found."
+          },
+          {
+            "points": null,
+            "name": "procedure",
+            "value": "",
+            "desc": "The state publicizes procedural changes."
+          },
+          {
+            "points": null,
+            "name": "category",
+            "value": "",
+            "desc": "The state utilizes commonly accepted categories."
+          },
+          {
+            "points": null,
+            "name": "age",
+            "value": "",
+            "desc": "The state provides birthdates and age data."
+          },
+          {
+            "points": null,
+            "name": "felon",
+            "value": "",
+            "desc": "The state offers clarity on ex-felon registration and purging."
+          }
+        ],
+        "name": "Transparency",
+        "stars": "",
+        "altname": "transparency"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "schedule",
+            "value": "",
+            "desc": "The state provides regular data releases (quarterly, monthly, or weekly)."
+          },
+          {
+            "points": null,
+            "name": "aquisition",
+            "value": "",
+            "desc": "The state disseminates data in an easily retrievable manner (email, web download, or mail)."
+          },
+          {
+            "points": null,
+            "name": "indentifiers",
+            "value": "",
+            "desc": "The state is transparent with identifiers."
+          },
+          {
+            "points": null,
+            "name": "contact",
+            "value": "",
+            "desc": "The state provides an in-depth history of voters including telephone numbers and email addresses."
+          }
+        ],
+        "name": "Access",
+        "stars": "",
+        "altname": "access"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "purgedtototal",
+            "value": "",
+            "desc": "Percentage of purged voters to total voters"
+          }
+        ],
+        "name": "Purge History",
+        "stars": "",
+        "altname": "purgehistory"
+      }
+    ],
+    "stars": "0"
+  },
+  {
+    "state": "OH",
+    "categories": [
+      {
+        "items": [
+          {
+            "points": 3,
+            "name": "Price",
+            "value": "$Free/yr",
+            "desc": "The state provides voter registration data for a free or low price."
+          }
+        ],
+        "name": "Cost",
+        "stars": "3",
+        "altname": "cost"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "online",
+            "value": "",
+            "desc": "State request procedures are readily available online."
+          },
+          {
+            "points": null,
+            "name": "foia",
+            "value": "Yes",
+            "desc": "The state responds to FOIA requests."
+          },
+          {
+            "points": null,
+            "name": "inquiry",
+            "value": "",
+            "desc": "The state responds to inquiries on their data processing practices."
+          },
+          {
+            "points": null,
+            "name": "errors",
+            "value": "Yes",
+            "desc": "The state will admit errors when found."
+          },
+          {
+            "points": null,
+            "name": "procedure",
+            "value": "",
+            "desc": "The state publicizes procedural changes."
+          },
+          {
+            "points": null,
+            "name": "category",
+            "value": "",
+            "desc": "The state utilizes commonly accepted categories."
+          },
+          {
+            "points": null,
+            "name": "age",
+            "value": "Yes",
+            "desc": "The state provides birthdates and age data."
+          },
+          {
+            "points": null,
+            "name": "felon",
+            "value": "",
+            "desc": "The state offers clarity on ex-felon registration and purging."
+          }
+        ],
+        "name": "Transparency",
+        "stars": "3",
+        "altname": "transparency"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "schedule",
+            "value": "Weekly",
+            "desc": "The state provides regular data releases (quarterly, monthly, or weekly)."
+          },
+          {
+            "points": null,
+            "name": "aquisition",
+            "value": "Download",
+            "desc": "The state disseminates data in an easily retrievable manner (email, web download, or mail)."
+          },
+          {
+            "points": null,
+            "name": "indentifiers",
+            "value": "",
+            "desc": "The state is transparent with identifiers."
+          },
+          {
+            "points": null,
+            "name": "contact",
+            "value": "",
+            "desc": "The state provides an in-depth history of voters including telephone numbers and email addresses."
+          }
+        ],
+        "name": "Access",
+        "stars": "3",
+        "altname": "access"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "purgedtototal",
+            "value": "2.74",
+            "desc": "Percentage of purged voters to total voters"
+          }
+        ],
+        "name": "Purge History",
+        "stars": "2",
+        "altname": "purgehistory"
+      }
+    ],
+    "stars": "3"
+  },
+  {
+    "state": "OK",
+    "categories": [
+      {
+        "items": [
+          {
+            "points": 3,
+            "name": "Price",
+            "value": "$Free/yr",
+            "desc": "The state provides voter registration data for a free or low price."
+          }
+        ],
+        "name": "Cost",
+        "stars": "3",
+        "altname": "cost"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "online",
+            "value": "",
+            "desc": "State request procedures are readily available online."
+          },
+          {
+            "points": null,
+            "name": "foia",
+            "value": "Yes",
+            "desc": "The state responds to FOIA requests."
+          },
+          {
+            "points": null,
+            "name": "inquiry",
+            "value": "",
+            "desc": "The state responds to inquiries on their data processing practices."
+          },
+          {
+            "points": null,
+            "name": "errors",
+            "value": "",
+            "desc": "The state will admit errors when found."
+          },
+          {
+            "points": null,
+            "name": "procedure",
+            "value": "",
+            "desc": "The state publicizes procedural changes."
+          },
+          {
+            "points": null,
+            "name": "category",
+            "value": "",
+            "desc": "The state utilizes commonly accepted categories."
+          },
+          {
+            "points": null,
+            "name": "age",
+            "value": "Yes",
+            "desc": "The state provides birthdates and age data."
+          },
+          {
+            "points": null,
+            "name": "felon",
+            "value": "",
+            "desc": "The state offers clarity on ex-felon registration and purging."
+          }
+        ],
+        "name": "Transparency",
+        "stars": "2",
+        "altname": "transparency"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "schedule",
+            "value": "Weekly",
+            "desc": "The state provides regular data releases (quarterly, monthly, or weekly)."
+          },
+          {
+            "points": null,
+            "name": "aquisition",
+            "value": "Download",
+            "desc": "The state disseminates data in an easily retrievable manner (email, web download, or mail)."
+          },
+          {
+            "points": null,
+            "name": "indentifiers",
+            "value": "",
+            "desc": "The state is transparent with identifiers."
+          },
+          {
+            "points": null,
+            "name": "contact",
+            "value": "",
+            "desc": "The state provides an in-depth history of voters including telephone numbers and email addresses."
+          }
+        ],
+        "name": "Access",
+        "stars": "3",
+        "altname": "access"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "purgedtototal",
+            "value": "1.78",
+            "desc": "Percentage of purged voters to total voters"
+          }
+        ],
+        "name": "Purge History",
+        "stars": "3",
+        "altname": "purgehistory"
+      }
+    ],
+    "stars": "3"
+  },
+  {
+    "state": "OR",
+    "categories": [
+      {
+        "items": [
+          {
+            "points": 1,
+            "name": "Price",
+            "value": "$/yr",
+            "desc": "The state provides voter registration data for a free or low price."
+          }
+        ],
+        "name": "Cost",
+        "stars": "1",
+        "altname": "cost"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "online",
+            "value": "",
+            "desc": "State request procedures are readily available online."
+          },
+          {
+            "points": null,
+            "name": "foia",
+            "value": "",
+            "desc": "The state responds to FOIA requests."
+          },
+          {
+            "points": null,
+            "name": "inquiry",
+            "value": "",
+            "desc": "The state responds to inquiries on their data processing practices."
+          },
+          {
+            "points": null,
+            "name": "errors",
+            "value": "",
+            "desc": "The state will admit errors when found."
+          },
+          {
+            "points": null,
+            "name": "procedure",
+            "value": "",
+            "desc": "The state publicizes procedural changes."
+          },
+          {
+            "points": null,
+            "name": "category",
+            "value": "",
+            "desc": "The state utilizes commonly accepted categories."
+          },
+          {
+            "points": null,
+            "name": "age",
+            "value": "Yes",
+            "desc": "The state provides birthdates and age data."
+          },
+          {
+            "points": null,
+            "name": "felon",
+            "value": "",
+            "desc": "The state offers clarity on ex-felon registration and purging."
+          }
+        ],
+        "name": "Transparency",
+        "stars": "1",
+        "altname": "transparency"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "schedule",
+            "value": "Quarterly",
+            "desc": "The state provides regular data releases (quarterly, monthly, or weekly)."
+          },
+          {
+            "points": null,
+            "name": "aquisition",
+            "value": "",
+            "desc": "The state disseminates data in an easily retrievable manner (email, web download, or mail)."
+          },
+          {
+            "points": null,
+            "name": "indentifiers",
+            "value": "",
+            "desc": "The state is transparent with identifiers."
+          },
+          {
+            "points": null,
+            "name": "contact",
+            "value": "Phone",
+            "desc": "The state provides an in-depth history of voters including telephone numbers and email addresses."
+          }
+        ],
+        "name": "Access",
+        "stars": "0",
+        "altname": "access"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "purgedtototal",
+            "value": "0.36",
+            "desc": "Percentage of purged voters to total voters"
+          }
+        ],
+        "name": "Purge History",
+        "stars": "3",
+        "altname": "purgehistory"
+      }
+    ],
+    "stars": "2"
+  },
+  {
+    "state": "PA",
+    "categories": [
+      {
+        "items": [
+          {
+            "points": 2,
+            "name": "Price",
+            "value": "$240/yr",
+            "desc": "The state provides voter registration data for a free or low price."
+          }
+        ],
+        "name": "Cost",
+        "stars": "2",
+        "altname": "cost"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "online",
+            "value": "",
+            "desc": "State request procedures are readily available online."
+          },
+          {
+            "points": null,
+            "name": "foia",
+            "value": "Yes",
+            "desc": "The state responds to FOIA requests."
+          },
+          {
+            "points": null,
+            "name": "inquiry",
+            "value": "",
+            "desc": "The state responds to inquiries on their data processing practices."
+          },
+          {
+            "points": null,
+            "name": "errors",
+            "value": "",
+            "desc": "The state will admit errors when found."
+          },
+          {
+            "points": null,
+            "name": "procedure",
+            "value": "",
+            "desc": "The state publicizes procedural changes."
+          },
+          {
+            "points": null,
+            "name": "category",
+            "value": "",
+            "desc": "The state utilizes commonly accepted categories."
+          },
+          {
+            "points": null,
+            "name": "age",
+            "value": "Yes",
+            "desc": "The state provides birthdates and age data."
+          },
+          {
+            "points": null,
+            "name": "felon",
+            "value": "",
+            "desc": "The state offers clarity on ex-felon registration and purging."
+          }
+        ],
+        "name": "Transparency",
+        "stars": "2",
+        "altname": "transparency"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "schedule",
+            "value": "Monthly",
+            "desc": "The state provides regular data releases (quarterly, monthly, or weekly)."
+          },
+          {
+            "points": null,
+            "name": "aquisition",
+            "value": "Email",
+            "desc": "The state disseminates data in an easily retrievable manner (email, web download, or mail)."
+          },
+          {
+            "points": null,
+            "name": "indentifiers",
+            "value": "",
+            "desc": "The state is transparent with identifiers."
+          },
+          {
+            "points": null,
+            "name": "contact",
+            "value": "",
+            "desc": "The state provides an in-depth history of voters including telephone numbers and email addresses."
+          }
+        ],
+        "name": "Access",
+        "stars": "1",
+        "altname": "access"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "purgedtototal",
+            "value": "3.34",
+            "desc": "Percentage of purged voters to total voters"
+          }
+        ],
+        "name": "Purge History",
+        "stars": "2",
+        "altname": "purgehistory"
+      }
+    ],
+    "stars": "2"
+  },
+  {
+    "state": "RI",
+    "categories": [
+      {
+        "items": [
+          {
+            "points": 2,
+            "name": "Price",
+            "value": "$300/yr",
+            "desc": "The state provides voter registration data for a free or low price."
+          }
+        ],
+        "name": "Cost",
+        "stars": "2",
+        "altname": "cost"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "online",
+            "value": "",
+            "desc": "State request procedures are readily available online."
+          },
+          {
+            "points": null,
+            "name": "foia",
+            "value": "Yes",
+            "desc": "The state responds to FOIA requests."
+          },
+          {
+            "points": null,
+            "name": "inquiry",
+            "value": "",
+            "desc": "The state responds to inquiries on their data processing practices."
+          },
+          {
+            "points": null,
+            "name": "errors",
+            "value": "",
+            "desc": "The state will admit errors when found."
+          },
+          {
+            "points": null,
+            "name": "procedure",
+            "value": "",
+            "desc": "The state publicizes procedural changes."
+          },
+          {
+            "points": null,
+            "name": "category",
+            "value": "",
+            "desc": "The state utilizes commonly accepted categories."
+          },
+          {
+            "points": null,
+            "name": "age",
+            "value": "Yes",
+            "desc": "The state provides birthdates and age data."
+          },
+          {
+            "points": null,
+            "name": "felon",
+            "value": "",
+            "desc": "The state offers clarity on ex-felon registration and purging."
+          }
+        ],
+        "name": "Transparency",
+        "stars": "2",
+        "altname": "transparency"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "schedule",
+            "value": "Monthly",
+            "desc": "The state provides regular data releases (quarterly, monthly, or weekly)."
+          },
+          {
+            "points": null,
+            "name": "aquisition",
+            "value": "Email",
+            "desc": "The state disseminates data in an easily retrievable manner (email, web download, or mail)."
+          },
+          {
+            "points": null,
+            "name": "indentifiers",
+            "value": "",
+            "desc": "The state is transparent with identifiers."
+          },
+          {
+            "points": null,
+            "name": "contact",
+            "value": "Phone and Email",
+            "desc": "The state provides an in-depth history of voters including telephone numbers and email addresses."
+          }
+        ],
+        "name": "Access",
+        "stars": "2",
+        "altname": "access"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "purgedtototal",
+            "value": "3.2",
+            "desc": "Percentage of purged voters to total voters"
+          }
+        ],
+        "name": "Purge History",
+        "stars": "2",
+        "altname": "purgehistory"
+      }
+    ],
+    "stars": "2"
+  },
+  {
+    "state": "SC",
+    "categories": [
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "Price",
+            "value": "$/yr",
+            "desc": "The state provides voter registration data for a free or low price."
+          }
+        ],
+        "name": "Cost",
+        "stars": "",
+        "altname": "cost"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "online",
+            "value": "",
+            "desc": "State request procedures are readily available online."
+          },
+          {
+            "points": null,
+            "name": "foia",
+            "value": "",
+            "desc": "The state responds to FOIA requests."
+          },
+          {
+            "points": null,
+            "name": "inquiry",
+            "value": "",
+            "desc": "The state responds to inquiries on their data processing practices."
+          },
+          {
+            "points": null,
+            "name": "errors",
+            "value": "",
+            "desc": "The state will admit errors when found."
+          },
+          {
+            "points": null,
+            "name": "procedure",
+            "value": "",
+            "desc": "The state publicizes procedural changes."
+          },
+          {
+            "points": null,
+            "name": "category",
+            "value": "",
+            "desc": "The state utilizes commonly accepted categories."
+          },
+          {
+            "points": null,
+            "name": "age",
+            "value": "",
+            "desc": "The state provides birthdates and age data."
+          },
+          {
+            "points": null,
+            "name": "felon",
+            "value": "",
+            "desc": "The state offers clarity on ex-felon registration and purging."
+          }
+        ],
+        "name": "Transparency",
+        "stars": "",
+        "altname": "transparency"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "schedule",
+            "value": "",
+            "desc": "The state provides regular data releases (quarterly, monthly, or weekly)."
+          },
+          {
+            "points": null,
+            "name": "aquisition",
+            "value": "",
+            "desc": "The state disseminates data in an easily retrievable manner (email, web download, or mail)."
+          },
+          {
+            "points": null,
+            "name": "indentifiers",
+            "value": "",
+            "desc": "The state is transparent with identifiers."
+          },
+          {
+            "points": null,
+            "name": "contact",
+            "value": "",
+            "desc": "The state provides an in-depth history of voters including telephone numbers and email addresses."
+          }
+        ],
+        "name": "Access",
+        "stars": "",
+        "altname": "access"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "purgedtototal",
+            "value": "",
+            "desc": "Percentage of purged voters to total voters"
+          }
+        ],
+        "name": "Purge History",
+        "stars": "",
+        "altname": "purgehistory"
+      }
+    ],
+    "stars": "0"
+  },
+  {
+    "state": "SD",
+    "categories": [
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "Price",
+            "value": "$/yr",
+            "desc": "The state provides voter registration data for a free or low price."
+          }
+        ],
+        "name": "Cost",
+        "stars": "",
+        "altname": "cost"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "online",
+            "value": "",
+            "desc": "State request procedures are readily available online."
+          },
+          {
+            "points": null,
+            "name": "foia",
+            "value": "",
+            "desc": "The state responds to FOIA requests."
+          },
+          {
+            "points": null,
+            "name": "inquiry",
+            "value": "",
+            "desc": "The state responds to inquiries on their data processing practices."
+          },
+          {
+            "points": null,
+            "name": "errors",
+            "value": "",
+            "desc": "The state will admit errors when found."
+          },
+          {
+            "points": null,
+            "name": "procedure",
+            "value": "",
+            "desc": "The state publicizes procedural changes."
+          },
+          {
+            "points": null,
+            "name": "category",
+            "value": "",
+            "desc": "The state utilizes commonly accepted categories."
+          },
+          {
+            "points": null,
+            "name": "age",
+            "value": "",
+            "desc": "The state provides birthdates and age data."
+          },
+          {
+            "points": null,
+            "name": "felon",
+            "value": "",
+            "desc": "The state offers clarity on ex-felon registration and purging."
+          }
+        ],
+        "name": "Transparency",
+        "stars": "",
+        "altname": "transparency"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "schedule",
+            "value": "",
+            "desc": "The state provides regular data releases (quarterly, monthly, or weekly)."
+          },
+          {
+            "points": null,
+            "name": "aquisition",
+            "value": "",
+            "desc": "The state disseminates data in an easily retrievable manner (email, web download, or mail)."
+          },
+          {
+            "points": null,
+            "name": "indentifiers",
+            "value": "",
+            "desc": "The state is transparent with identifiers."
+          },
+          {
+            "points": null,
+            "name": "contact",
+            "value": "",
+            "desc": "The state provides an in-depth history of voters including telephone numbers and email addresses."
+          }
+        ],
+        "name": "Access",
+        "stars": "",
+        "altname": "access"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "purgedtototal",
+            "value": "",
+            "desc": "Percentage of purged voters to total voters"
+          }
+        ],
+        "name": "Purge History",
+        "stars": "",
+        "altname": "purgehistory"
+      }
+    ],
+    "stars": "0"
+  },
+  {
+    "state": "TN",
+    "categories": [
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "Price",
+            "value": "$/yr",
+            "desc": "The state provides voter registration data for a free or low price."
+          }
+        ],
+        "name": "Cost",
+        "stars": "",
+        "altname": "cost"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "online",
+            "value": "",
+            "desc": "State request procedures are readily available online."
+          },
+          {
+            "points": null,
+            "name": "foia",
+            "value": "Yes",
+            "desc": "The state responds to FOIA requests."
+          },
+          {
+            "points": null,
+            "name": "inquiry",
+            "value": "",
+            "desc": "The state responds to inquiries on their data processing practices."
+          },
+          {
+            "points": null,
+            "name": "errors",
+            "value": "",
+            "desc": "The state will admit errors when found."
+          },
+          {
+            "points": null,
+            "name": "procedure",
+            "value": "",
+            "desc": "The state publicizes procedural changes."
+          },
+          {
+            "points": null,
+            "name": "category",
+            "value": "",
+            "desc": "The state utilizes commonly accepted categories."
+          },
+          {
+            "points": null,
+            "name": "age",
+            "value": "",
+            "desc": "The state provides birthdates and age data."
+          },
+          {
+            "points": null,
+            "name": "felon",
+            "value": "",
+            "desc": "The state offers clarity on ex-felon registration and purging."
+          }
+        ],
+        "name": "Transparency",
+        "stars": "1",
+        "altname": "transparency"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "schedule",
+            "value": "",
+            "desc": "The state provides regular data releases (quarterly, monthly, or weekly)."
+          },
+          {
+            "points": null,
+            "name": "aquisition",
+            "value": "",
+            "desc": "The state disseminates data in an easily retrievable manner (email, web download, or mail)."
+          },
+          {
+            "points": null,
+            "name": "indentifiers",
+            "value": "",
+            "desc": "The state is transparent with identifiers."
+          },
+          {
+            "points": null,
+            "name": "contact",
+            "value": "",
+            "desc": "The state provides an in-depth history of voters including telephone numbers and email addresses."
+          }
+        ],
+        "name": "Access",
+        "stars": "",
+        "altname": "access"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "purgedtototal",
+            "value": "",
+            "desc": "Percentage of purged voters to total voters"
+          }
+        ],
+        "name": "Purge History",
+        "stars": "",
+        "altname": "purgehistory"
+      }
+    ],
+    "stars": "1"
+  },
+  {
+    "state": "TX",
+    "categories": [
+      {
+        "items": [
+          {
+            "points": 0,
+            "name": "Price",
+            "value": "$6000/yr",
+            "desc": "The state provides voter registration data for a free or low price."
+          }
+        ],
+        "name": "Cost",
+        "stars": "0",
+        "altname": "cost"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "online",
+            "value": "",
+            "desc": "State request procedures are readily available online."
+          },
+          {
+            "points": null,
+            "name": "foia",
+            "value": "Yes",
+            "desc": "The state responds to FOIA requests."
+          },
+          {
+            "points": null,
+            "name": "inquiry",
+            "value": "",
+            "desc": "The state responds to inquiries on their data processing practices."
+          },
+          {
+            "points": null,
+            "name": "errors",
+            "value": "",
+            "desc": "The state will admit errors when found."
+          },
+          {
+            "points": null,
+            "name": "procedure",
+            "value": "",
+            "desc": "The state publicizes procedural changes."
+          },
+          {
+            "points": null,
+            "name": "category",
+            "value": "",
+            "desc": "The state utilizes commonly accepted categories."
+          },
+          {
+            "points": null,
+            "name": "age",
+            "value": "Yes",
+            "desc": "The state provides birthdates and age data."
+          },
+          {
+            "points": null,
+            "name": "felon",
+            "value": "",
+            "desc": "The state offers clarity on ex-felon registration and purging."
+          }
+        ],
+        "name": "Transparency",
+        "stars": "2",
+        "altname": "transparency"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "schedule",
+            "value": "Quarterly",
+            "desc": "The state provides regular data releases (quarterly, monthly, or weekly)."
+          },
+          {
+            "points": null,
+            "name": "aquisition",
+            "value": "Email",
+            "desc": "The state disseminates data in an easily retrievable manner (email, web download, or mail)."
+          },
+          {
+            "points": null,
+            "name": "indentifiers",
+            "value": "",
+            "desc": "The state is transparent with identifiers."
+          },
+          {
+            "points": null,
+            "name": "contact",
+            "value": "",
+            "desc": "The state provides an in-depth history of voters including telephone numbers and email addresses."
+          }
+        ],
+        "name": "Access",
+        "stars": "1",
+        "altname": "access"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "purgedtototal",
+            "value": "0",
+            "desc": "Percentage of purged voters to total voters"
+          }
+        ],
+        "name": "Purge History",
+        "stars": "3",
+        "altname": "purgehistory"
+      }
+    ],
+    "stars": "2"
+  },
+  {
+    "state": "UT",
+    "categories": [
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "Price",
+            "value": "$/yr",
+            "desc": "The state provides voter registration data for a free or low price."
+          }
+        ],
+        "name": "Cost",
+        "stars": "",
+        "altname": "cost"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "online",
+            "value": "",
+            "desc": "State request procedures are readily available online."
+          },
+          {
+            "points": null,
+            "name": "foia",
+            "value": "",
+            "desc": "The state responds to FOIA requests."
+          },
+          {
+            "points": null,
+            "name": "inquiry",
+            "value": "",
+            "desc": "The state responds to inquiries on their data processing practices."
+          },
+          {
+            "points": null,
+            "name": "errors",
+            "value": "",
+            "desc": "The state will admit errors when found."
+          },
+          {
+            "points": null,
+            "name": "procedure",
+            "value": "",
+            "desc": "The state publicizes procedural changes."
+          },
+          {
+            "points": null,
+            "name": "category",
+            "value": "",
+            "desc": "The state utilizes commonly accepted categories."
+          },
+          {
+            "points": null,
+            "name": "age",
+            "value": "",
+            "desc": "The state provides birthdates and age data."
+          },
+          {
+            "points": null,
+            "name": "felon",
+            "value": "",
+            "desc": "The state offers clarity on ex-felon registration and purging."
+          }
+        ],
+        "name": "Transparency",
+        "stars": "",
+        "altname": "transparency"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "schedule",
+            "value": "",
+            "desc": "The state provides regular data releases (quarterly, monthly, or weekly)."
+          },
+          {
+            "points": null,
+            "name": "aquisition",
+            "value": "",
+            "desc": "The state disseminates data in an easily retrievable manner (email, web download, or mail)."
+          },
+          {
+            "points": null,
+            "name": "indentifiers",
+            "value": "",
+            "desc": "The state is transparent with identifiers."
+          },
+          {
+            "points": null,
+            "name": "contact",
+            "value": "",
+            "desc": "The state provides an in-depth history of voters including telephone numbers and email addresses."
+          }
+        ],
+        "name": "Access",
+        "stars": "",
+        "altname": "access"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "purgedtototal",
+            "value": "",
+            "desc": "Percentage of purged voters to total voters"
+          }
+        ],
+        "name": "Purge History",
+        "stars": "",
+        "altname": "purgehistory"
+      }
+    ],
+    "stars": "0"
+  },
+  {
+    "state": "VT",
+    "categories": [
+      {
+        "items": [
+          {
+            "points": 5,
+            "name": "Price",
+            "value": "$Free/yr",
+            "desc": "The state provides voter registration data for a free or low price."
+          }
+        ],
+        "name": "Cost",
+        "stars": "5",
+        "altname": "cost"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "online",
+            "value": "",
+            "desc": "State request procedures are readily available online."
+          },
+          {
+            "points": null,
+            "name": "foia",
+            "value": "Yes",
+            "desc": "The state responds to FOIA requests."
+          },
+          {
+            "points": null,
+            "name": "inquiry",
+            "value": "",
+            "desc": "The state responds to inquiries on their data processing practices."
+          },
+          {
+            "points": null,
+            "name": "errors",
+            "value": "",
+            "desc": "The state will admit errors when found."
+          },
+          {
+            "points": null,
+            "name": "procedure",
+            "value": "",
+            "desc": "The state publicizes procedural changes."
+          },
+          {
+            "points": null,
+            "name": "category",
+            "value": "",
+            "desc": "The state utilizes commonly accepted categories."
+          },
+          {
+            "points": null,
+            "name": "age",
+            "value": "Yes",
+            "desc": "The state provides birthdates and age data."
+          },
+          {
+            "points": null,
+            "name": "felon",
+            "value": "",
+            "desc": "The state offers clarity on ex-felon registration and purging."
+          }
+        ],
+        "name": "Transparency",
+        "stars": "2",
+        "altname": "transparency"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "schedule",
+            "value": "Monthly",
+            "desc": "The state provides regular data releases (quarterly, monthly, or weekly)."
+          },
+          {
+            "points": null,
+            "name": "aquisition",
+            "value": "Email",
+            "desc": "The state disseminates data in an easily retrievable manner (email, web download, or mail)."
+          },
+          {
+            "points": null,
+            "name": "indentifiers",
+            "value": "",
+            "desc": "The state is transparent with identifiers."
+          },
+          {
+            "points": null,
+            "name": "contact",
+            "value": "",
+            "desc": "The state provides an in-depth history of voters including telephone numbers and email addresses."
+          }
+        ],
+        "name": "Access",
+        "stars": "1",
+        "altname": "access"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "purgedtototal",
+            "value": "3.43",
+            "desc": "Percentage of purged voters to total voters"
+          }
+        ],
+        "name": "Purge History",
+        "stars": "2",
+        "altname": "purgehistory"
+      }
+    ],
+    "stars": "3"
+  },
+  {
+    "state": "VA",
+    "categories": [
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "Price",
+            "value": "$/yr",
+            "desc": "The state provides voter registration data for a free or low price."
+          }
+        ],
+        "name": "Cost",
+        "stars": "",
+        "altname": "cost"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "online",
+            "value": "",
+            "desc": "State request procedures are readily available online."
+          },
+          {
+            "points": null,
+            "name": "foia",
+            "value": "",
+            "desc": "The state responds to FOIA requests."
+          },
+          {
+            "points": null,
+            "name": "inquiry",
+            "value": "",
+            "desc": "The state responds to inquiries on their data processing practices."
+          },
+          {
+            "points": null,
+            "name": "errors",
+            "value": "",
+            "desc": "The state will admit errors when found."
+          },
+          {
+            "points": null,
+            "name": "procedure",
+            "value": "",
+            "desc": "The state publicizes procedural changes."
+          },
+          {
+            "points": null,
+            "name": "category",
+            "value": "",
+            "desc": "The state utilizes commonly accepted categories."
+          },
+          {
+            "points": null,
+            "name": "age",
+            "value": "",
+            "desc": "The state provides birthdates and age data."
+          },
+          {
+            "points": null,
+            "name": "felon",
+            "value": "",
+            "desc": "The state offers clarity on ex-felon registration and purging."
+          }
+        ],
+        "name": "Transparency",
+        "stars": "",
+        "altname": "transparency"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "schedule",
+            "value": "",
+            "desc": "The state provides regular data releases (quarterly, monthly, or weekly)."
+          },
+          {
+            "points": null,
+            "name": "aquisition",
+            "value": "",
+            "desc": "The state disseminates data in an easily retrievable manner (email, web download, or mail)."
+          },
+          {
+            "points": null,
+            "name": "indentifiers",
+            "value": "",
+            "desc": "The state is transparent with identifiers."
+          },
+          {
+            "points": null,
+            "name": "contact",
+            "value": "",
+            "desc": "The state provides an in-depth history of voters including telephone numbers and email addresses."
+          }
+        ],
+        "name": "Access",
+        "stars": "",
+        "altname": "access"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "purgedtototal",
+            "value": "",
+            "desc": "Percentage of purged voters to total voters"
+          }
+        ],
+        "name": "Purge History",
+        "stars": "",
+        "altname": "purgehistory"
+      }
+    ],
+    "stars": "0"
+  },
+  {
+    "state": "WA",
+    "categories": [
+      {
+        "items": [
+          {
+            "points": 5,
+            "name": "Price",
+            "value": "$Free/yr",
+            "desc": "The state provides voter registration data for a free or low price."
+          }
+        ],
+        "name": "Cost",
+        "stars": "5",
+        "altname": "cost"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "online",
+            "value": "",
+            "desc": "State request procedures are readily available online."
+          },
+          {
+            "points": null,
+            "name": "foia",
+            "value": "",
+            "desc": "The state responds to FOIA requests."
+          },
+          {
+            "points": null,
+            "name": "inquiry",
+            "value": "",
+            "desc": "The state responds to inquiries on their data processing practices."
+          },
+          {
+            "points": null,
+            "name": "errors",
+            "value": "",
+            "desc": "The state will admit errors when found."
+          },
+          {
+            "points": null,
+            "name": "procedure",
+            "value": "",
+            "desc": "The state publicizes procedural changes."
+          },
+          {
+            "points": null,
+            "name": "category",
+            "value": "",
+            "desc": "The state utilizes commonly accepted categories."
+          },
+          {
+            "points": null,
+            "name": "age",
+            "value": "Yes",
+            "desc": "The state provides birthdates and age data."
+          },
+          {
+            "points": null,
+            "name": "felon",
+            "value": "",
+            "desc": "The state offers clarity on ex-felon registration and purging."
+          }
+        ],
+        "name": "Transparency",
+        "stars": "1",
+        "altname": "transparency"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "schedule",
+            "value": "Monthly",
+            "desc": "The state provides regular data releases (quarterly, monthly, or weekly)."
+          },
+          {
+            "points": null,
+            "name": "aquisition",
+            "value": "Email",
+            "desc": "The state disseminates data in an easily retrievable manner (email, web download, or mail)."
+          },
+          {
+            "points": null,
+            "name": "indentifiers",
+            "value": "",
+            "desc": "The state is transparent with identifiers."
+          },
+          {
+            "points": null,
+            "name": "contact",
+            "value": "",
+            "desc": "The state provides an in-depth history of voters including telephone numbers and email addresses."
+          }
+        ],
+        "name": "Access",
+        "stars": "1",
+        "altname": "access"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "purgedtototal",
+            "value": "",
+            "desc": "Percentage of purged voters to total voters"
+          }
+        ],
+        "name": "Purge History",
+        "stars": "",
+        "altname": "purgehistory"
+      }
+    ],
+    "stars": "2"
+  },
+  {
+    "state": "WV",
+    "categories": [
+      {
+        "items": [
+          {
+            "points": 2,
+            "name": "Price",
+            "value": "$1000/yr",
+            "desc": "The state provides voter registration data for a free or low price."
+          }
+        ],
+        "name": "Cost",
+        "stars": "2",
+        "altname": "cost"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "online",
+            "value": "",
+            "desc": "State request procedures are readily available online."
+          },
+          {
+            "points": null,
+            "name": "foia",
+            "value": "Yes",
+            "desc": "The state responds to FOIA requests."
+          },
+          {
+            "points": null,
+            "name": "inquiry",
+            "value": "",
+            "desc": "The state responds to inquiries on their data processing practices."
+          },
+          {
+            "points": null,
+            "name": "errors",
+            "value": "",
+            "desc": "The state will admit errors when found."
+          },
+          {
+            "points": null,
+            "name": "procedure",
+            "value": "",
+            "desc": "The state publicizes procedural changes."
+          },
+          {
+            "points": null,
+            "name": "category",
+            "value": "",
+            "desc": "The state utilizes commonly accepted categories."
+          },
+          {
+            "points": null,
+            "name": "age",
+            "value": "Yes",
+            "desc": "The state provides birthdates and age data."
+          },
+          {
+            "points": null,
+            "name": "felon",
+            "value": "",
+            "desc": "The state offers clarity on ex-felon registration and purging."
+          }
+        ],
+        "name": "Transparency",
+        "stars": "2",
+        "altname": "transparency"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "schedule",
+            "value": "Monthly",
+            "desc": "The state provides regular data releases (quarterly, monthly, or weekly)."
+          },
+          {
+            "points": null,
+            "name": "aquisition",
+            "value": "Email",
+            "desc": "The state disseminates data in an easily retrievable manner (email, web download, or mail)."
+          },
+          {
+            "points": null,
+            "name": "indentifiers",
+            "value": "",
+            "desc": "The state is transparent with identifiers."
+          },
+          {
+            "points": null,
+            "name": "contact",
+            "value": "",
+            "desc": "The state provides an in-depth history of voters including telephone numbers and email addresses."
+          }
+        ],
+        "name": "Access",
+        "stars": "1",
+        "altname": "access"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "purgedtototal",
+            "value": "3.37",
+            "desc": "Percentage of purged voters to total voters"
+          }
+        ],
+        "name": "Purge History",
+        "stars": "2",
+        "altname": "purgehistory"
+      }
+    ],
+    "stars": "2"
+  },
+  {
+    "state": "WI",
+    "categories": [
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "Price",
+            "value": "$/yr",
+            "desc": "The state provides voter registration data for a free or low price."
+          }
+        ],
+        "name": "Cost",
+        "stars": "",
+        "altname": "cost"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "online",
+            "value": "",
+            "desc": "State request procedures are readily available online."
+          },
+          {
+            "points": null,
+            "name": "foia",
+            "value": "",
+            "desc": "The state responds to FOIA requests."
+          },
+          {
+            "points": null,
+            "name": "inquiry",
+            "value": "",
+            "desc": "The state responds to inquiries on their data processing practices."
+          },
+          {
+            "points": null,
+            "name": "errors",
+            "value": "",
+            "desc": "The state will admit errors when found."
+          },
+          {
+            "points": null,
+            "name": "procedure",
+            "value": "",
+            "desc": "The state publicizes procedural changes."
+          },
+          {
+            "points": null,
+            "name": "category",
+            "value": "",
+            "desc": "The state utilizes commonly accepted categories."
+          },
+          {
+            "points": null,
+            "name": "age",
+            "value": "",
+            "desc": "The state provides birthdates and age data."
+          },
+          {
+            "points": null,
+            "name": "felon",
+            "value": "",
+            "desc": "The state offers clarity on ex-felon registration and purging."
+          }
+        ],
+        "name": "Transparency",
+        "stars": "",
+        "altname": "transparency"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "schedule",
+            "value": "",
+            "desc": "The state provides regular data releases (quarterly, monthly, or weekly)."
+          },
+          {
+            "points": null,
+            "name": "aquisition",
+            "value": "",
+            "desc": "The state disseminates data in an easily retrievable manner (email, web download, or mail)."
+          },
+          {
+            "points": null,
+            "name": "indentifiers",
+            "value": "",
+            "desc": "The state is transparent with identifiers."
+          },
+          {
+            "points": null,
+            "name": "contact",
+            "value": "",
+            "desc": "The state provides an in-depth history of voters including telephone numbers and email addresses."
+          }
+        ],
+        "name": "Access",
+        "stars": "",
+        "altname": "access"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "purgedtototal",
+            "value": "",
+            "desc": "Percentage of purged voters to total voters"
+          }
+        ],
+        "name": "Purge History",
+        "stars": "",
+        "altname": "purgehistory"
+      }
+    ],
+    "stars": "0"
+  },
+  {
+    "state": "WY",
+    "categories": [
+      {
+        "items": [
+          {
+            "points": 4,
+            "name": "Price",
+            "value": "$240/yr",
+            "desc": "The state provides voter registration data for a free or low price."
+          }
+        ],
+        "name": "Cost",
+        "stars": "4",
+        "altname": "cost"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "online",
+            "value": "",
+            "desc": "State request procedures are readily available online."
+          },
+          {
+            "points": null,
+            "name": "foia",
+            "value": "Yes",
+            "desc": "The state responds to FOIA requests."
+          },
+          {
+            "points": null,
+            "name": "inquiry",
+            "value": "",
+            "desc": "The state responds to inquiries on their data processing practices."
+          },
+          {
+            "points": null,
+            "name": "errors",
+            "value": "",
+            "desc": "The state will admit errors when found."
+          },
+          {
+            "points": null,
+            "name": "procedure",
+            "value": "",
+            "desc": "The state publicizes procedural changes."
+          },
+          {
+            "points": null,
+            "name": "category",
+            "value": "",
+            "desc": "The state utilizes commonly accepted categories."
+          },
+          {
+            "points": null,
+            "name": "age",
+            "value": "",
+            "desc": "The state provides birthdates and age data."
+          },
+          {
+            "points": null,
+            "name": "felon",
+            "value": "",
+            "desc": "The state offers clarity on ex-felon registration and purging."
+          }
+        ],
+        "name": "Transparency",
+        "stars": "1",
+        "altname": "transparency"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "schedule",
+            "value": "Monthly",
+            "desc": "The state provides regular data releases (quarterly, monthly, or weekly)."
+          },
+          {
+            "points": null,
+            "name": "aquisition",
+            "value": "Email",
+            "desc": "The state disseminates data in an easily retrievable manner (email, web download, or mail)."
+          },
+          {
+            "points": null,
+            "name": "indentifiers",
+            "value": "",
+            "desc": "The state is transparent with identifiers."
+          },
+          {
+            "points": null,
+            "name": "contact",
+            "value": "",
+            "desc": "The state provides an in-depth history of voters including telephone numbers and email addresses."
+          }
+        ],
+        "name": "Access",
+        "stars": "1",
+        "altname": "access"
+      },
+      {
+        "items": [
+          {
+            "points": null,
+            "name": "purgedtototal",
+            "value": "8.52",
+            "desc": "Percentage of purged voters to total voters"
+          }
+        ],
+        "name": "Purge History",
+        "stars": "1",
+        "altname": "purgehistory"
+      }
+    ],
+    "stars": "2"
+  }
+]

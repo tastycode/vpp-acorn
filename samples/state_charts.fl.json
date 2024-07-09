@@ -1,0 +1,466 @@
+{
+  "code": "12",
+  "name": "Florida",
+  "end_date": "2024-01-01",
+  "cat1": "state",
+  "datasets": [
+    {
+      "cat3": "age",
+      "data": [
+        {
+          "cat2": "total",
+          "datasets": [
+            {
+              "data": [
+                1769,
+                1300857,
+                2457663,
+                2356589,
+                2287936,
+                2669626,
+                4455690
+              ],
+              "label": "Total Voters"
+            }
+          ],
+          "subtitle": "Total Voters by Age Group",
+          "categories": [
+            "17",
+            "18-24",
+            "25-34",
+            "35-44",
+            "45-54",
+            "55-64",
+            "65+"
+          ],
+          "dp": 101
+        },
+        {
+          "cat2": "drop",
+          "datasets": [
+            {
+              "data": [
+                1,
+                16250,
+                72111,
+                58606,
+                44597,
+                50120,
+                174031
+              ],
+              "label": "Total Voters"
+            }
+          ],
+          "subtitle": "Dropped Voters by Age Group",
+          "categories": [
+            "17",
+            "18-24",
+            "25-34",
+            "35-44",
+            "45-54",
+            "55-64",
+            "65+"
+          ],
+          "dp": 111
+        },
+        {
+          "cat2": "new",
+          "datasets": [
+            {
+              "data": [
+                7073,
+                154390,
+                83711,
+                64779,
+                56385,
+                66348,
+                75000
+              ],
+              "label": "Total Voters"
+            }
+          ],
+          "subtitle": "New Voters by Age Group",
+          "categories": [
+            "17",
+            "18-24",
+            "25-34",
+            "35-44",
+            "45-54",
+            "55-64",
+            "65+"
+          ],
+          "dp": 121
+        }
+      ],
+      "title": "Voters by Age Group"
+    },
+    {
+      "cat3": "status",
+      "data": [
+        {
+          "cat2": "total",
+          "datasets": [
+            {
+              "data": [
+                14323696,
+                1284067
+              ],
+              "label": "Total Voters"
+            }
+          ],
+          "subtitle": "Total Voters by Status",
+          "categories": [
+            "ACT",
+            "INA"
+          ],
+          "dp": 102
+        },
+        {
+          "cat2": "drop",
+          "datasets": [
+            {
+              "data": [
+                196052,
+                220502
+              ],
+              "label": "Total Voters"
+            }
+          ],
+          "subtitle": "Dropped Voters by Status",
+          "categories": [
+            "ACT",
+            "INA"
+          ],
+          "dp": 112
+        },
+        {
+          "cat2": "new",
+          "datasets": [
+            {
+              "data": [
+                454713,
+                53685
+              ],
+              "label": "Total Voters"
+            }
+          ],
+          "subtitle": "New Voters by Status",
+          "categories": [
+            "ACT",
+            "INA"
+          ],
+          "dp": 122
+        }
+      ],
+      "title": "Voters by Status"
+    },
+    {
+      "cat3": "party",
+      "data": [
+        {
+          "cat2": "total",
+          "datasets": [
+            {
+              "data": [
+                1135,
+                6444,
+                856,
+                3979,
+                5262088,
+                2409,
+                209,
+                8959,
+                226469,
+                43598,
+                2615,
+                4415317,
+                784,
+                1880,
+                1557,
+                5630009
+              ],
+              "label": "Total Voters"
+            }
+          ],
+          "subtitle": "Total Voters by Party",
+          "categories": [
+            "BPP",
+            "CPF",
+            "CPP",
+            "CSV",
+            "DEM",
+            "ECO",
+            "FFP",
+            "GRE",
+            "IND",
+            "LPF",
+            "NLP",
+            "NPA",
+            "PEO",
+            "PSL",
+            "REF",
+            "REP"
+          ],
+          "dp": 103
+        },
+        {
+          "cat2": "drop",
+          "datasets": [
+            {
+              "data": [
+                1,
+                113,
+                6,
+                26,
+                150845,
+                35,
+                1,
+                237,
+                3189,
+                1122,
+                11,
+                121343,
+                6,
+                31,
+                58,
+                139530
+              ],
+              "label": "Total Voters"
+            }
+          ],
+          "subtitle": "Dropped Voters by Party",
+          "categories": [
+            "BPP",
+            "CPF",
+            "CPP",
+            "CSV",
+            "DEM",
+            "ECO",
+            "FFP",
+            "GRE",
+            "IND",
+            "LPF",
+            "NLP",
+            "NPA",
+            "PEO",
+            "PSL",
+            "REF",
+            "REP"
+          ],
+          "dp": 113
+        },
+        {
+          "cat2": "new",
+          "datasets": [
+            {
+              "data": [
+                1130,
+                3143,
+                856,
+                4743,
+                124808,
+                1016,
+                64,
+                625,
+                13235,
+                1561,
+                2496,
+                166274,
+                217,
+                125,
+                66,
+                188039
+              ],
+              "label": "Total Voters"
+            }
+          ],
+          "subtitle": "New Voters by Party",
+          "categories": [
+            "BPP",
+            "CPF",
+            "CPP",
+            "CSV",
+            "DEM",
+            "ECO",
+            "FFP",
+            "GRE",
+            "IND",
+            "LPF",
+            "NLP",
+            "NPA",
+            "PEO",
+            "PSL",
+            "REF",
+            "REP"
+          ],
+          "dp": 123
+        }
+      ],
+      "title": "Voters by Party"
+    },
+    {
+      "cat3": "sex",
+      "data": [
+        {
+          "cat2": "total",
+          "datasets": [
+            {
+              "data": [
+                8114845,
+                7081813,
+                408506
+              ],
+              "label": "Total Voters"
+            }
+          ],
+          "subtitle": "Total Voters by Gender",
+          "categories": [
+            "F",
+            "M",
+            "U"
+          ],
+          "dp": 104
+        },
+        {
+          "cat2": "drop",
+          "datasets": [
+            {
+              "data": [
+                200361,
+                203878,
+                12267
+              ],
+              "label": "Total Voters"
+            }
+          ],
+          "subtitle": "Dropped Voters by Gender",
+          "categories": [
+            "F",
+            "M",
+            "U"
+          ],
+          "dp": 114
+        },
+        {
+          "cat2": "new",
+          "datasets": [
+            {
+              "data": [
+                249471,
+                245478,
+                13419
+              ],
+              "label": "Total Voters"
+            }
+          ],
+          "subtitle": "New Voters by Gender",
+          "categories": [
+            "F",
+            "M",
+            "U"
+          ],
+          "dp": 124
+        }
+      ],
+      "title": "Voters by Gender"
+    },
+    {
+      "cat3": "race",
+      "data": [
+        {
+          "cat2": "total",
+          "datasets": [
+            {
+              "data": [
+                47334,
+                343079,
+                2098095,
+                2799941,
+                9492775,
+                305144,
+                80282,
+                441113
+              ],
+              "label": "Total Voters"
+            }
+          ],
+          "subtitle": "Total Voters by Race",
+          "categories": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "9"
+          ],
+          "dp": 105
+        },
+        {
+          "cat2": "drop",
+          "datasets": [
+            {
+              "data": [
+                1745,
+                6192,
+                55422,
+                59039,
+                272676,
+                6912,
+                2823,
+                11745
+              ],
+              "label": "Total Voters"
+            }
+          ],
+          "subtitle": "Dropped Voters by Race",
+          "categories": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "9"
+          ],
+          "dp": 115
+        },
+        {
+          "cat2": "new",
+          "datasets": [
+            {
+              "data": [
+                1302,
+                15519,
+                60776,
+                93253,
+                307590,
+                14089,
+                2197,
+                13672
+              ],
+              "label": "Total Voters"
+            }
+          ],
+          "subtitle": "New Voters by Race",
+          "categories": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "9"
+          ],
+          "dp": 125
+        }
+      ],
+      "title": "Voters by Race"
+    }
+  ],
+  "abv": "FL",
+  "start_date": "2023-01-01"
+}

@@ -1,22 +1,12 @@
 import { IndexedArray, createIndexedArray } from "../utils/indexedArray";
 import { atom } from "jotai";
-import type { StateData, CountyData } from "@/app/counties/types";
-export const statesAtom = atom<IndexedArray<StateData>>(
-  createIndexedArray<StateData>([]),
+import type { PrivateState, PrivateCounty, SummaryStats, Nullable, RegionalStats} from "@/app/counties/types";
+export const statesAtom = atom<IndexedArray<PrivateState>>(
+  createIndexedArray<PrivateState>([]),
 );
-export const countiesAtom = atom<IndexedArray<CountyData>>(
-  createIndexedArray<CountyData>([]),
+export const countiesAtom = atom<IndexedArray<PrivateCounty>>(
+  createIndexedArray<PrivateCounty>([]),
 );
 
-interface PurgeMetadata {
-    count: number
-    mean: number
-    stddev: number
-}
-
-type CountryMetadata = {
-    "*": PurgeMetadata
-
-}
-
-export const MetaAtom = atom<CountryMetadata>({});
+export type CountryMetadata = Nullable<RegionalStats>
+export const countryAtom = atom<CountryMetadata>(null);

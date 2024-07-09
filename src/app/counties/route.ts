@@ -6,6 +6,7 @@ import type {
   CountyData,
   CountyIndexResponse,
   StateCode,
+  PublicStates
 } from "./types";
 
 const formatCountyData = (countyData: CountyFormerData): CountyData => {
@@ -21,6 +22,11 @@ const formatCountyData = (countyData: CountyFormerData): CountyData => {
 };
 
 export async function GET() {
+    const url = `https://back9.voterpurgeproject.org:8443/api/public/us_dataset`
+const resp = await fetch(url)
+const  { states } = await resp.json() as PublicStates
+// todo: integrate new data source once total_voters, purged_voters is available
+
   const stateCounties = R.groupBy(R.prop("State_Abv"), counties);
   // return ctx.db.select().from(schema.county).orderBy(desc(schema.post.id));
   return Response.json({

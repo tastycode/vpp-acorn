@@ -1,18 +1,14 @@
 export type IndexedArray<G> = G[] & {
   _indexes: IndexStore<G>;
   $find: (column: keyof G, needle: G[keyof G]) => G | undefined;
-  $query: (column: keyof G, needle: G[keyof G]) => G[];
+  $query: (column: keyof G, needle: G[keyof G]) => IndexedArray<G>;
 };
 
 type IndexStore<G> = {
   [Property in keyof G]?: { [key: string]: number[] };
 };
 
-export function createIndexedArray<G>(array: G[]): G[] & {
-  _indexes: IndexStore<G>;
-  $find: (column: keyof G, needle: G[keyof G]) => G | undefined;
-  $query: (column: keyof G, needle: G[keyof G]) => G[];
-} {
+export function createIndexedArray<G>(array: G[]): IndexedArray<G> {
   const indexStore: IndexStore<G> = {};
   const columnIndexStore: Record<string, IndexedArray<G>> = {};
 
@@ -82,9 +78,5 @@ export function createIndexedArray<G>(array: G[]): G[] & {
     indexStore[propName] = index;
   }
 
-  return new Proxy(array, handler) as G[] & {
-    _indexes: IndexStore<G>;
-    $find: (column: keyof G, needle: G[keyof G]) => G | undefined;
-    $query: (column: keyof G, needle: G[keyof G]) => G[];
-  };
+  return new Proxy(array, handler) as IndexedArray<G>;
 }

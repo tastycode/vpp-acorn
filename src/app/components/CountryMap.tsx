@@ -4,24 +4,11 @@ import { useEffect, useState } from "react";
 import CountiesSVG from "../counties/index.svg";
 import { useRouter } from "next/router";
 import { useAtom } from "jotai";
-import { statesAtom, countiesAtom } from "../../states/atoms";
-import { CountyData, StateData } from "../counties/types";
-import nj from "numjs";
-import * as R from "ramda";
-
-const featureStats = (dataset: Record<string, any>, column: string) => {
-  const values = dataset.map(R.prop(column));
-  const arr = nj.array(values);
-  console.log("featureStats", values, arr);
-  return {
-    total: arr.sum(),
-    mean: arr.mean(),
-    std: arr.std(),
-  };
-};
+import { statesAtom, countiesAtom, countryAtom } from "../../states/atoms";
+import { Maybe, CountyData, PrivateCounty, PrivateState, StateData, Nullable } from "../counties/types";
 
 type CountryMapProps = {
-  focusOn?: { county?: string; state: string };
+  focusOn?: { countyName?: string; stateCode: string };
 };
 type Bounds = { x: number; y: number; width: number; height: number };
 
@@ -37,41 +24,47 @@ export const CountryMap = ({ focusOn }: CountryMapProps) => {
   const router = useRouter();
   const [states] = useAtom(statesAtom);
   const [counties] = useAtom(countiesAtom);
-  const [state, setState] = useState<StateData>();
-  const [county, setCounty] = useState<CountyData>();
+  const [country] = useAtom(countryAtom);
+  const [state, setState] = useState<PrivateState | undefined>();
+  const [county, setCounty] = useState<PrivateCounty | undefined>();
 
-  const stateCountyFromPath = (path: SVGPathElement) => {
-    const stateFips = path.getAttribute("data-state_fips");
-    if (!stateFips) return [];
-    const countyFips = path.getAttribute("data-county_fips");
-    const fips = stateFips.padStart(2, "0") + countyFips.padStart(3, "");
-    const matchState = states.$find("fips", stateFips);
-    const matchCounty = counties.$find("fips", fips);
-    return [matchState, matchCounty];
+  const stateCountyFromPath = (path: SVGPathElement) : {
+    state: Nullable<PrivateState>,
+    county: Nullable<PrivateCounty>
+  } => {
+    const stateCode = path.getAttribute("data-state_code");
+    if (!stateCode) return {state: null, county: null};
+    const countyName = path.getAttribute("data-county_name");
+    const matchState = states.$find("code", stateCode)!;
+    if (!matchState) {
+      return {state: null, county: null}
+    }
+    const matchCounty = matchState.counties.$find("name", countyName)!;
+    return {state: matchState, county: matchCounty}
   };
   const applyFocusAttributes = () => {
     //debugger;
-    let targetPath : SVGPathElement | SVGGElement | undefined;
-    if (focusOn?.county) {
+    let targetPath : Maybe<SVGPathElement | SVGGElement>;
+    if (focusOn?.countyName) {
       const paths = [...document.querySelectorAll<SVGPathElement>("svg g > g > path")];
       const focusedPath = paths.find((path) => {
-        const [matchState, matchCounty] = stateCountyFromPath(path);
+        const {state: matchState, county: matchCounty} = stateCountyFromPath(path);
         return (
           matchCounty &&
-          matchCounty.county === focusOn.county &&
-          matchState?.code === focusOn.state
+          matchCounty.name === focusOn.countyName &&
+          matchState!.code === focusOn.stateCode
         );
       })
       targetPath = focusedPath;
 
-    } else if (focusOn?.state) {
+    } else if (focusOn?.stateCode) {
       const paths = [...document.querySelectorAll<SVGPathElement>("svg g > g > path")];
       targetPath  = paths.find((path) => {
-        const [matchState, matchCounty] = stateCountyFromPath(path);
-        return matchState?.code === focusOn.state;
+        const {state: matchState, county: matchCounty} = stateCountyFromPath(path);
+        return matchState?.code === focusOn.stateCode;
       })?.closest('g')
     }
-    let zoom = focusOn?.county ? 1.5 : 1;
+    let zoom = focusOn?.countyName ? 1.5 : 1;
     if (targetPath) {
       const pathBounds = targetPath?.getBBox();
       const svg = targetPath?.ownerSVGElement!;
@@ -80,85 +73,72 @@ export const CountryMap = ({ focusOn }: CountryMapProps) => {
      svg?.setAttribute('viewbox', `${x} ${y} ${width} ${height}`)
     }
   }
-  const handleMouseOver = (e: any) => {
-    if (e.target.matches("path")) {
-      const [matchState, matchCounty] = stateCountyFromPath(e.target);
-      setState(matchState as StateData);
-      setCounty(matchCounty as CountyData);
+
+  const mouseOverHandlerFn = (county: PrivateCounty, state: PrivateState) => {
+    return (e: MouseEvent) => {
+      console.log('countyStats', county)
+      setState(state);
+      setCounty(county);
     }
-  };
-  const handleCountyClick = (e) => {
-    const [matchState, matchCounty] = stateCountyFromPath(e.target);
-    if (!router.query.state) { // if county is not set, then only go to state levelon click
+  }
+
+  const countyClickHandlerFn = (matchCounty: PrivateCounty, matchState: PrivateState) => (e) => {
+    if (!router.query.stateCode) { // if county is not set, then only go to state levelon click
       router.push(`/states/${matchState!.code}`);
-    } else if (!router.query.county) {
-      router.push(`/states/${matchState!.code}/county/${matchCounty.county}`);
+    } else if (!router.query.countyName) {
+      router.push(`/states/${matchState!.code}/county/${matchCounty.name}`);
     }
   };
 
   useEffect(() => {
-    const metadata = states.reduce(
-      (o, state) => {
-        o[state["code"]] = {
-          total: featureStats(state.counties, "total_voters"),
-          purged: featureStats(state.counties, "purged_voters"),
-          pcnt: featureStats(state.counties, "purged_pcnt"),
-        };
-        return o;
-      },
-      {
-        "*": {
-          total: featureStats(counties, "total_voters"),
-          purged: featureStats(counties, "purged_voters"),
-          pcnt: featureStats(counties, "purged_pcnt"),
-        },
-      },//The meeting code is 824 190 6161
-    );
+    if (states.length < 50) {
+      console.warn('State data not yet loaded before map')
+      return
+    };
 
     const paths = [...document.querySelectorAll("svg g > g > path")];
-    for (const path of paths) {
-      const [matchState, matchCounty] = stateCountyFromPath(path);
-      if (!matchCounty) continue;
-      const purgeZCountry =
-        (matchCounty.purged_pcnt - metadata["*"]["pcnt"]["mean"]) /
-        metadata["*"]["pcnt"]["std"];
-      const purgeZState =
-        (matchCounty.purged_pcnt - metadata[matchState.code]["pcnt"]["mean"]) /
-        metadata[matchState.code]["pcnt"]["std"];
-      const fillColor = new Color(purgeZState > 0 ? "red" : "blue");
-      const strokeColor = new Color(purgeZCountry > 0 ? "red" : "blue");
-      if (purgeZState > 1) {
-        console.log(matchCounty, purgeZCountry, purgeZState);
-      } else if (purgeZState < -1) {
-      }
+    for (const currentPath of paths) {
+      const path = currentPath as SVGPathElement
+      const {state: matchState, county: matchCounty}= stateCountyFromPath(path);
+  if (!matchState || !matchCounty || !matchCounty.purged_percentage || !country?.purged_percentage.mean) continue;
+
+  /*
+      const favorableColor = {fill: new Color('#66dd66'), stroke: new Color('#33aa33')};
+      const meanColor = {fill: new Color('#dddd66'), stroke: new Color('#aaaa33')};
+      const unfavorableColor = {fill: new Color('#dd6666'), stroke: new Color('#aa3333')};
+      const mixStateColor = matchCounty.purged_percentage_state_z! > 0 ? unfavorableColor : favorableColor;
+      const mixStateFactor = Math.abs(matchCounty.purged_percentage_state_z!) / 2;//
+      const fillColor = meanColor.fill.mix(mixStateColor.fill, mixStateFactor);
+      const mixCountryColor = matchCounty.purged_percentage_country_z! > 0 ? unfavorableColor : favorableColor;
+      const mixCountryFactor = Math.abs(matchCounty.purged_percentage_country_z!) / 2;
+      const strokeColor = meanColor.stroke.mix(mixCountryColor.stroke, mixCountryFactor);
+      */
+
+      // meanColor is hue 105. at 2 standard deviations higher purge, we want it to be
+      // hue 0 (#dd6666) and 2 standard deviations under the mean purge we want it at
+      // hue 205 (#66dd66) .  if z is -2, then -1 * -2 * 50  = 100. if z is 2 then -1 * 2 * 50 = -100
+      // FYI. Calling rotate on meanColor mutates meanColor 😱
+     const meanHex = '#dddd66'
+      const freshMeanColor = () => new Color(meanHex)
+      const fillColor = freshMeanColor().rotate(-1 * matchCounty.purged_percentage_state_z! * 50)
+      const strokeColor = freshMeanColor().rotate(-1 * matchCounty.purged_percentage_country_z! * 50).darken(20);
 
       // zoom into state
-
-      path.setAttribute("data-z_state", purgeZState);
-      path.setAttribute("data-purged_pcnt", matchCounty.purged_pcnt);
-      path.setAttribute("data-z_country", purgeZCountry);
-      path.setAttribute(
-        "data-m_state",
-        metadata[matchState.code]["pcnt"]["mean"],
-      );
-      path.setAttribute("data-m_country", metadata["*"]["pcnt"]["mean"]);
-
-      path.style.fill = fillColor
-        .saturation((Math.abs(purgeZCountry) / 3.0) * 100.0)
-        .to();
-      path.style.stroke = strokeColor
-        .saturation((Math.abs(purgeZState) / 3.0) * 100.0)
-        .to();
+      path.addEventListener('mouseover', mouseOverHandlerFn(matchCounty, matchState));
+      path.style.fill = fillColor.toRgb();
+      path.style.stroke = strokeColor.toRgb();
+      path.addEventListener('mouseover', mouseOverHandlerFn(matchCounty, matchState))
+      path.addEventListener('click', countyClickHandlerFn(matchCounty, matchState))
 
     }
     applyFocusAttributes();
-  }, [counties]);
+  }, [states, counties]);
   return (
-    <div onMouseOver={handleMouseOver} onClick={handleCountyClick}>
-      <pre style={{ display: "block", height: "1.5rem" }}>
-        {JSON.stringify(county)}
-      </pre>
+    <div>
       <CountiesSVG />
+      <pre style={{ display: "block", height: "1.5rem" }}>
+        {JSON.stringify(county, null, 4)}
+      </pre>
     </div>
   );
 };
