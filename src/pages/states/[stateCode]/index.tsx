@@ -21,6 +21,8 @@ import * as R from 'ramda'
 import { chartDataFrom, chartOptionsFrom } from '@/app/utils';
 import { useAtom } from 'jotai';
 import { useEffect, useMemo } from 'react';
+import { Badge } from "@/components/ui/badge";
+
   ChartJS.register(
     CategoryScale,
     LinearScale,
@@ -29,6 +31,50 @@ import { useEffect, useMemo } from 'react';
     Tooltip,
     Legend
   );
+
+
+  const VPPScoreHeader = (scorecard: PublicStateScorecard) => {
+    return (
+      <div className="bg-red-600 text-white p-4 text-center">
+        VPP Score: <Badge className="ml-1">
+            {Array.from({length: parseInt(scorecard.stars)}, () => "⭐").join("")}
+            </Badge>
+      </div>
+    );
+  };
+  import React from 'react';
+
+  const Section = ({ title, stars, items }) => {
+    return (
+      <div className="p-4 border-b last:border-b-0">
+        <h3 className="text-lg font-bold text-red-600">{title} <span>{'⭐️'.repeat(stars)}</span></h3>
+        {items.filter(item => item.value).map((item, index) => (
+          <div key={index} className="mt-2">
+            <p className="font-semibold">{item.desc}</p>
+            <p className="mt-1 text-gray-500 italic">{item.value}</p>
+          </div>
+        ))}
+      </div>
+    );
+  };
+  
+  const VPPScoreCard = ({ scorecard }) => {
+    return (
+      <div className="max-w-lg mx-auto bg-white shadow-md rounded-lg overflow-hidden">
+        <VPPScoreHeader scorecard={scorecard}/>
+        <div className="divide-y">
+          {scorecard.categories.map((category, index) => (
+            <Section 
+              key={index}
+              title={category.name}
+              stars={category.stars}
+              items={category.items}
+            />
+          ))}
+        </div>
+      </div>
+    );
+  };
 
 
 
@@ -68,43 +114,11 @@ const StatePage: React.FC<StatePageProps> = ({ stateIndex, state }) => {
     const { stateCode } = router.query as { stateCode: StateCode; };
     let scorecardCategories = state?.scorecard?.categories ?? []
     return (
-        <div>
+      <div className="z-10 max-w-5xl w-full flex-col items-center justify-between font-mono text-sm lg:flex">
             <h1>State: {state?.name}</h1>
             <CountryMap focusOn={{stateCode}}/>
-            <div className="state-scorecard">
-            <pre> ∑ {JSON.stringify(state?.scorecard)} ∆</pre>
-                <div className="state-scorecard--header">
-                VPP Score: {scorecardCategories.reduce((acc,i) => {
-                    const stars = parseInt(i.stars)
-                    if (!isNaN(stars)) {
-                        console.log(i, stars)
-                        acc += stars
-                    }
-                    return acc
-                },0) / scorecardCategories.length
-            }
-                </div>
-                {scorecardCategories.map((category) =>
-                    <div className="state-scorecard-section">
-                        <h2>{category.name}</h2>
-                        <div className="state-scorecard-section--star">
-                            {category.stars}
-                        </div>
-                        <div className='state-scorecard-section--items'>
-                            {category.items.map((item) => {
-                                return <div className='state-scorecard-section--item'>
-                                    <h3>{item.name}</h3>
-                                    <p>{item.desc}</p>
-                                    <b>{item.value}</b>
-                                </div>
-                            })}
-
-                        </div>
-                    </div>
-                )}
-
-
-            </div>
+        <div>
+            {state.scorecard && <VPPScoreCard scorecard={state.scorecard}/>}
 {(state?.chartStats?.datasets ?? []).map((stateStat: ChartDataset) => {
     return <>
     <h2>{stateStat.title}</h2>
@@ -113,11 +127,9 @@ const StatePage: React.FC<StatePageProps> = ({ stateIndex, state }) => {
 })}
 </>})}
 
-            <pre>
-                {JSON.stringify(state, null, 2)}
-            </pre>
             {/* Add other relevant data and structure */}
         </div>
+      </div>
     );
 };
 

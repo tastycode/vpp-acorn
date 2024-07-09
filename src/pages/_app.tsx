@@ -3,6 +3,7 @@ import { useAtom } from "jotai";
 import { useEffect } from "react";
 import { statesAtom, countiesAtom, countryAtom } from "../states/atoms";
 import { enhanceData } from '@/utils/enhanceData'
+import '@/app/globals.css'
 
 function PurgeApp({ Component, pageProps }) {
   const enhancedData = enhanceData(pageProps)
@@ -18,7 +19,9 @@ function PurgeApp({ Component, pageProps }) {
     }
   }, [pageProps]);
 
-  return <Component {...pageProps} />;
+  return <main className="flex min-h-screen flex-col items-center justify-between p-24">
+      <Component {...pageProps} />;
+    </main>
 }
 
 export default PurgeApp;

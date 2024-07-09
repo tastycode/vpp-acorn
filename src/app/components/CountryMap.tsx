@@ -1,7 +1,8 @@
 "use client";
 import { Color } from "@fly-lab/color-magic";
 import { useEffect, useState } from "react";
-import CountiesSVG from "../counties/index.svg";
+import CountiesSVG from "@/app/counties/index.svg";
+import StatesSVG from "@/app/states/index.svg"
 import { useRouter } from "next/router";
 import { useAtom } from "jotai";
 import { statesAtom, countiesAtom, countryAtom } from "../../states/atoms";
@@ -42,6 +43,12 @@ export const CountryMap = ({ focusOn }: CountryMapProps) => {
     const matchCounty = matchState.counties.$find("name", countyName)!;
     return {state: matchState, county: matchCounty}
   };
+
+  const stateFromPath = (path: SVGPathElement) : PrivateState => {
+    const className = path.getAttribute('class')
+    const stateCode = className!.match(/index_svg__(?<stateCode>[a-z]{2})/)!.groups.stateCode.toUpperCase()
+    return states.$find("code", stateCode)
+  }
   const applyFocusAttributes = () => {
     //debugger;
     let targetPath : Maybe<SVGPathElement | SVGGElement>;
@@ -96,30 +103,18 @@ export const CountryMap = ({ focusOn }: CountryMapProps) => {
       return
     };
 
-    const paths = [...document.querySelectorAll("svg g > g > path")];
-    for (const currentPath of paths) {
+     const meanHex = '#dddd66'
+      const freshMeanColor = () => new Color(meanHex)
+    const countyPaths = [...document.querySelectorAll(".country-county svg g > g > path")];
+    for (const currentPath of countyPaths) {
       const path = currentPath as SVGPathElement
       const {state: matchState, county: matchCounty}= stateCountyFromPath(path);
   if (!matchState || !matchCounty || !matchCounty.purged_percentage || !country?.purged_percentage.mean) continue;
-
-  /*
-      const favorableColor = {fill: new Color('#66dd66'), stroke: new Color('#33aa33')};
-      const meanColor = {fill: new Color('#dddd66'), stroke: new Color('#aaaa33')};
-      const unfavorableColor = {fill: new Color('#dd6666'), stroke: new Color('#aa3333')};
-      const mixStateColor = matchCounty.purged_percentage_state_z! > 0 ? unfavorableColor : favorableColor;
-      const mixStateFactor = Math.abs(matchCounty.purged_percentage_state_z!) / 2;//
-      const fillColor = meanColor.fill.mix(mixStateColor.fill, mixStateFactor);
-      const mixCountryColor = matchCounty.purged_percentage_country_z! > 0 ? unfavorableColor : favorableColor;
-      const mixCountryFactor = Math.abs(matchCounty.purged_percentage_country_z!) / 2;
-      const strokeColor = meanColor.stroke.mix(mixCountryColor.stroke, mixCountryFactor);
-      */
 
       // meanColor is hue 105. at 2 standard deviations higher purge, we want it to be
       // hue 0 (#dd6666) and 2 standard deviations under the mean purge we want it at
       // hue 205 (#66dd66) .  if z is -2, then -1 * -2 * 50  = 100. if z is 2 then -1 * 2 * 50 = -100
       // FYI. Calling rotate on meanColor mutates meanColor 😱
-     const meanHex = '#dddd66'
-      const freshMeanColor = () => new Color(meanHex)
       const fillColor = freshMeanColor().rotate(-1 * matchCounty.purged_percentage_state_z! * 50)
       const strokeColor = freshMeanColor().rotate(-1 * matchCounty.purged_percentage_country_z! * 50).darken(20);
 
@@ -131,16 +126,36 @@ export const CountryMap = ({ focusOn }: CountryMapProps) => {
       path.addEventListener('click', countyClickHandlerFn(matchCounty, matchState))
 
     }
+    const statePaths = [...document.querySelectorAll<SVGPathElement>('.country-state svg > g  > path')]
+    for (const statePath of statePaths) {
+      const state = stateFromPath(statePath);
+      if (!state?.stats) continue;
+      const fillColor = freshMeanColor().rotate(-1 * state.stats.purged_percentage_country_z! * 50)
+      statePath.style.fill = fillColor.toRgb();
+      statePath.addEventListener('click' , () => {
+        router.push(`/states/${state!.code}`);
+      })
+
+    }
+
     applyFocusAttributes();
   }, [states, counties]);
-  return (
-    <div>
-      <CountiesSVG />
-      <pre style={{ display: "block", height: "1.5rem" }}>
-        {JSON.stringify(county, null, 4)}
-      </pre>
+  if (focusOn?.stateCode) {
+    return <div className="country-county w-full h-auto max-w-full overflow-hidden">
+        <CountiesSVG />
     </div>
-  );
+  } else {
+    return (<>
+        <div className="hidden lg:block w-full h-auto max-w-full overflow-hidden country-county">
+          <CountiesSVG />
+        </div>
+        <div className="block lg:hidden w-full country-state">
+          <StatesSVG/>
+        </div>
+      </>
+    );
+
+  }
 };
 
 export default CountryMap;
