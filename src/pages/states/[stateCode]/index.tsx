@@ -1,11 +1,9 @@
 "use client";
 
 import CountryMap from '@/app/components/CountryMap';
-import { ChartData, ChartDataset, Nullable, PrivateCounty, PrivateState, PublicStateScorecard, StateCode, StateData, StateStats } from '@/app/counties/types';
-import { GetServerSideProps } from 'next';
+import { ChartData, ChartDataset, Nullable, PrivateCounty, PrivateState, PublicStateScorecard, StateCode, ChartStats } from '@/app/counties/types';
 import { useRouter } from 'next/router';
 import { getCommonServerSideProps } from '@/pages';
-import { statesAtom } from '@/states/atoms';
 const fs = require('fs')
 import {
     Chart as ChartJS,
@@ -17,10 +15,7 @@ import {
     Legend,
 } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
-import * as R from 'ramda'
 import { chartDataFrom, chartOptionsFrom } from '@/app/utils';
-import { useAtom } from 'jotai';
-import { useEffect, useMemo } from 'react';
 import { Badge } from "@/components/ui/badge";
 import { ColumnDef } from "@tanstack/react-table"
 import { DataTable } from '@/components/ui/data-table';
@@ -146,7 +141,7 @@ export const getStateServerSideProps = async (context, fs) => {
     const { country, states, counties } = commonProps.props
     const { stateCode } = context.params as { stateCode: StateCode; };
     const url = `https://back9.voterpurgeproject.org:8443/api/public/state_charts?state=${stateCode}&start_date=2023-01-01&end_date=2025-01-01`
-    const stateStats = await (await fetch(url)).json() as StateStats;
+    const stateStats = await (await fetch(url)).json() as ChartStats;
     const matchState = states.find(state => state.code == stateCode)
     if (!matchState) return null;
     const stateIndex = states.indexOf(matchState)
@@ -191,7 +186,7 @@ const StatePage: React.FC<StatePageProps> = ({ stateIndex, state }) => {
                 return <>
                     <h2>{stateStat.title}</h2>
                     {stateStat.data.map((data: ChartData) => {
-                        return <Bar options={chartOptionsFrom(data)} data={chartDataFrom(data)} />
+                        return <Bar key={data.cat2} options={chartOptionsFrom(data)} data={chartDataFrom(data)} />
                     })}
                 </>
             })}

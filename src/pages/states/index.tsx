@@ -5,6 +5,8 @@ import { useAtom } from "jotai";
 import fs from 'fs'
 import * as R from 'ramda'
 import { useState } from "react";
+import Link from 'next/link'
+
 
 type SortMode = "name" | "score"
 
@@ -17,12 +19,12 @@ export default function StatesPage() {
 
     return <div>
         <ul>
-            {sortedStates.map((state: PrivateState) => <li>
+            {sortedStates.map((state: PrivateState) => <li key={state.code}>
                 {state.name} VPP Score: {state.scorecard?.stars}
                 <div>Total Voters: {state.stats.average_total_voters.mean}</div>
                 <div>Total Purged: {state.stats.dropped_voters.mean}</div>
                 <p>{state.stats.purged_percentage.mean}</p>
-                <a href={`/states/${state.code}`}>More Stats</a>
+                <Link href={`/states/${state.code}`}>More Stats</Link>
             </li>)}
         </ul>
     </div>

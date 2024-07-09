@@ -1,5 +1,5 @@
 import states from "./states.json";
-import { IndexedArray } from '@app/utils/indexedArray'
+import { IndexedArray } from '@/utils/indexedArray'
 export type Maybe<T> = T | null | undefined;
 export type Nullable<T> = T | null;
 
@@ -85,8 +85,16 @@ export interface PublicState {
   abv: StateCode;
 }
 
-export interface PrivateState extends Omit<PublicState, 'counties'> {
-  counties: IndexedArray<PrivateCounty>;
+export interface PrivateServerState extends Omit<PublicState, 'counties'> {
+  counties: PrivateCounty[] // RIP Lishkov
+  code: StateCode;
+  fips: string;
+  scorecard?: Nullable<PublicStateScorecard>
+  stats: RegionalStats
+  chartStats?: ChartStats
+}
+export interface PrivateState extends Omit<PrivateServerState, 'counties'> {
+  counties: IndexedArray<PrivateCounty> // RIP Lishkov
   code: StateCode;
   fips: string;
   scorecard: Nullable<PublicStateScorecard>
@@ -102,7 +110,7 @@ export interface PublicCounty {
     purged_percentage: Nullable<string>;
     fips?: string;
 }
-export interface PrivateCounty extends Omit<PublicCounty, 'county', 'purged_percentage'> {
+export interface PrivateCounty extends Omit<PublicCounty, 'county' | 'purged_percentage'> {
   name: string;
   stateFips: string;
   stateCode: StateCode;
@@ -141,3 +149,5 @@ export interface SummaryStats {
     mean: number
     std: number
 }
+
+export type CountryMetadata = Nullable<RegionalStats>

@@ -1,9 +1,9 @@
 import { featureStats } from "@/app/utils";
-import { PublicStateScorecard, PublicStates, PrivateCounty, PrivateState } from "@/app/counties/types";
+import { PublicStateScorecard, PublicStates, PrivateCounty, PrivateState, PrivateServerState } from "@/app/counties/types";
 
 export function processData(initialStatesData: PublicStates['states'], stateScorecards: PublicStateScorecard[]) {
   const counties: PrivateCounty[] = [];
-  const privateStates: PrivateState[] = [];
+  const privateStates: PrivateServerState[] = [];
 
   for (const state of initialStatesData) {
     const stateFips = state.code;
@@ -23,7 +23,7 @@ export function processData(initialStatesData: PublicStates['states'], stateScor
 
     counties.push(...stateCounties);
 
-    const privateState : PrivateState = {
+    const privateState : PrivateServerState = {
       ...state,
       code: stateCode,
       fips: stateFips,
@@ -48,8 +48,8 @@ export function processData(initialStatesData: PublicStates['states'], stateScor
   for (const [i, privateState] of privateStates.entries()) {
     const purgedPercentageCountryZ = (privateState.stats.purged_percentage.mean - countryStats.purged_percentage.mean) / countryStats.purged_percentage.std;
     for (const [j, privateCounty] of privateState.counties.entries()) {
-      const purgedPercentageStateZ = (privateCounty.purged_percentage - privateState.stats.purged_percentage.mean) / privateState.stats.purged_percentage.std;
-      const purgedPercentageCountryZ = (privateCounty.purged_percentage - countryStats.purged_percentage.mean) / countryStats.purged_percentage.std;
+      const purgedPercentageStateZ = (privateCounty.purged_percentage! - privateState.stats.purged_percentage.mean) / privateState.stats.purged_percentage.std;
+      const purgedPercentageCountryZ = (privateCounty.purged_percentage! - countryStats.purged_percentage.mean) / countryStats.purged_percentage.std;
       privateStates[i].counties[j] = {
         ...privateStates[i].counties[j],
         purged_percentage_state_z: purgedPercentageStateZ,

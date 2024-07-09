@@ -25,7 +25,7 @@ export function createIndexedArray<G>(array: G[]): IndexedArray<G> {
           return indexedMany(target, column, needle);
         };
       }
-      return Reflect.get(...arguments);
+      return Reflect.get(target, prop, receiver);
     },
   };
 

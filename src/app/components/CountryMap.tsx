@@ -46,8 +46,8 @@ export const CountryMap = ({ focusOn }: CountryMapProps) => {
 
   const stateFromPath = (path: SVGPathElement) : PrivateState => {
     const className = path.getAttribute('class')
-    const stateCode = className!.match(/index_svg__(?<stateCode>[a-z]{2})/)!.groups.stateCode.toUpperCase()
-    return states.$find("code", stateCode)
+    const stateCode = className!.match(/index_svg__(?<stateCode>[a-z]{2})/)!.groups!.stateCode.toUpperCase()
+    return states.$find("code", stateCode)!
   }
   const applyFocusAttributes = () => {
     //debugger;
@@ -135,7 +135,6 @@ export const CountryMap = ({ focusOn }: CountryMapProps) => {
       statePath.addEventListener('click' , () => {
         router.push(`/states/${state!.code}`);
       })
-
     }
 
     applyFocusAttributes();
@@ -143,6 +142,7 @@ export const CountryMap = ({ focusOn }: CountryMapProps) => {
   if (focusOn?.stateCode) {
     return <div className="country-county w-full h-auto max-w-full overflow-hidden">
         <CountiesSVG />
+
     </div>
   } else {
     return (<>

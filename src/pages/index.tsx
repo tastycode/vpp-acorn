@@ -3,6 +3,9 @@ import CountryMap from "../app/components/CountryMap";
 import { fetchStatesData } from "../app/statesData";
 import {processData} from "@/utils/processData";
 const fs = require('fs')
+import Link from 'next/link'
+
+
 
 export default function Home() {
   return (
@@ -11,7 +14,7 @@ export default function Home() {
           Where Purges are Happening?
         </p>
         <CountryMap />
-        <a href="/states">View All States</a>
+        <Link href="/states">View All States</Link>
       </div>
   );
 }
