@@ -89,7 +89,7 @@ export interface PrivateState extends Omit<PublicState, 'counties'> {
   counties: IndexedArray<PrivateCounty>;
   code: StateCode;
   fips: string;
-  scorecard: PublicStateScorecard
+  scorecard: Nullable<PublicStateScorecard>
   stats: RegionalStats
   chartStats?: ChartStats
 }

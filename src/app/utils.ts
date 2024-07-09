@@ -35,7 +35,6 @@ export const chartOptionsFrom = (chartData: ChartData) => {
 
 export const featureStats = (dataset: Record<string, any>, column: string) : SummaryStats => {
   const values = dataset.map(R.prop(column));
-  console.log(column, dataset, 'values', values)
   const arr = nj.array(values.map((val : Nullable<number>) => val == null ? 0 : val));
   return {
     count: values.length,

@@ -12,7 +12,6 @@ function PurgeApp({ Component, pageProps }) {
 
   useEffect(() => {
     if (enhancedData.states && enhancedData.counties && enhancedData.country) {
-      console.log('setStatesData', enhancedData.states)
       setStatesData(enhancedData.states);
       setCountiesData(enhancedData.counties);
       setCountryData(enhancedData.country);

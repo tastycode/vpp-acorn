@@ -23,19 +23,20 @@ export function processData(initialStatesData: PublicStates['states'], stateScor
 
     counties.push(...stateCounties);
 
-    const scorecard = stateScorecards.find(scorecard => scorecard.state == state.code);
-    privateStates.push({
+    const privateState : PrivateState = {
       ...state,
       code: stateCode,
       fips: stateFips,
       counties: stateCounties,
-      scorecard: scorecard == undefined ? null : scorecard,
       stats: {
         average_total_voters: featureStats(stateCounties, "average_total_voters"),
         dropped_voters: featureStats(stateCounties, "dropped_voters"),
         purged_percentage: featureStats(stateCounties, "purged_percentage")
       }
-    });
+    }
+   const scorecard = stateScorecards.find(scorecard => scorecard.state == privateState.code);
+   privateState.scorecard = scorecard === undefined ? null : scorecard
+   privateStates.push(privateState)
   }
 
   const countryStats = {

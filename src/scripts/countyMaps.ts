@@ -5,7 +5,6 @@ import path from "path";
 //
 const file = process.argv[2];
 const inputFilePath = file;
-console.log({ file });
 const outputDir = path.dirname(file);
 
 // Read the input file

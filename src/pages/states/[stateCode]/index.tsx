@@ -41,6 +41,7 @@ export const getStateServerSideProps = async (context, fs) => {
     const { country, states, counties} = commonProps.props
     const { stateCode } = context.params as { stateCode: StateCode; };
     const url = `https://back9.voterpurgeproject.org:8443/api/public/state_charts?state=${stateCode}&start_date=2023-01-01&end_date=2025-01-01`
+    console.log({url})
     const stateStats = await (await fetch(url)).json() as StateStats;
     const matchState = states.find(state => state.code == stateCode)
     if (!matchState) return null;
