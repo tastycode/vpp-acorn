@@ -22,7 +22,7 @@ export default function StatesPage() {
                 <div>Total Voters: {state.stats.average_total_voters.mean}</div>
                 <div>Total Purged: {state.stats.dropped_voters.mean}</div>
                 <p>{state.stats.purged_percentage.mean}</p>
-                <a href="/states/{state.code}">More Stats</a>
+                <a href={`/states/${state.code}`}>More Stats</a>
             </li>)}
         </ul>
     </div>

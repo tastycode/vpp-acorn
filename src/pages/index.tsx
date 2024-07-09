@@ -11,6 +11,7 @@ export default function Home() {
           Where Purges are Happening?
         </p>
         <CountryMap />
+        <a href="/states">View All States</a>
       </div>
   );
 }
