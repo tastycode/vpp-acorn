@@ -1,6 +1,5 @@
 import { PublicStateScorecard, PublicStates } from "@/app/counties/types";
 import CountryMap from "../app/components/CountryMap";
-import { fetchStatesData } from "../app/statesData";
 import {processData} from "@/utils/processData";
 const fs = require('fs')
 import Link from 'next/link'
