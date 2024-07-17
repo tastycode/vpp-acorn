@@ -60,52 +60,39 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     } };
 };
 
-const renderChart = (type: string, datasets: InternalChartData[], options: ChartJSOptions) => {
-    if (datasets.length === 0) return null;
+
+const renderChart = (chartConfig: any, chartDatasets: InternalChartData[]) => {
+    if (chartDatasets.length === 0 || chartDatasets[0].datasets[0].data.length === 0) return null;
   
-    const chartJSData = {
-      labels: datasets[0].categories,
-      datasets: datasets.map((d, index) => ({
-        label: d.subtitle,
-        data: d.datasets[0].data,
-        backgroundColor: d.datasets[0].data.map((_, i) => getColor(i, d.cat2)),
-      })),
+    const chartData = chartDataFrom(chartDatasets[0]);
+    const options = chartConfig.type === 'Donut' 
+      ? doughnutChartOptionsFrom(chartDatasets[0])
+      : barChartOptionsFrom(chartDatasets[0], chartConfig.type === 'HorizontalBar');
+  
+    // Modify the chartData to include colors
+    const coloredChartData = {
+      ...chartData,
+      datasets: chartData.datasets.map((dataset, index) => ({
+        ...dataset,
+        backgroundColor: dataset.data.map((_, i) => getColor(i, dataset.label?.toLowerCase() || '')),
+      }))
     };
   
-    const commonOptions: ChartJSOptions = {
+    // Add responsive option to maintain aspect ratio
+    const responsiveOptions = {
       ...options,
       responsive: true,
       maintainAspectRatio: false,
     };
   
-    switch (type) {
-      case "Bar":
-      case "StackedBar":
-      case "HorizontalBar":
-        const barOptions: ChartJSOptions<'bar'> = {
-          ...commonOptions,
-          scales: {
-            x: {
-              beginAtZero: true,
-            },
-            y: {
-              beginAtZero: true,
-            },
-          },
-        };
-        if (type === "HorizontalBar") {
-          barOptions.indexAxis = 'y';
+    return (
+      <div className="w-full h-[400px]">
+        {chartConfig.type === 'Donut' 
+          ? <Doughnut options={responsiveOptions as ChartJSOptions<'doughnut'>} data={coloredChartData as ChartJSData<'doughnut'>} />
+          : <Bar options={responsiveOptions as ChartJSOptions<'bar'>} data={coloredChartData as ChartJSData<'bar'>} />
         }
-        return <Bar data={chartJSData} options={barOptions as ChartJSOptions<'bar'>} />;
-      case "Donut":
-        const doughnutOptions: ChartJSOptions<'doughnut'> = {
-          ...commonOptions,
-          cutout: '50%',
-        } as ChartJSOptions<'doughnut'>;
-        return <Doughnut data={chartJSData} options={doughnutOptions as ChartJSOptions<'doughnut'>} />;
-      default:
-        return null;
-    }
+      </div>
+    );
   };
 
 const CountyPage: React.FC<CountyPageProps> = ({ county, state }: CountyPageProps) => {
@@ -124,6 +111,10 @@ const CountyPage: React.FC<CountyPageProps> = ({ county, state }: CountyPageProp
         [
             { type: "Bar", paths: ["county.sex.total", "county.sex.new", "county.sex.drop"] },
             { type: "Bar", paths: ["county.race.total", "county.race.new", "county.race.drop"] }
+        ],
+        [
+            { type: "Bar", paths: ["county.status.new", "county.status.drop"] },
+            { type: "HorizontalBar", paths: ["county.race.new", "county.race.drop"] }
         ]
     ];
      return (
@@ -141,34 +132,21 @@ const CountyPage: React.FC<CountyPageProps> = ({ county, state }: CountyPageProp
 
 
                 {chartLayout.map((row, rowIndex) => (
-    <div key={rowIndex} className={`grid grid-cols-1 ${row.length > 1 ? 'lg:grid-cols-2' : ''} gap-4`}>
-        {row.map((chartConfig, colIndex) => {
-            const chartDatasets = chartConfig.paths
-                .filter(path => county.chartStats)
-                .map(path => getChartData(path, county.chartStats!))
-                .filter((data): data is InternalChartData => data !== null);
-            
-            if (chartDatasets.length === 0) return null;
-        
-            return (
-                <div key={colIndex} className="w-full h-[400px]">
-                    <h2 className="text-center mb-2">{chartConfig.type} Chart</h2>
-                    {chartConfig.type === 'Donut' 
-                        ? <Doughnut 
-                            options={doughnutChartOptionsFrom(chartDatasets[0])} 
-                            data={chartDataFrom(chartDatasets[0]) as ChartJSData<'doughnut', number[], unknown>} 
-                          />
-                        : <Bar 
-                            options={barChartOptionsFrom(chartDatasets[0], chartConfig.type === 'HorizontalBar')} 
-                            data={chartDataFrom(chartDatasets[0]) as ChartJSData<'bar'>} 
-                          />
-                    }
-                </div>
-            );
-        })}
-    </div>
+  <div key={rowIndex} className={`grid grid-cols-1 ${row.length > 1 ? 'lg:grid-cols-2' : ''} gap-4`}>
+    {row.map((chartConfig, colIndex) => (
+      <div key={colIndex} className="w-full h-[400px]">
+        {(() => {
+          const chartDatasets = chartConfig.paths
+            .filter(path => county.chartStats)
+            .map(path => getChartData(path, county.chartStats!))
+            .filter((data): data is InternalChartData => data !== null);
+          
+          return renderChart(chartConfig, chartDatasets);
+        })()}
+      </div>
+    ))}
+  </div>
 ))}
-
             </div>
         </div>
     );

@@ -24,7 +24,7 @@ export const convertToChartJSData = (internalData: InternalChartData): ChartJSDa
     if (!dataset) return null;
     const data = dataset.data.find(d => d.cat2 === cat2);
     if (!data) return null;
-    return data;
+    return data.datasets[0].data.length == 0 ? null : data;
   };
 
 

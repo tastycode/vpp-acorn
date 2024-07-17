@@ -1,7 +1,7 @@
 "use client";
 
 import CountryMap from '@/app/components/CountryMap';
-import { ChartData as InternalChartData, ChartDataset, Nullable, PrivateCounty, PrivateState, PublicStateScorecard, StateCode, ChartStats } from '@/app/counties/types';
+import { ChartData as InternalChartData, ChartDataset, Nullable, PrivateState, PublicStateScorecard, StateCode, ChartStats, PrivateCounty } from '@/app/counties/types';
 import { useRouter } from 'next/router';
 import { getCommonServerSideProps } from '@/pages';
 const fs = require('fs')
@@ -46,27 +46,21 @@ const getColor = (index: number, type: string): string => {
   };
 const chartLayout = [
     [
-        {
-            type: "Bar",
-            paths: ["state.age.total"],
-        },
-    ], // 1 column
+        { type: "Bar", paths: ["stae.age.total", "state.age.new", "state.age.drop"] },
+        { type: "Donut", paths: ["state.status.total"] }
+    ],
     [
-        {
-            type: "Donut",
-            paths: ["state.age.drop"], // cat1, cat3, cat2
-        },
-        {
-            type: "HorizontalBar",
-            paths: ["state.age.new"],
-        },
-    ], // 2 columns on desktop
+        { type: "Bar", paths: ["state.party.total", "state.party.new", "state.party.drop"] },
+        { type: "Donut", paths: ["state.party.total"] }
+    ],
     [
-        {
-            type: "StackedBar",
-            paths: ["state.party.total", "state.party.dropped", "state.party.new"]
-        }
-    ] // 1 column on desktop, 3 series in one all with same categories
+        { type: "Bar", paths: ["state.sex.total", "state.sex.new", "state.sex.drop"] },
+        { type: "Bar", paths: ["state.race.total", "state.race.new", "state.race.drop"] }
+    ],
+    [
+        { type: "Bar", paths: ["state.status.new", "state.status.drop"] },
+        { type: "HorizontalBar", paths: ["state.race.new", "state.race.drop"] }
+    ]
 ];
 
 
@@ -74,7 +68,7 @@ const columns: ColumnDef<PrivateCounty>[] = [
     {
         accessorKey: "name",
         header: ({ column }) => (
-            <DataTableColumnHeader column={column} title="County" />
+            <DataTableColumnHeader column={column} title="state" />
         ),
         filterFn: "includesString"
     },
@@ -189,7 +183,7 @@ export const getStateServerSideProps = async (context, fs) => {
         chartStats: stateStats
     }
 
-    // Fetch data for the specified county from the API
+    // Fetch data for the specified state from the API
     const stateServerSideProps = {
         props:
         {
@@ -202,42 +196,45 @@ export const getServerSideProps = async (context) => {
     return getStateServerSideProps(context, fs);
 };
 
+const renderChart = (chartConfig: any, chartDatasets: InternalChartData[]) => {
+  if (chartDatasets.length === 0 || chartDatasets[0].datasets[0].data.length === 0) return null;
+
+  const chartData = chartDataFrom(chartDatasets[0]);
+  const options = chartConfig.type === 'Donut' 
+    ? doughnutChartOptionsFrom(chartDatasets[0])
+    : barChartOptionsFrom(chartDatasets[0], chartConfig.type === 'HorizontalBar');
+
+  // Modify the chartData to include colors
+  const coloredChartData = {
+    ...chartData,
+    datasets: chartData.datasets.map((dataset, index) => ({
+      ...dataset,
+      backgroundColor: dataset.data.map((_, i) => getColor(i, dataset.label?.toLowerCase() || '')),
+    }))
+  };
+
+  // Add responsive option to maintain aspect ratio
+  const responsiveOptions = {
+    ...options,
+    responsive: true,
+    maintainAspectRatio: false,
+  };
+
+  return (
+    <div className="w-full h-[400px]">
+      {chartConfig.type === 'Donut' 
+        ? <Doughnut options={responsiveOptions as ChartJSOptions<'doughnut'>} data={coloredChartData as ChartJSData<'doughnut'>} />
+        : <Bar options={responsiveOptions as ChartJSOptions<'bar'>} data={coloredChartData as ChartJSData<'bar'>} />
+      }
+    </div>
+  );
+};
+
 const StatePage: React.FC<StatePageProps> = ({ stateIndex, state }) => {
     const router = useRouter();
     const { stateCode } = router.query as { stateCode: StateCode; };
     let scorecardCategories = state?.scorecard?.categories ?? []
-    const renderChart = (type: string, datasets: InternalChartData[], options: ChartJSOptions) => {
-        if (datasets.length === 0) return null;
-      
-        const chartJSData = {
-          labels: datasets[0].categories,
-          datasets: datasets.map((d, index) => ({
-            label: d.subtitle,
-            data: d.datasets[0].data,
-            backgroundColor: getColor(index, d.cat2),
-          })),
-        };
-      
-        const commonOptions: ChartJSOptions = {
-          ...options,
-          responsive: true,
-          maintainAspectRatio: false,
-        };
-        console.log('rendering chart type', type)
-      
-        switch (type) {
-          case "Bar":
-          case "StackedBar":
-          case "HorizontalBar":
-            return <Bar data={chartJSData as ChartJSData<'bar'>} options={commonOptions as any} />;
-          case "Donut":
-            console.log("Rendering donut", chartJSData, commonOptions)
-            return <Doughnut data={chartJSData as ChartJSData<'doughnut'>} options={commonOptions as any} />;
-          default:
-            return null;
-        }
-      };
-      return (
+    return (
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> {/* Outer container */}
           <div className="space-y-8"> {/* Vertical stack for sections */}
             {/* Top section with VPPScoreCard, CountryMap, and VoterStatsCard */}
@@ -256,32 +253,21 @@ const StatePage: React.FC<StatePageProps> = ({ stateIndex, state }) => {
       
             {/* Charts section */}
             {chartLayout.map((row, rowIndex) => (
-  <div key={rowIndex} className={`grid grid-cols-1 ${row.length > 1 ? 'lg:grid-cols-2' : ''} gap-4`}>
-    {row.map((chartConfig, colIndex) => {
-      const chartDatasets = chartConfig.paths
-        .filter(path => state.chartStats)
-        .map(path => getChartData(path, state.chartStats!))
-        .filter((data): data is InternalChartData => {
-            const result = data !== null
-            return result
-        });
-      
-      if (chartDatasets.length === 0) return null;
-      if (chartDatasets[0].datasets[0].data.length == 0) return null;
-  
-    const chartData = chartDataFrom(chartDatasets[0]);
-    return (
-        <div key={colIndex} className="w-full h-[400px]">
-            <h2 className="text-center mb-2">{chartConfig.type} Chart</h2>
-            {chartConfig.type === 'Donut' 
-                ? <Doughnut options={doughnutChartOptionsFrom(chartDatasets[0])} data={chartData as ChartJSData<'doughnut'>} />
-                : <Bar options={barChartOptionsFrom(chartDatasets[0], chartConfig.type === 'HorizontalBar')} data={chartData as ChartJSData<'bar'>} />
-            }
-        </div>
-    );
-    })}
-  </div>
-))}
+              <div key={rowIndex} className={`grid grid-cols-1 ${row.length > 1 ? 'lg:grid-cols-2' : ''} gap-4`}>
+                {row.map((chartConfig, colIndex) => (
+                  <div key={colIndex} className="w-full h-[400px]">
+                    {(() => {
+                      const chartDatasets = chartConfig.paths
+                        .filter(path => state.chartStats)
+                        .map(path => getChartData(path, state.chartStats!))
+                        .filter((data): data is InternalChartData => data !== null);
+                      
+                      return renderChart(chartConfig, chartDatasets);
+                    })()}
+                  </div>
+                ))}
+              </div>
+            ))}
       
             {/* DataTable section */}
             <div className="w-full">
