@@ -6,8 +6,8 @@ import {
   flexRender,
   getCoreRowModel,
  getFilteredRowModel,
-
-
+ getSortedRowModel,
+ SortingState,
   getPaginationRowModel,
   useReactTable,
 } from "@tanstack/react-table"
@@ -35,19 +35,22 @@ export function DataTable<TData, TValue>({
   filterColumn
 }: DataTableProps<TData, TValue>) {
   const [globalFilter, setGlobalFilter] = React.useState('')
-
+  const [sorting, setSorting] = React.useState<SortingState>([])
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>([])
   const table = useReactTable({
     data,
     columns,
     state: {
-      globalFilter
+      globalFilter,
+      sorting
     },
     onGlobalFilterChange: setGlobalFilter,
     onColumnFiltersChange: setColumnFilters,
     getCoreRowModel: getCoreRowModel(),
     getFilteredRowModel: getFilteredRowModel(),
     getPaginationRowModel: getPaginationRowModel(),
+    getSortedRowModel: getSortedRowModel(),
+    onSortingChange: setSorting
   })
   React.useEffect(() => {
     console.log('Current filters:', columnFilters);
