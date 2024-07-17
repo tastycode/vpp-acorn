@@ -1,9 +1,13 @@
 "use client"
-
+import React from 'react'
 import {
   ColumnDef,
+  ColumnFiltersState,
   flexRender,
   getCoreRowModel,
+ getFilteredRowModel,
+
+
   getPaginationRowModel,
   useReactTable,
 } from "@tanstack/react-table"
@@ -16,26 +20,52 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table"
+import { Input } from '@/components/ui/input'
 import { DataTablePagination } from "./data-table-pagination"
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[]
   data: TData[]
+  filterColumn?: string
 }
 
 export function DataTable<TData, TValue>({
   columns,
   data,
+  filterColumn
 }: DataTableProps<TData, TValue>) {
+  const [globalFilter, setGlobalFilter] = React.useState('')
+
+  const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>([])
   const table = useReactTable({
     data,
     columns,
+    state: {
+      globalFilter
+    },
+    onGlobalFilterChange: setGlobalFilter,
+    onColumnFiltersChange: setColumnFilters,
     getCoreRowModel: getCoreRowModel(),
+    getFilteredRowModel: getFilteredRowModel(),
     getPaginationRowModel: getPaginationRowModel(),
   })
+  React.useEffect(() => {
+    console.log('Current filters:', columnFilters);
+    console.log('Filtered rows:', table.getFilteredRowModel().rows);
+  }, [columnFilters, table]);
 
   return (
     <div>
+        {filterColumn && <Input
+          placeholder="Filter..."
+          value={globalFilter ?? ''}
+          onChange={(event) => {
+            console.log('table event', event.target.value)
+            setGlobalFilter(event.target.value)
+            //table.getColumn(filterColumn)?.setFilterValue(event.target.value)
+          }}
+          className="max-w-sm"
+        />}
     <div className="rounded-md border">
       <Table>
         <TableHeader>

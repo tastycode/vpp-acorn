@@ -38,6 +38,7 @@ const columns: ColumnDef<PrivateCounty>[] = [
         header: ({ column }) => (
             <DataTableColumnHeader column={column} title="County" />
         ),
+        filterFn: "includesString"
     },
     {
         accessorKey: "average_total_voters",
@@ -190,7 +191,8 @@ const StatePage: React.FC<StatePageProps> = ({ stateIndex, state }) => {
                     })}
                 </>
             })}
-            <DataTable columns={columns} data={state.counties} />
+            <DataTable columns={columns} data={state.counties} filterColumn="name"/>
+
 
         </div>
             );
