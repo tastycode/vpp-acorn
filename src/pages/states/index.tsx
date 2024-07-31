@@ -4,9 +4,10 @@ import { statesAtom } from '@/states/atoms';
 import { useAtom } from "jotai";
 import fs from 'fs'
 import * as R from 'ramda'
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import { RouteLoader } from "@/app/components/RouteLoader";
 
 type SortMode = "name" | "score"
 
@@ -24,9 +25,9 @@ export default function StatesPage() {
         }
     }, [router, sortMode])
 
-    const sortedStates = R.sortBy((state: PrivateState) => {
+    const sortedStates = React.useMemo(() => R.sortBy((state: PrivateState) => {
         return sortMode === 'name' ? state.name : -(state.scorecard?.stars || 0)
-    })(states)
+    })(states), [states, sortMode])
 
     const handleSort = (mode: SortMode) => {
         router.push({
@@ -36,54 +37,56 @@ export default function StatesPage() {
     }
 
     return (
-        <div className="container mx-auto px-4">
-            <h1 className="text-2xl font-bold mb-4">State Score Cards</h1>
-            <p className="mb-4">The Voter Purge Project is currently monitoring 38 states for disenfranchised voters. Each state in the list below is scored by the following criteria on a one to three star scale, transparency, access to data and human resources, and the state's recorded history of purging its voter rolls.</p>
-            
-            <div className="mb-4 flex justify-end space-x-2">
-                <button 
-                    onClick={() => handleSort('name')} 
-                    className={`px-4 py-2 rounded ${sortMode === 'name' ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}
-                >
-                    Sort by Name
-                </button>
-                <button 
-                    onClick={() => handleSort('score')} 
-                    className={`px-4 py-2 rounded ${sortMode === 'score' ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}
-                >
-                    Sort by VPP Score
-                </button>
-            </div>
+        <RouteLoader checkLoaded={() => states.length > 0} checkDependencies={[states]}>
+            <div className="container mx-auto px-4">
+                <h1 className="text-2xl font-bold mb-4">State Score Cards</h1>
+                <p className="mb-4">The Voter Purge Project is currently monitoring 38 states for disenfranchised voters. Each state in the list below is scored by the following criteria on a one to three star scale, transparency, access to data and human resources, and the state's recorded history of purging its voter rolls.</p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                {sortedStates.map((state: PrivateState) => (
-                    <div key={state.code} className={`rounded-lg overflow-hidden shadow-md ${getScoreCardColor(state.scorecard?.stars!)}`}>
-                        <div className="p-4">
-                            <div className="flex justify-between items-center mb-2">
-                                <h2 className="text-lg font-semibold">{state.name}</h2>
-                                <div className="text-sm font-medium">VPP Score: {getStars(state.scorecard?.stars!)}</div>
-                            </div>
-                            <div className="text-sm mb-1">
-                                <span className="font-medium">{state.stats.average_total_voters.mean.toLocaleString()} total voters</span>
-                            </div>
-                            <div className="text-sm mb-2">
-                                <span className="text-red-600 font-medium">{state.stats.dropped_voters.mean.toLocaleString()} voters purged</span> (since last report)
-                            </div>
-                            <div className="text-sm font-bold mb-2">
-                                {state.stats.purged_percentage.mean.toFixed(2)}%
-                            </div>
-                            <div className="flex justify-between items-center">
-                                <Link href={`/states/${state.code}`} className="text-blue-600 hover:underline text-sm">
-                                    More Metrics
-                                </Link>
-                                <div className="text-xs text-gray-500">
+                <div className="mb-4 flex justify-end space-x-2">
+                    <button
+                        onClick={() => handleSort('name')}
+                        className={`px-4 py-2 rounded ${sortMode === 'name' ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}
+                    >
+                        Sort by Name
+                    </button>
+                    <button
+                        onClick={() => handleSort('score')}
+                        className={`px-4 py-2 rounded ${sortMode === 'score' ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}
+                    >
+                        Sort by VPP Score
+                    </button>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                    {sortedStates.map((state: PrivateState) => (
+                        <div key={state.code} className={`rounded-lg overflow-hidden shadow-md ${getScoreCardColor(state.scorecard?.stars!)}`}>
+                            <div className="p-4">
+                                <div className="flex justify-between items-center mb-2">
+                                    <h2 className="text-lg font-semibold">{state.name}</h2>
+                                    <div className="text-sm font-medium">VPP Score: {getStars(state.scorecard?.stars!)}</div>
+                                </div>
+                                <div className="text-sm mb-1">
+                                    <span className="font-medium">{state.stats.average_total_voters.mean.toLocaleString()} total voters</span>
+                                </div>
+                                <div className="text-sm mb-2">
+                                    <span className="text-red-600 font-medium">{state.stats.dropped_voters.mean.toLocaleString()} voters purged</span> (since last report)
+                                </div>
+                                <div className="text-sm font-bold mb-2">
+                                    {state.stats.purged_percentage.mean.toFixed(2)}%
+                                </div>
+                                <div className="flex justify-between items-center">
+                                    <Link href={`/states/${state.code}`} className="text-blue-600 hover:underline text-sm">
+                                        More Metrics
+                                    </Link>
+                                    <div className="text-xs text-gray-500">
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
-        </div>
+        </RouteLoader>
     )
 }
 
@@ -102,5 +105,5 @@ function getStars(count: string | undefined) {
 }
 
 export async function getServerSideProps() {
-  return getCommonServerSideProps(fs);
+    return getCommonServerSideProps(fs);
 }

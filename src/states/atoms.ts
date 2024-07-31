@@ -9,3 +9,5 @@ export const countiesAtom = atom<IndexedArray<PrivateCounty>>(
 );
 
 export const countryAtom = atom<CountryMetadata>(null);
+
+export const loadingAtom = atom<boolean>(false);

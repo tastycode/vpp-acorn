@@ -47,7 +47,7 @@ export const CountryMap = ({ focusOn }: CountryMapProps) => {
   const stateFromPath = (path: SVGPathElement) : PrivateState => {
     const className = path.getAttribute('class')
     const stateCode = className!.match(/index_svg__(?<stateCode>[a-z]{2})/)!.groups!.stateCode.toUpperCase()
-    return states.$find("code", stateCode)!
+  return states.$find("code", stateCode)!
   }
   const applyFocusAttributes = () => {
     //debugger;
@@ -101,7 +101,9 @@ export const CountryMap = ({ focusOn }: CountryMapProps) => {
     if (states.length < 50) {
       console.warn('State data not yet loaded before map')
       return
-    };
+    } else {
+      console.log('State data loaded ', states)
+    }
 
      const meanHex = '#dddd66'
       const freshMeanColor = () => new Color(meanHex)

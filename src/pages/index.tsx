@@ -1,20 +1,23 @@
 import { PublicStateScorecard, PublicStates } from "@/app/counties/types";
 import CountryMap from "../app/components/CountryMap";
-import {processData} from "@/utils/processData";
+import { processData } from "@/utils/processData";
 const fs = require('fs')
 import Link from 'next/link'
+import { RouteLoader } from "@/app/components/RouteLoader";
 
 
 
-export default function Home() {
+export default function Home({ country, states, counties }) {
   return (
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Where Purges are Happening?
-        </p>
+    <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
+      <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
+        Where Purges are Happening?
+      </p>
+      <RouteLoader checkLoaded={() => country && states && counties} checkDependencies={[country, states, counties]}>
         <CountryMap />
         <Link href="/states">View All States</Link>
-      </div>
+      </RouteLoader>
+    </div>
   );
 }
 
@@ -51,6 +54,7 @@ export async function getCommonServerSideProps(fs: any) {
       counties
     },
   };
+  console.log("commonServerSideProps", commonServerSideProps);
   return commonServerSideProps;
 }
 
