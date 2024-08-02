@@ -145,7 +145,7 @@ const VoterStatsCard = ({ state }) => {
     <div className="max-w-md mx-auto space-y-4">
       <div className="bg-white shadow-md rounded-lg overflow-hidden">
         <div className="bg-blue-600 text-white text-center p-4 font-bold">
-          Registered Voters in Missouri
+          Registered Voters in {state.name}
         </div>
         <div className="text-center text-red-600 font-bold p-4">
           {totalVoters.toLocaleString()}

@@ -13,7 +13,7 @@ type CountryMapProps = {
 };
 type Bounds = { x: number; y: number; width: number; height: number };
 
-function resizeBoundsCentered<K extends Bounds>(factor: number, bounds: K) : K  {
+function resizeBoundsCentered<K extends Bounds>(factor: number, bounds: K): K {
   const { x, y, width, height } = bounds;
   const newWidth = width * factor;
   const newHeight = height * factor;
@@ -29,33 +29,33 @@ export const CountryMap = ({ focusOn }: CountryMapProps) => {
   const [state, setState] = useState<PrivateState | undefined>();
   const [county, setCounty] = useState<PrivateCounty | undefined>();
 
-  const stateCountyFromPath = (path: SVGPathElement) : {
+  const stateCountyFromPath = (path: SVGPathElement): {
     state: Nullable<PrivateState>,
     county: Nullable<PrivateCounty>
   } => {
     const stateCode = path.getAttribute("data-state_code");
-    if (!stateCode) return {state: null, county: null};
+    if (!stateCode) return { state: null, county: null };
     const countyName = path.getAttribute("data-county_name");
     const matchState = states.$find("code", stateCode)!;
     if (!matchState) {
-      return {state: null, county: null}
+      return { state: null, county: null }
     }
     const matchCounty = matchState.counties.$find("name", countyName)!;
-    return {state: matchState, county: matchCounty}
+    return { state: matchState, county: matchCounty }
   };
 
-  const stateFromPath = (path: SVGPathElement) : PrivateState => {
+  const stateFromPath = (path: SVGPathElement): PrivateState => {
     const className = path.getAttribute('class')
     const stateCode = className!.match(/index_svg__(?<stateCode>[a-z]{2})/)!.groups!.stateCode.toUpperCase()
-  return states.$find("code", stateCode)!
+    return states.$find("code", stateCode)!
   }
   const applyFocusAttributes = () => {
     //debugger;
-    let targetPath : Maybe<SVGPathElement | SVGGElement>;
+    let targetPath: Maybe<SVGPathElement | SVGGElement>;
     if (focusOn?.countyName) {
       const paths = [...document.querySelectorAll<SVGPathElement>("svg g > g > path")];
       const focusedPath = paths.find((path) => {
-        const {state: matchState, county: matchCounty} = stateCountyFromPath(path);
+        const { state: matchState, county: matchCounty } = stateCountyFromPath(path);
         return (
           matchCounty &&
           matchCounty.name === focusOn.countyName &&
@@ -66,8 +66,8 @@ export const CountryMap = ({ focusOn }: CountryMapProps) => {
 
     } else if (focusOn?.stateCode) {
       const paths = [...document.querySelectorAll<SVGPathElement>("svg g > g > path")];
-      targetPath  = paths.find((path) => {
-        const {state: matchState, county: matchCounty} = stateCountyFromPath(path);
+      targetPath = paths.find((path) => {
+        const { state: matchState, county: matchCounty } = stateCountyFromPath(path);
         return matchState?.code === focusOn.stateCode;
       })?.closest('g')
     }
@@ -75,9 +75,9 @@ export const CountryMap = ({ focusOn }: CountryMapProps) => {
     if (targetPath) {
       const pathBounds = targetPath?.getBBox();
       const svg = targetPath?.ownerSVGElement!;
-      const {x,y,width,height} = resizeBoundsCentered(zoom, pathBounds);
+      const { x, y, width, height } = resizeBoundsCentered(zoom, pathBounds);
       Object.assign(svg.viewBox.baseVal, { x, y, width, height } as Bounds)
-     svg?.setAttribute('viewbox', `${x} ${y} ${width} ${height}`)
+      svg?.setAttribute('viewbox', `${x} ${y} ${width} ${height}`)
     }
   }
 
@@ -105,13 +105,13 @@ export const CountryMap = ({ focusOn }: CountryMapProps) => {
       console.log('State data loaded ', states)
     }
 
-     const meanHex = '#dddd66'
-      const freshMeanColor = () => new Color(meanHex)
+    const meanHex = '#dddd66'
+    const freshMeanColor = () => new Color(meanHex)
     const countyPaths = [...document.querySelectorAll(".country-county svg g > g > path")];
     for (const currentPath of countyPaths) {
       const path = currentPath as SVGPathElement
-      const {state: matchState, county: matchCounty}= stateCountyFromPath(path);
-  if (!matchState || !matchCounty || !matchCounty.purged_percentage || !country?.purged_percentage.mean) continue;
+      const { state: matchState, county: matchCounty } = stateCountyFromPath(path);
+      if (!matchState || !matchCounty || !matchCounty.purged_percentage || !country?.purged_percentage.mean) continue;
 
       // meanColor is hue 105. at 2 standard deviations higher purge, we want it to be
       // hue 0 (#dd6666) and 2 standard deviations under the mean purge we want it at
@@ -134,7 +134,7 @@ export const CountryMap = ({ focusOn }: CountryMapProps) => {
       if (!state?.stats) continue;
       const fillColor = freshMeanColor().rotate(-1 * state.stats.purged_percentage_country_z! * 50)
       statePath.style.fill = fillColor.toRgb();
-      statePath.addEventListener('click' , () => {
+      statePath.addEventListener('click', () => {
         router.push(`/states/${state!.code}`);
       })
     }
@@ -143,18 +143,18 @@ export const CountryMap = ({ focusOn }: CountryMapProps) => {
   }, [states, counties]);
   if (focusOn?.stateCode) {
     return <div className="country-county w-full h-auto max-w-full overflow-hidden">
-        <CountiesSVG />
+      <CountiesSVG />
 
     </div>
   } else {
     return (<>
-        <div className="hidden lg:block w-full h-auto max-w-full overflow-hidden country-county">
-          <CountiesSVG />
-        </div>
-        <div className="block lg:hidden w-full country-state">
-          <StatesSVG/>
-        </div>
-      </>
+      <div className="hidden lg:block w-full h-auto max-w-full overflow-hidden country-county">
+        <CountiesSVG />
+      </div>
+      <div className="block lg:hidden w-full country-state">
+        <StatesSVG />
+      </div>
+    </>
     );
 
   }
