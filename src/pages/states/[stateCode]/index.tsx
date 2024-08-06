@@ -4,9 +4,11 @@ import CountryMap from '@/app/components/CountryMap';
 import { ChartData as InternalChartData, ChartDataset, Nullable, PrivateState, PublicStateScorecard, StateCode, ChartStats, PrivateCounty } from '@/app/counties/types';
 import { useRouter } from 'next/router';
 import { getCommonServerSideProps } from '@/pages';
+import Link from 'next/link'
 const fs = require('fs')
 import {
   ArcElement,
+
   Chart as ChartJS,
   CategoryScale,
   LinearScale,
@@ -25,6 +27,7 @@ import { ColumnDef } from "@tanstack/react-table"
 import { DataTable } from '@/components/ui/data-table';
 import { DataTableColumnHeader } from '@/components/ui/data-table-column-header';
 import { RouteLoader } from '@/app/components/RouteLoader';
+
 ChartJS.register(ArcElement, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
 const colorPalette = {
@@ -65,33 +68,6 @@ const chartLayout = [
 ];
 
 
-const columns: ColumnDef<PrivateCounty>[] = [
-  {
-    accessorKey: "name",
-    header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="state" />
-    ),
-    filterFn: "includesString"
-  },
-  {
-    accessorKey: "average_total_voters",
-    header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Voters" />
-    ),
-  },
-  {
-    accessorKey: "dropped_voters",
-    header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Dropped" />
-    ),
-  },
-  {
-    accessorKey: "purged_percentage",
-    header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Purged %" />
-    ),
-  }
-]
 
 const VPPScoreHeader = ({ scorecard }: { scorecard: PublicStateScorecard }) => {
   return (
@@ -231,9 +207,42 @@ const renderChart = (chartConfig: any, chartDatasets: InternalChartData[]) => {
   );
 };
 
+let columns: ColumnDef<PrivateCounty>[] = []
+
 const StatePage: React.FC<StatePageProps> = ({ stateIndex, state }) => {
   const router = useRouter();
   const { stateCode } = router.query as { stateCode: StateCode; };
+  columns = [
+  {
+    accessorKey: "name",
+    header: ({ column }) => (
+      <DataTableColumnHeader column={column} title="state" />
+    ),
+    cell: ({ row }) => {
+      const county = row.original;
+      return <Link className="text-blue-600 underline hover:text-blue-800" href={`/states/${county.stateCode}/county/${county.name}`}>{county.name}</Link>;
+    },
+    filterFn: "includesString"
+  },
+  {
+    accessorKey: "average_total_voters",
+    header: ({ column }) => (
+      <DataTableColumnHeader column={column} title="Voters" />
+    ),
+  },
+  {
+    accessorKey: "dropped_voters",
+    header: ({ column }) => (
+      <DataTableColumnHeader column={column} title="Dropped" />
+    ),
+  },
+  {
+    accessorKey: "purged_percentage",
+    header: ({ column }) => (
+      <DataTableColumnHeader column={column} title="Purged %" />
+    ),
+  },
+];
   let scorecardCategories = state?.scorecard?.categories ?? []
   return (
     <RouteLoader checkLoaded={() => scorecardCategories !== undefined} checkDependencies={[scorecardCategories]}>
