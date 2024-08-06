@@ -1,5 +1,5 @@
 import { featureStats } from "@/app/utils";
-import { PublicStateScorecard, PublicStates, PrivateCounty, PrivateState, PrivateServerState } from "@/app/counties/types";
+import { PublicStateScorecard, PublicStates, PrivateCounty, PrivateState, PrivateServerState, RegionalStats } from "@/app/counties/types";
 
 export function processData(initialStatesData: PublicStates['states'], stateScorecards: PublicStateScorecard[]) {
   const counties: PrivateCounty[] = [];
@@ -13,7 +13,7 @@ export function processData(initialStatesData: PublicStates['states'], stateScor
       const county = state.counties[countyFips];
       return {
         ...county,
-        purged_percentage: county.purged_percentage == null ? null : parseFloat(county.purged_percentage),
+        purged_percentage: county.purged_percentage == null ? null : parseFloat(county.purged_percentage)/100.0,
         name: county.county,
         fips: countyFips,
         stateFips,
@@ -39,11 +39,19 @@ export function processData(initialStatesData: PublicStates['states'], stateScor
    privateStates.push(privateState)
   }
 
-  const countryStats = {
+  const countryStats : RegionalStats = {
     average_total_voters: featureStats(counties, "average_total_voters"),
     dropped_voters: featureStats(counties, "dropped_voters"),
     purged_percentage: featureStats(counties, "purged_percentage")
   };
+  countryStats.purged_percentage_z_legend = {
+    [-2]: countryStats.purged_percentage.mean - 2*countryStats.purged_percentage.std,
+    [-1]: countryStats.purged_percentage.mean - countryStats.purged_percentage.std,
+    [0]: countryStats.purged_percentage.mean,
+    [1]: countryStats.purged_percentage.mean + countryStats.purged_percentage.std,
+    [2]: countryStats.purged_percentage.mean + 2*countryStats.purged_percentage.std
+  }
+  
 
   for (const [i, privateState] of privateStates.entries()) {
     const purgedPercentageCountryZ = (privateState.stats.purged_percentage.mean - countryStats.purged_percentage.mean) / countryStats.purged_percentage.std;
@@ -60,10 +68,18 @@ export function processData(initialStatesData: PublicStates['states'], stateScor
       ...privateStates[i],
       stats: {
         ...privateStates[i].stats,
-        purged_percentage_country_z: purgedPercentageCountryZ
+        purged_percentage_country_z: purgedPercentageCountryZ,
+        purged_percentage_z_legend: {
+          [-2]: privateStates[i].stats.purged_percentage.mean - 2*privateStates[i].stats.purged_percentage.std,
+          [-1]: privateStates[i].stats.purged_percentage.mean - privateStates[i].stats.purged_percentage.std,
+          [0]: privateStates[i].stats.purged_percentage.mean,
+          [1]: privateStates[i].stats.purged_percentage.mean + privateStates[i].stats.purged_percentage.std,
+          [2]: privateStates[i].stats.purged_percentage.mean + 2*privateStates[i].stats.purged_percentage.std
+        }
       }
     };
   }
+  
 
   return {
     country: countryStats,

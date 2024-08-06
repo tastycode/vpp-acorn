@@ -54,7 +54,6 @@ export async function getCommonServerSideProps(fs: any) {
       counties
     },
   };
-  console.log("commonServerSideProps", commonServerSideProps);
   return commonServerSideProps;
 }
 

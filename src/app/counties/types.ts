@@ -76,6 +76,7 @@ export interface ChartDatasetEntry {
 export interface PublicStates {
   states: PublicState[]
 }
+
 export interface PublicState {
   counties: {
     [countyFips: string]: PublicCounty
@@ -93,6 +94,7 @@ export interface PrivateServerState extends Omit<PublicState, 'counties'> {
   stats: RegionalStats
   chartStats?: ChartStats
 }
+
 export interface PrivateState extends Omit<PrivateServerState, 'counties'> {
   counties: IndexedArray<PrivateCounty> // RIP Lishkov
   code: StateCode;
@@ -110,6 +112,7 @@ export interface PublicCounty {
     purged_percentage: Nullable<string>;
     fips?: string;
 }
+
 export interface PrivateCounty extends Omit<PublicCounty, 'county' | 'purged_percentage'> {
   name: string;
   stateFips: string;
@@ -141,6 +144,9 @@ export interface RegionalStats {
   purged_percentage: SummaryStats;
   dropped_voters: SummaryStats;
   purged_percentage_country_z?: number;
+  purged_percentage_z_legend?: {
+    [z: number]: number;
+  };
 }
 
 export interface SummaryStats {
