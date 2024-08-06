@@ -70,7 +70,7 @@ export default function StatesPage({state}: {state: PrivateState}) {
             </DropdownMenuTrigger>
             <DropdownMenuContent align="start">
                 {states.map((state) => {
-              return <DropdownMenuItem className="bg-white dark:bg-slate-500 text-base dark:text-white">
+              return <DropdownMenuItem key={state.code} className="hite dark:bg-slate-500 text-base dark:text-white">
                 <Link href={`/states/${state.code}`}>{state.name}</Link>
               </DropdownMenuItem>
                 })}

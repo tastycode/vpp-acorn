@@ -155,7 +155,7 @@ const CountyPage: React.FC<CountyPageProps> = ({ county, state }: CountyPageProp
             </DropdownMenuTrigger>
             <DropdownMenuContent align="start">
                 {states.map((countryState) => {
-              return <DropdownMenuItem className="bg-white dark:bg-slate-500 text-base dark:text-white">
+              return <DropdownMenuItem key={countryState.code} className="bg-white dark:bg-slate-500 text-base dark:text-white">
                 <Link href={`/states/${countryState.code}`}>
                   {countryState.name == state.name && <span className="text-green-500 text-bold">{countryState.name}</span>}
                   {countryState.name != state.name && <span>{countryState.name}</span>}
@@ -173,7 +173,7 @@ const CountyPage: React.FC<CountyPageProps> = ({ county, state }: CountyPageProp
             </DropdownMenuTrigger>
             <DropdownMenuContent align="start">
                 {R.sortBy(R.prop('name'), state.counties).map((stateCounty) => {
-              return <DropdownMenuItem className="bg-white dark:bg-slate-500 text-base dark:text-white">
+              return <DropdownMenuItem key={stateCounty.name} className="bg-white dark:bg-slate-500 text-base dark:text-white">
 
                 <Link href={`/states/${county.stateCode}/county/${stateCounty.name}`}>
                   {county.name == stateCounty.name && <span className="text-green-500 text-bold">{county.name}</span>}

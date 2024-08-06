@@ -224,41 +224,41 @@ const renderChart = (chartConfig: any, chartDatasets: InternalChartData[]) => {
 
 let columns: ColumnDef<PrivateCounty>[] = []
 
-const StatePage: React.FC<StatePageProps> = ({ stateIndex, state}) => {
+const StatePage: React.FC<StatePageProps> = ({ stateIndex, state }) => {
   const router = useRouter();
   const { stateCode } = router.query as { stateCode: StateCode; };
   const [states, _] = useAtom(statesAtom);
   columns = [
-  {
-    accessorKey: "name",
-    header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="state" />
-    ),
-    cell: ({ row }) => {
-      const county = row.original;
-      return <Link className="text-blue-600 underline hover:text-blue-800" href={`/states/${county.stateCode}/county/${county.name}`}>{county.name}</Link>;
+    {
+      accessorKey: "name",
+      header: ({ column }) => (
+        <DataTableColumnHeader column={column} title="state" />
+      ),
+      cell: ({ row }) => {
+        const county = row.original;
+        return <Link className="text-blue-600 underline hover:text-blue-800" href={`/states/${county.stateCode}/county/${county.name}`}>{county.name}</Link>;
+      },
+      filterFn: "includesString"
     },
-    filterFn: "includesString"
-  },
-  {
-    accessorKey: "average_total_voters",
-    header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Voters" />
-    ),
-  },
-  {
-    accessorKey: "dropped_voters",
-    header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Dropped" />
-    ),
-  },
-  {
-    accessorKey: "purged_percentage",
-    header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Purged %" />
-    ),
-  },
-];
+    {
+      accessorKey: "average_total_voters",
+      header: ({ column }) => (
+        <DataTableColumnHeader column={column} title="Voters" />
+      ),
+    },
+    {
+      accessorKey: "dropped_voters",
+      header: ({ column }) => (
+        <DataTableColumnHeader column={column} title="Dropped" />
+      ),
+    },
+    {
+      accessorKey: "purged_percentage",
+      header: ({ column }) => (
+        <DataTableColumnHeader column={column} title="Purged %" />
+      ),
+    },
+  ];
   let scorecardCategories = state?.scorecard?.categories ?? []
   return (
     <RouteLoader checkLoaded={() => scorecardCategories !== undefined} checkDependencies={[scorecardCategories]}>
@@ -266,31 +266,31 @@ const StatePage: React.FC<StatePageProps> = ({ stateIndex, state}) => {
         <div className="space-y-8"> {/* Vertical stack for sections */}
           {/* Top section with VPPScoreCard, CountryMap, and VoterStatsCard */}
           <Breadcrumb>
-      <BreadcrumbList>
-        <BreadcrumbItem>
-          <BreadcrumbLink href="/">Home</BreadcrumbLink>
-        </BreadcrumbItem>
-        <BreadcrumbSeparator />
-        <BreadcrumbItem>
-          <BreadcrumbLink href="/states">States</BreadcrumbLink>
-        </BreadcrumbItem>
-        <BreadcrumbSeparator />
-        <BreadcrumbItem>
-          <DropdownMenu>
-            <DropdownMenuTrigger className="flex items-center gap-1">
-              {state?.name}
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="start">
-                {states.map((state) => {
-              return <DropdownMenuItem className="bg-white dark:bg-slate-500 text-base dark:text-white">
-                <Link href={`/states/${state.code}`}>{state.name}</Link>
-              </DropdownMenuItem>
-                })}
-            </DropdownMenuContent>
-          </DropdownMenu>
-        </BreadcrumbItem>
-      </BreadcrumbList>
-    </Breadcrumb>
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink href="/">Home</BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbLink href="/states">States</BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <DropdownMenu>
+                  <DropdownMenuTrigger className="flex items-center gap-1">
+                    {state?.name}
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent align="start">
+                    {states.map((state) => {
+                      return <DropdownMenuItem key={state.code} className="bg-white dark:bg-slate-500 text-base dark:text-white">
+                        <Link href={`/states/${state.code}`}>{state.name}</Link>
+                      </DropdownMenuItem>
+                    })}
+                  </DropdownMenuContent>
+                </DropdownMenu>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
             <div className="w-full">
               {state.scorecard && <VPPScoreCard scorecard={state.scorecard} />}
