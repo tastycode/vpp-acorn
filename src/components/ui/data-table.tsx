@@ -52,11 +52,6 @@ export function DataTable<TData, TValue>({
     getSortedRowModel: getSortedRowModel(),
     onSortingChange: setSorting
   })
-  React.useEffect(() => {
-    console.log('Current filters:', columnFilters);
-    console.log('Filtered rows:', table.getFilteredRowModel().rows);
-  }, [columnFilters, table]);
-
   return (
     <div>
         {filterColumn && <Input
@@ -67,7 +62,7 @@ export function DataTable<TData, TValue>({
             setGlobalFilter(event.target.value)
             //table.getColumn(filterColumn)?.setFilterValue(event.target.value)
           }}
-          className="max-w-sm"
+          className="max-w-sm mb-2"
         />}
     <div className="rounded-md border">
       <Table>

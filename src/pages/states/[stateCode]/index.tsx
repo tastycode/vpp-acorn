@@ -98,11 +98,11 @@ const VPPScoreHeader = ({ scorecard }: { scorecard: PublicStateScorecard }) => {
 const Section = ({ title, stars, items }) => {
   return (
     <div className="p-4 border-b last:border-b-0">
-      <h3 className="font-bold text-red-600">{title} <span>{'⭐️'.repeat(stars)}</span></h3>
+      <h3 className="font-bold text-red-600 dark:text-white">{title} <span>{'⭐️'.repeat(stars)}</span></h3>
       {items.filter(item => item.value).map((item, index) => (
         <div key={index} className="mt-1">
           <p className="font-semibold">{item.desc}</p>
-          <p className="mt-1 text-gray-500 italic">{item.value}</p>
+          <p className="mt-1 text-gray-500 dark:text-gray-3000 italic">{item.value}</p>
         </div>
       ))}
     </div>
@@ -111,7 +111,7 @@ const Section = ({ title, stars, items }) => {
 
 const VPPScoreCard = ({ scorecard }) => {
   return (
-    <div className="max-w-lg mx-auto bg-white shadow-md rounded-lg overflow-hidden">
+    <div className="max-w-lg mx-auto bg-white dark:bg-slate-500 shadow-md rounded-lg overflow-hidden">
       <VPPScoreHeader scorecard={scorecard} />
       <div className="divide-y">
         {scorecard.categories.map((category, index) => (
@@ -134,7 +134,7 @@ const VoterStatsCard = ({ state }) => {
 
   return (
     <div className="max-w-md mx-auto space-y-4">
-      <div className="bg-white shadow-md rounded-lg overflow-hidden">
+      <div className="bg-white dark:bg-slate-500 shadow-md rounded-lg overflow-hidden">
         <div className="bg-blue-600 text-white text-center p-4 font-bold">
           Registered Voters in {state.name}
         </div>
@@ -142,7 +142,7 @@ const VoterStatsCard = ({ state }) => {
           {totalVoters.toLocaleString()}
         </div>
       </div>
-      <div className="bg-white shadow-md rounded-lg overflow-hidden">
+      <div className="bg-white dark:bg-slate-500 shadow-md rounded-lg overflow-hidden">
         <div className="bg-red-600 text-white text-center p-4 font-bold">
           Voters Purged (since last report)
         </div>
@@ -257,6 +257,19 @@ const StatePage: React.FC<StatePageProps> = ({ stateIndex, state }) => {
       header: ({ column }) => (
         <DataTableColumnHeader column={column} title="Purged %" />
       ),
+      cell: ({ column, row}) => {
+        const amount = parseFloat(row.getValue("purged_percentage"))
+            var formatter = new Intl.NumberFormat("en-US", {
+              style: 'percent',
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2
+
+            });
+            const purgedPercentage = formatter.format(amount);
+          return <Badge>
+            {purgedPercentage}
+          </Badge>
+      },
     },
   ];
   let scorecardCategories = state?.scorecard?.categories ?? []
