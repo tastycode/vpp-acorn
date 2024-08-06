@@ -4,6 +4,7 @@ import CountryMap from '@/app/components/CountryMap';
 import { ChartData as InternalChartData, ChartDataset, Nullable, PrivateState, PublicStateScorecard, StateCode, ChartStats, PrivateCounty } from '@/app/counties/types';
 import { useRouter } from 'next/router';
 import { getCommonServerSideProps } from '@/pages';
+import { statesAtom } from '@/states/atoms';
 import Link from 'next/link'
 const fs = require('fs')
 import {
@@ -19,6 +20,19 @@ import {
   ChartOptions as ChartJSOptions,
   ChartData as ChartJSData
 } from 'chart.js';
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
 import { Bar, Doughnut } from 'react-chartjs-2';
 
 import { barChartOptionsFrom, chartDataFrom, doughnutChartOptionsFrom, getChartData } from '@/app/utils';
@@ -27,6 +41,7 @@ import { ColumnDef } from "@tanstack/react-table"
 import { DataTable } from '@/components/ui/data-table';
 import { DataTableColumnHeader } from '@/components/ui/data-table-column-header';
 import { RouteLoader } from '@/app/components/RouteLoader';
+import { useAtom } from 'jotai';
 
 ChartJS.register(ArcElement, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
@@ -209,9 +224,10 @@ const renderChart = (chartConfig: any, chartDatasets: InternalChartData[]) => {
 
 let columns: ColumnDef<PrivateCounty>[] = []
 
-const StatePage: React.FC<StatePageProps> = ({ stateIndex, state }) => {
+const StatePage: React.FC<StatePageProps> = ({ stateIndex, state}) => {
   const router = useRouter();
   const { stateCode } = router.query as { stateCode: StateCode; };
+  const [states, _] = useAtom(statesAtom);
   columns = [
   {
     accessorKey: "name",
@@ -249,12 +265,38 @@ const StatePage: React.FC<StatePageProps> = ({ stateIndex, state }) => {
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> {/* Outer container */}
         <div className="space-y-8"> {/* Vertical stack for sections */}
           {/* Top section with VPPScoreCard, CountryMap, and VoterStatsCard */}
+          <Breadcrumb>
+      <BreadcrumbList>
+        <BreadcrumbItem>
+          <BreadcrumbLink href="/">Home</BreadcrumbLink>
+        </BreadcrumbItem>
+        <BreadcrumbSeparator />
+        <BreadcrumbItem>
+          <BreadcrumbLink href="/states">States</BreadcrumbLink>
+        </BreadcrumbItem>
+        <BreadcrumbSeparator />
+        <BreadcrumbItem>
+          <DropdownMenu>
+            <DropdownMenuTrigger className="flex items-center gap-1">
+              {state?.name}
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="start">
+                {states.map((state) => {
+              return <DropdownMenuItem className="bg-white dark:bg-slate-500 text-base dark:text-white">
+                <Link href={`/states/${state.code}`}>{state.name}</Link>
+              </DropdownMenuItem>
+                })}
+            </DropdownMenuContent>
+          </DropdownMenu>
+        </BreadcrumbItem>
+      </BreadcrumbList>
+    </Breadcrumb>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
             <div className="w-full">
               {state.scorecard && <VPPScoreCard scorecard={state.scorecard} />}
             </div>
             <div className="w-full">
-              <h1>State: {state?.name}</h1>
+              <h1>{state?.name}</h1>
               <CountryMap focusOn={{ stateCode }} />
             </div>
             <div className="w-full">

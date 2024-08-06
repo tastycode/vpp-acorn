@@ -9,9 +9,23 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { RouteLoader } from "@/app/components/RouteLoader";
 
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+
 type SortMode = "name" | "score"
 
-export default function StatesPage() {
+export default function StatesPage({state}: {state: PrivateState}) {
     const [states] = useAtom(statesAtom)
     const router = useRouter()
     const sortMode = (router.query.sort as SortMode) || "name"
@@ -39,6 +53,32 @@ export default function StatesPage() {
     return (
         <RouteLoader checkLoaded={() => states.length > 0} checkDependencies={[states]}>
             <div className="container mx-auto px-4">
+            <Breadcrumb>
+      <BreadcrumbList>
+        <BreadcrumbItem>
+          <BreadcrumbLink href="/">Home</BreadcrumbLink>
+        </BreadcrumbItem>
+        <BreadcrumbSeparator />
+        <BreadcrumbItem>
+
+          <BreadcrumbLink href="/states">States</BreadcrumbLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem>
+          <DropdownMenu>
+            <DropdownMenuTrigger className="flex items-center gap-1">
+              {state?.name}
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="start">
+                {states.map((state) => {
+              return <DropdownMenuItem className="bg-white dark:bg-slate-500 text-base dark:text-white">
+                <Link href={`/states/${state.code}`}>{state.name}</Link>
+              </DropdownMenuItem>
+                })}
+            </DropdownMenuContent>
+          </DropdownMenu>
+        </BreadcrumbItem>
+      </BreadcrumbList>
+    </Breadcrumb>
                 <h1 className="text-2xl font-bold mb-4">State Score Cards</h1>
                 <p className="mb-4">The Voter Purge Project is currently monitoring 38 states for disenfranchised voters. Each state in the list below is scored by the following criteria on a one to three star scale, transparency, access to data and human resources, and the state's recorded history of purging its voter rolls.</p>
 
@@ -65,15 +105,18 @@ export default function StatesPage() {
                                     <h2 className="text-lg font-semibold">{state.name}</h2>
                                     <div className="text-sm font-medium">VPP Score: {getStars(state.scorecard?.stars!)}</div>
                                 </div>
-                                <div className="text-sm mb-1">
-                                    <span className="font-medium">{state.stats.average_total_voters.mean.toLocaleString()} total voters</span>
-                                </div>
-                                <div className="text-sm mb-2">
-                                    <span className="text-red-600 font-medium">{state.stats.dropped_voters.mean.toLocaleString()} voters purged</span> (since last report)
-                                </div>
-                                <div className="text-sm font-bold mb-2">
-                                    {state.stats.purged_percentage.mean.toFixed(2)}%
-                                </div>
+                                {state?.stats?.average_total_voters?.mean && <>
+                                    <div className="text-sm mb-1">
+                                        <span className="font-medium">{state.stats.average_total_voters.mean.toLocaleString()} total voters</span>
+                                    </div>
+                                    <div className="text-sm mb-2">
+                                        <span className="text-red-600 font-medium">{state.stats.dropped_voters.mean.toLocaleString()} voters purged</span> (since last report)
+                                    </div>
+                                    <div className="text-sm font-bold mb-2">
+                                        {state.stats.purged_percentage.mean.toFixed(2)}%
+                                    </div>
+                                </>
+                                }
                                 <div className="flex justify-between items-center">
                                     <Link href={`/states/${state.code}`} className="text-blue-600 hover:underline text-sm">
                                         More Metrics

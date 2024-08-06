@@ -5,14 +5,29 @@ import CountryMap from '@/app/components/CountryMap';
 import { GetServerSideProps } from 'next';
 import { useRouter } from 'next/router';
 import { useAtom } from 'jotai';
-import { statesAtom, countiesAtom } from '@/states/atoms';
-import { ChartStats, ChartDataset, ChartData as InternalChartData, StateCode, PrivateCounty, PrivateState } from '@/app/counties/types';
+import { statesAtom } from '@/states/atoms';
+import { ChartStats, ChartData as InternalChartData, StateCode, PrivateCounty, PrivateState } from '@/app/counties/types';
 import { getStateServerSideProps } from '@/pages/states/[stateCode]';
+import * as R from 'ramda'
 import fs from 'fs'
 import { Chart as ChartJS, ChartData as ChartJSData, ChartOptions as ChartJSOptions, ArcElement, Tooltip, Legend, CategoryScale, LinearScale, BarElement, Title } from 'chart.js';
 import { Bar, Doughnut } from 'react-chartjs-2';
 import { barChartOptionsFrom, doughnutChartOptionsFrom, chartDataFrom, getChartData } from '@/app/utils';
 import { RouteLoader } from '@/app/components/RouteLoader';
+import Link from 'next/link';
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
 
 
 ChartJS.register(ArcElement, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
@@ -100,6 +115,7 @@ const renderChart = (chartConfig: any, chartDatasets: InternalChartData[]) => {
 
 const CountyPage: React.FC<CountyPageProps> = ({ county, state }: CountyPageProps) => {
   const router = useRouter();
+  const [states, _] = useAtom(statesAtom);
   const { stateCode, countyName } = router.query as { stateCode: string; countyName: string };
 
   const chartLayout = [
@@ -122,11 +138,59 @@ const CountyPage: React.FC<CountyPageProps> = ({ county, state }: CountyPageProp
   ];
   return (
     <RouteLoader checkLoaded={() => county.chartStats !== undefined} checkDependencies={[county]}>
+      <Breadcrumb>
+      <BreadcrumbList>
+        <BreadcrumbItem>
+          <BreadcrumbLink href="/">Home</BreadcrumbLink>
+        </BreadcrumbItem>
+        <BreadcrumbSeparator />
+        <BreadcrumbItem>
+          <BreadcrumbLink href="/states">States</BreadcrumbLink>
+        </BreadcrumbItem>
+        <BreadcrumbSeparator />
+        <BreadcrumbItem>
+          <DropdownMenu>
+            <DropdownMenuTrigger className="flex items-center gap-1">
+              {state?.name}
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="start">
+                {states.map((countryState) => {
+              return <DropdownMenuItem className="bg-white dark:bg-slate-500 text-base dark:text-white">
+                <Link href={`/states/${countryState.code}`}>
+                  {countryState.name == state.name && <span className="text-green-500 text-bold">{countryState.name}</span>}
+                  {countryState.name != state.name && <span>{countryState.name}</span>}
+                  </Link>
+              </DropdownMenuItem>
+                })}
+            </DropdownMenuContent>
+          </DropdownMenu>
+        </BreadcrumbItem>
+        <BreadcrumbSeparator />
+        <BreadcrumbItem>
+          <DropdownMenu>
+            <DropdownMenuTrigger className="flex items-center gap-1">
+              {county.name}
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="start">
+                {R.sortBy(R.prop('name'), state.counties).map((stateCounty) => {
+              return <DropdownMenuItem className="bg-white dark:bg-slate-500 text-base dark:text-white">
+
+                <Link href={`/states/${county.stateCode}/county/${stateCounty.name}`}>
+                  {county.name == stateCounty.name && <span className="text-green-500 text-bold">{county.name}</span>}
+                  {county.name != stateCounty.name && <span>{stateCounty.name}</span>}
+                  </Link>
+              </DropdownMenuItem>
+                })}
+            </DropdownMenuContent>
+          </DropdownMenu>
+        </BreadcrumbItem>
+      </BreadcrumbList>
+    </Breadcrumb>
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="space-y-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
             <div>
-              <h1 className="text-2xl font-bold mb-2">County: {county.name}, State: {state.code}</h1>
+              <h1 className="text-2xl font-bold mb-2">{county.name}, {state.name}</h1>
               <CountryMap focusOn={{ countyName, stateCode }} />
             </div>
             <div>
