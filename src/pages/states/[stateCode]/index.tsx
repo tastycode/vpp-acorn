@@ -35,7 +35,7 @@ import {
 } from "@/components/ui/dropdown-menu"
 import { Bar, Doughnut } from 'react-chartjs-2';
 
-import { barChartOptionsFrom, chartDataFrom, doughnutChartOptionsFrom, getChartData } from '@/app/utils';
+import { apiEndpoint, barChartOptionsFrom, chartDataFrom, doughnutChartOptionsFrom, getChartData } from '@/app/utils';
 import { Badge } from "@/components/ui/badge";
 import { ColumnDef } from "@tanstack/react-table"
 import { DataTable } from '@/components/ui/data-table';
@@ -165,7 +165,7 @@ export const getStateServerSideProps = async (context, fs) => {
   const commonProps = await getCommonServerSideProps(fs);
   const { country, states, counties } = commonProps.props
   const { stateCode } = context.params as { stateCode: StateCode; };
-  const url = `https://back9.voterpurgeproject.org:8443/api/public/state_charts?state=${stateCode}&start_date=2023-01-01&end_date=2025-01-01`
+  const url = apiEndpoint(`/state_charts?state=${stateCode}&start_date=2023-01-01&end_date=2025-01-01`)
   const stateStats = await (await fetch(url)).json() as ChartStats;
   const matchState = states.find(state => state.code == stateCode)
   if (!matchState) return null;

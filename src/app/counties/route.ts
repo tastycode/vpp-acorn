@@ -1,5 +1,4 @@
 import counties from "./index.json";
-import states from "./states.json";
 import * as R from "ramda";
 import type {
   CountyFormerData,
@@ -8,6 +7,7 @@ import type {
   StateCode,
   PublicStates
 } from "./types";
+import { apiEndpoint } from "../utils";
 
 const formatCountyData = (countyData: CountyFormerData): CountyData => {
   return {
@@ -22,10 +22,10 @@ const formatCountyData = (countyData: CountyFormerData): CountyData => {
 };
 
 export async function GET() {
-    const url = `https://back9.voterpurgeproject.org:8443/api/public/us_dataset`
-const resp = await fetch(url)
-const  { states } = await resp.json() as PublicStates
-// todo: integrate new data source once total_voters, purged_voters is available
+  const url = apiEndpoint('/us_dataset')
+  const resp = await fetch(url)
+  const { states } = await resp.json() as PublicStates
+  // todo: integrate new data source once total_voters, purged_voters is available
 
   const stateCounties = R.groupBy(R.prop("State_Abv"), counties);
   // return ctx.db.select().from(schema.county).orderBy(desc(schema.post.id));

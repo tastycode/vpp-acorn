@@ -129,3 +129,9 @@ export const colorForZ = (z: number): Color => {
   const mean = new Color(meanHex);
   return mean.rotate(-1 * z * 50);
 };
+
+
+export const apiEndpoint = (path: string) => {
+  const apiHost = process.env.VPP_API_BASE_URL ?? 'https://back9.voterpurgeproject.org:8443/api/public'
+  return `${apiHost}${path}`
+}

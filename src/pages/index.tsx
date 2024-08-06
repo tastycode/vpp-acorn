@@ -4,6 +4,7 @@ import { processData } from "@/utils/processData";
 const fs = require('fs')
 import Link from 'next/link'
 import { RouteLoader } from "@/app/components/RouteLoader";
+import { apiEndpoint } from "@/app/utils";
 
 
 
@@ -23,7 +24,7 @@ export default function Home({ country, states, counties }) {
 
 async function getStateScorecards(fs: any): Promise<PublicStateScorecard[]> {
   try {
-    return fetch('https://back9.voterpurgeproject.org:8443/api/public/state_scorecard').then(response => response.json() as Promise<PublicStateScorecard[]>);
+    return fetch(apiEndpoint('/state_scorecard')).then(response => response.json() as Promise<PublicStateScorecard[]>);
   } catch (e) {
     console.error('native fetch for getStateScorecards failed', e);
     return JSON.parse(fs.readFileSync('./samples/state_scorecard.json', 'utf-8')) as PublicStateScorecard[];
@@ -32,7 +33,7 @@ async function getStateScorecards(fs: any): Promise<PublicStateScorecard[]> {
 
 async function getCountryIndex(fs: any): Promise<PublicStates> {
   try {
-    return fetch('https://back9.voterpurgeproject.org:8443/api/public/us_dataset').then(response => response.json() as Promise<PublicStates>);
+    return fetch(apiEndpoint('/us_dataset')).then(response => response.json() as Promise<PublicStates>);
   } catch (e) {
     console.error('native fetch for getCountryIndex failed', e);
     return JSON.parse(fs.readFileSync('./samples/us_dataset.json', 'utf-8')) as PublicStates;

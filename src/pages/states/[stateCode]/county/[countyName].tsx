@@ -12,7 +12,7 @@ import * as R from 'ramda'
 import fs from 'fs'
 import { Chart as ChartJS, ChartData as ChartJSData, ChartOptions as ChartJSOptions, ArcElement, Tooltip, Legend, CategoryScale, LinearScale, BarElement, Title } from 'chart.js';
 import { Bar, Doughnut } from 'react-chartjs-2';
-import { barChartOptionsFrom, doughnutChartOptionsFrom, chartDataFrom, getChartData } from '@/app/utils';
+import { barChartOptionsFrom, doughnutChartOptionsFrom, chartDataFrom, getChartData, apiEndpoint } from '@/app/utils';
 import { RouteLoader } from '@/app/components/RouteLoader';
 import Link from 'next/link';
 import {
@@ -64,7 +64,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   // note that county.fips is a 5 digit code which includes the state code as the first two digits, this API requires just the last 3 digits
 
   const county = state.counties.find((county: PrivateCounty) => county.name == countyName)!
-  const url = `https://back9.voterpurgeproject.org:8443/api/public/county_charts?state=${state.code}&county=${county.fips}&start_date=2023-01-01&end_date=2025-01-01`
+  const url = apiEndpoint(`/county_charts?state=${state.code}&county=${county.fips}&start_date=2023-01-01&end_date=2025-01-01`)
   const countyChartStats = (await (await fetch(url)).json()) as ChartStats
   county.chartStats = countyChartStats
   return {
